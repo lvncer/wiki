@@ -128,6 +128,10 @@
 | 2008 | メタルギア ソリッド 4                                            |
 | 2012 | メタルギア ライジング: リベンジェンス（PlatinumGames開発）       |
 | 2015 | メタルギア ソリッド V ファントムペイン                           |
+| 2024 | SILENT HILL 2（リメイク） |
+| 2025 | SILENT HILL f |
+| 2025 | METAL GEAR SOLID Δ: SNAKE EATER |
+| 2026/09/24 | Silent Hill: Townfall |
 
 ## セガ / アトラス（Sega / Atlus · Japan）
 
