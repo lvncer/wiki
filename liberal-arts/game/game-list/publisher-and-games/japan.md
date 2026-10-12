@@ -1,10 +1,6 @@
-# パブリッシャー別 名作ゲーム一覧
+# 日本のパブリッシャー
 
-パブリッシャー・スタジオごとに、代表作・名作を年代順でまとめたリストです。
-
-## 日本のパブリッシャー
-
-### 任天堂（Nintendo · Japan）
+## 任天堂（Nintendo · Japan）
 
 | 年   | タイトル                                        |
 | ---- | ----------------------------------------------- |
@@ -51,7 +47,7 @@
 | 2022 | 星のカービィ ディスカバリー                     |
 | 2023 | ゼルダの伝説 ティアーズ オブ ザ キングダム      |
 
-### スクウェア・エニックス（Square Enix · Japan）
+## スクウェア・エニックス（Square Enix · Japan）
 
 | 年   | タイトル                                        |
 | ---- | ----------------------------------------------- |
@@ -83,7 +79,7 @@
 | 2023 | オクトパストラベラー II                         |
 | 2024 | ファイナルファンタジー VII リバース             |
 
-### カプコン（Capcom · Japan）
+## カプコン（Capcom · Japan）
 
 | 年   | タイトル                               |
 | ---- | -------------------------------------- |
@@ -112,7 +108,7 @@
 | 2023 | ストリートファイター 6                 |
 | 2025 | モンスターハンター ワイルズ            |
 
-### コナミ（Konami · Japan）
+## コナミ（Konami · Japan）
 
 | 年   | タイトル                                                         |
 | ---- | ---------------------------------------------------------------- |
@@ -133,7 +129,7 @@
 | 2012 | メタルギア ライジング: リベンジェンス（PlatinumGames開発）       |
 | 2015 | メタルギア ソリッド V ファントムペイン                           |
 
-### セガ / アトラス（Sega / Atlus · Japan）
+## セガ / アトラス（Sega / Atlus · Japan）
 
 | 年   | タイトル                               |
 | ---- | -------------------------------------- |
@@ -159,7 +155,7 @@
 | 2024 | ペルソナ 3 Reload                      |
 | 2024 | Like a Dragon: Infinite Wealth         |
 
-### フロム・ソフトウェア（FromSoftware · Japan）
+## フロム・ソフトウェア（FromSoftware · Japan）
 
 > パブリッシャー: バンダイナムコ / ソニー
 
@@ -176,7 +172,7 @@
 | 2022 | エルデンリング                                  |
 | 2023 | アーマード・コア VI: ファイアーズ オブ ルビコン |
 
-### バンダイナムコ（Bandai Namco · Japan）
+## バンダイナムコ（Bandai Namco · Japan）
 
 | 年   | タイトル                                            |
 | ---- | --------------------------------------------------- |
@@ -193,7 +189,7 @@
 | 2022 | エルデンリング（フロム・ソフトウェア開発）          |
 | 2022 | テイルズ オブ アライズ                              |
 
-### プラチナゲームズ（PlatinumGames · Japan）
+## プラチナゲームズ（PlatinumGames · Japan）
 
 | 年   | タイトル                                            |
 | ---- | --------------------------------------------------- |
@@ -206,7 +202,7 @@
 | 2019 | アストラル チェイン（任天堂発売）                   |
 | 2023 | ベヨネッタ Origins: セレッサと迷子の悪魔            |
 
-### SNK（SNK · Japan）
+## SNK（SNK · Japan）
 
 | 年   | タイトル                           |
 | ---- | ---------------------------------- |
@@ -221,7 +217,7 @@
 | 2019 | サムライスピリッツ（リブート）     |
 | 2022 | ザ・キング・オブ・ファイターズ XV  |
 
-### アークシステムワークス（Arc System Works · Japan）
+## アークシステムワークス（Arc System Works · Japan）
 
 | 年   | タイトル                                                              |
 | ---- | --------------------------------------------------------------------- |
@@ -233,7 +229,7 @@
 | 2021 | ギルティギア -ストライヴ-                                             |
 | 2023 | グランブルーファンタジー ヴァーサス: ライジング                       |
 
-### タイトー（Taito / Square Enix · Japan）
+## タイトー（Taito / Square Enix · Japan）
 
 | 年   | タイトル                       |
 | ---- | ------------------------------ |
@@ -243,7 +239,7 @@
 | 2004 | グラディウス V（Treasure開発） |
 | 2022 | エグジストアーカイヴ           |
 
-### レベルファイブ（Level-5 · Japan）
+## レベルファイブ（Level-5 · Japan）
 
 | 年   | タイトル                                     |
 | ---- | -------------------------------------------- |
@@ -252,7 +248,7 @@
 | 2013 | 妖怪ウォッチ                                 |
 | 2019 | INAZUMA ELEVEN（イナズマイレブン）           |
 
-### スパイク・チュンソフト（Spike Chunsoft · Japan）
+## スパイク・チュンソフト（Spike Chunsoft · Japan）
 
 | 年   | タイトル                                       |
 | ---- | ---------------------------------------------- |
@@ -263,7 +259,7 @@
 | 2017 | ニューダンガンロンパV3                         |
 | 2019 | AI: ソムニウム ファイル                        |
 
-### グラスホッパー・マニファクチュア（Grasshopper Manufacture · Japan）
+## グラスホッパー・マニファクチュア（Grasshopper Manufacture · Japan）
 
 | 年   | タイトル                                   |
 | ---- | ------------------------------------------ |
@@ -273,7 +269,7 @@
 | 2021 | ノーモア★ヒーローズ 3                      |
 | 2022 | シャドウ オブ ザ ダムド: ヘラ リマスタード |
 
-### 日本一ソフトウェア（Nippon Ichi Software · Japan）
+## 日本一ソフトウェア（Nippon Ichi Software · Japan）
 
 | 年   | タイトル             |
 | ---- | -------------------- |
@@ -281,332 +277,3 @@
 | 2006 | ディスガイア 2       |
 | 2008 | ディスガイア 3       |
 | 2015 | ディスガイア 5       |
-
-## 海外大手パブリッシャー
-
-### ユービーアイソフト（Ubisoft · France）
-
-| 年   | タイトル                           |
-| ---- | ---------------------------------- |
-| 2003 | プリンス・オブ・ペルシャ: 時間の砂 |
-| 2007 | アサシン クリード                  |
-| 2012 | アサシン クリード III              |
-| 2012 | ファークライ 3                     |
-| 2013 | スプリンターセル ブラックリスト    |
-| 2014 | ウォッチドッグス                   |
-| 2015 | レインボーシックス シージ          |
-| 2016 | ウォッチドッグス 2                 |
-| 2018 | アサシン クリード オデッセイ       |
-| 2020 | アサシン クリード ヴァルハラ       |
-
-### エレクトロニック・アーツ（EA · USA）
-
-| 年   | タイトル                                        |
-| ---- | ----------------------------------------------- |
-| 1998 | ニード・フォー・スピード III                    |
-| 2003 | スターウォーズ: バトルフロント                  |
-| 2007 | マスエフェクト（BioWare開発）                   |
-| 2008 | デッドスペース                                  |
-| 2012 | マスエフェクト 3                                |
-| 2019 | スター・ウォーズ ジェダイ: フォールン・オーダー |
-| 2023 | スター・ウォーズ ジェダイ: サバイバー           |
-
-### ベセスダ / Xbox Game Studios（Bethesda · USA）
-
-| 年   | タイトル                                     |
-| ---- | -------------------------------------------- |
-| 2002 | モロウウィンド                               |
-| 2006 | オブリビオン                                 |
-| 2008 | フォールアウト 3                             |
-| 2010 | フォールアウト: ニューベガス（Obsidian開発） |
-| 2011 | スカイリム                                   |
-| 2015 | フォールアウト 4                             |
-| 2016 | Doom（id Software開発）                      |
-| 2023 | スターフィールド                             |
-
-### CD PROJEKT RED（CDPR · Poland）
-
-| 年   | タイトル                                     |
-| ---- | -------------------------------------------- |
-| 2007 | ウィッチャー                                 |
-| 2011 | ウィッチャー 2: キングスメイカー             |
-| 2015 | ウィッチャー 3: ワイルドハント               |
-| 2020 | サイバーパンク 2077                          |
-| 2023 | サイバーパンク 2077: フォールトライン（DLC） |
-
-### ソニー / PlayStation Studios（SIE · USA/Japan）
-
-| 年   | タイトル                              |
-| ---- | ------------------------------------- |
-| 2005 | ゴッド・オブ・ウォー                  |
-| 2009 | アンチャーテッド 2（Naughty Dog開発） |
-| 2013 | The Last of Us（Naughty Dog開発）     |
-| 2016 | アンチャーテッド 4                    |
-| 2017 | Horizon Zero Dawn（Guerrilla開発）    |
-| 2018 | スパイダーマン（Insomniac開発）       |
-| 2018 | ゴッド・オブ・ウォー (PS4)            |
-| 2020 | The Last of Us Part II                |
-| 2020 | Ghost of Tsushima（Sucker Punch開発） |
-| 2022 | God of War ラグナロク                 |
-| 2022 | Horizon 禁じられた西                  |
-| 2023 | スパイダーマン 2（Insomniac開発）     |
-
-### バルブ（Valve · USA）
-
-| 年   | タイトル              |
-| ---- | --------------------- |
-| 1998 | Half-Life             |
-| 2000 | Counter-Strike        |
-| 2004 | Half-Life 2           |
-| 2007 | Portal                |
-| 2007 | Team Fortress 2       |
-| 2011 | Portal 2              |
-| 2013 | Dota 2                |
-| 2020 | Half-Life: Alyx（VR） |
-
-### ロックスター / Take-Two（Rockstar / 2K · USA）
-
-| 年   | タイトル                         |
-| ---- | -------------------------------- |
-| 1997 | Grand Theft Auto                 |
-| 2001 | GTA III                          |
-| 2002 | GTA: Vice City                   |
-| 2004 | GTA: San Andreas                 |
-| 2008 | GTA IV                           |
-| 2010 | レッド・デッド・リデンプション   |
-| 2013 | GTA V                            |
-| 2016 | Mafia III                        |
-| 2018 | レッド・デッド・リデンプション 2 |
-
-### アクティビジョン / ブリザード（Activision Blizzard · USA）
-
-| 年   | タイトル                     |
-| ---- | ---------------------------- |
-| 1994 | ウォークラフト: オークと人間 |
-| 1996 | ディアブロ                   |
-| 2002 | ウォークラフト III           |
-| 2004 | World of Warcraft            |
-| 2007 | CoD 4: Modern Warfare        |
-| 2010 | スタークラフト II            |
-| 2012 | ディアブロ III               |
-| 2014 | ハースストーン               |
-| 2016 | オーバーウォッチ             |
-| 2023 | ディアブロ IV                |
-
-## 中小・インディースタジオ
-
-### Devolver Digital（インディーパブリッシャー · USA）
-
-| 年   | タイトル                      | 開発元          |
-| ---- | ----------------------------- | --------------- |
-| 2012 | Hotline Miami                 | Dennaton Games  |
-| 2013 | Hotline Miami 2: Wrong Number | Dennaton Games  |
-| 2016 | Enter the Gungeon             | Dodge Roll      |
-| 2017 | Ruiner                        | Reikon Games    |
-| 2018 | Minit                         | Various         |
-| 2019 | Katana ZERO                   | Askiisoft       |
-| 2019 | My Friend Pedro               | DeadToast       |
-| 2020 | Fall Guys                     | Mediatonic      |
-| 2021 | Death's Door                  | Acid Nerve      |
-| 2021 | Inscryption                   | Daniel Mullins  |
-| 2021 | Loop Hero                     | Four Quarters   |
-| 2022 | Cult of the Lamb              | Massive Monster |
-| 2023 | Anger Foot                    | Free Lives      |
-
-### アンナプルナ インタラクティブ（Annapurna Interactive · USA）
-
-| 年   | タイトル                    | 開発元                |
-| ---- | --------------------------- | --------------------- |
-| 2017 | What Remains of Edith Finch | Giant Sparrow         |
-| 2019 | Outer Wilds                 | Mobius Digital        |
-| 2020 | Telling Lies                | Sam Barlow            |
-| 2021 | 12 Minutes                  | Luis Antonio          |
-| 2021 | The Artful Escape           | Beethoven & Dinosaur  |
-| 2022 | Neon White                  | Angel Matrix          |
-| 2022 | Stray                       | BlueTwelve            |
-| 2023 | Cocoon                      | Geometric Interactive |
-
-### Larian Studios（Belgium）
-
-| 年   | タイトル                 |
-| ---- | ------------------------ |
-| 2014 | Divinity: Original Sin   |
-| 2017 | Divinity: Original Sin 2 |
-| 2023 | Baldur's Gate 3          |
-
-### Klei Entertainment（Canada）
-
-| 年   | タイトル            |
-| ---- | ------------------- |
-| 2012 | Mark of the Ninja   |
-| 2013 | Don't Starve        |
-| 2015 | Invisible, Inc.     |
-| 2019 | Oxygen Not Included |
-| 2021 | Hot Lava            |
-
-### Playdead（Denmark）
-
-| 年   | タイトル |
-| ---- | -------- |
-| 2010 | Limbo    |
-| 2016 | Inside   |
-
-### Supergiant Games（USA）
-
-| 年   | タイトル   |
-| ---- | ---------- |
-| 2011 | Bastion    |
-| 2014 | Transistor |
-| 2017 | Pyre       |
-| 2020 | Hades      |
-| 2024 | Hades II   |
-
-### Thatgamecompany（USA）
-
-| 年   | タイトル                   |
-| ---- | -------------------------- |
-| 2009 | Flower                     |
-| 2012 | Journey                    |
-| 2019 | Sky: Children of the Light |
-
-### Subset Games（USA）
-
-| 年   | タイトル               |
-| ---- | ---------------------- |
-| 2012 | FTL: Faster Than Light |
-| 2018 | Into the Breach        |
-
-### Motion Twin / Evil Empire（France）
-
-| 年   | タイトル                                 |
-| ---- | ---------------------------------------- |
-| 2018 | Dead Cells                               |
-| 2023 | Dead Cells: Return to Castlevania（DLC） |
-
-### Team Cherry（Australia）
-
-| 年   | タイトル      |
-| ---- | ------------- |
-| 2017 | Hollow Knight |
-
-### Mossmouth（USA）
-
-| 年   | タイトル    |
-| ---- | ----------- |
-| 2012 | Spelunky HD |
-| 2020 | Spelunky 2  |
-
-### Raw Fury / その他良質インディーパブリッシャー
-
-| 年   | タイトル                  | 開発元              |
-| ---- | ------------------------- | ------------------- |
-| 2015 | Kingdom: New Lands        | Noio                |
-| 2019 | Night Call                | Studio Midgard      |
-| 2021 | Norco                     | Geography of Robots |
-| 2021 | Unpacking（Humble Games） | Witch Beam          |
-| 2022 | Tunic（Finji）            | Andrew Shouldice    |
-| 2023 | Dredge（Team17）          | Black Salt Games    |
-| 2024 | Animal Well（Bigmode）    | Billy Basso         |
-
-### その他注目インディースタジオ
-
-| 年   | タイトル                | 開発元・特記             |
-| ---- | ----------------------- | ------------------------ |
-| 2011 | Terraria                | Re-Logic                 |
-| 2013 | Papers, Please          | Lucas Pope（1人開発）    |
-| 2016 | Night in the Woods      | Infinite Fall            |
-| 2017 | Hollow Knight           | Team Cherry              |
-| 2018 | Return of the Obra Dinn | Lucas Pope（1人開発）    |
-| 2018 | Celeste                 | Extremely OK Games       |
-| 2019 | Baba Is You             | Hempuli Oy               |
-| 2019 | Disco Elysium           | ZA/UM                    |
-| 2020 | Among Us                | Innersloth               |
-| 2020 | Hades                   | Supergiant Games         |
-| 2021 | Inscryption             | Daniel Mullins           |
-| 2022 | Vampire Survivors       | poncle（小規模）         |
-| 2022 | Norco                   | Geography of Robots      |
-| 2023 | Pizza Tower             | Tour De Pizza（1人開発） |
-| 2023 | Dave the Diver          | MINTROCKET（Nexon傘下）  |
-| 2024 | Balatro                 | LocalThunk（1人開発）    |
-
-## 個人・超小規模スタジオ（Solo dev / Tiny team）
-
-### ConcernedApe（Eric Barone / 1人開発）
-
-| 年   | タイトル       |
-| ---- | -------------- |
-| 2016 | Stardew Valley |
-
-### Toby Fox（tobyfox / 1人開発）
-
-| 年     | タイトル                  |
-| ------ | ------------------------- |
-| 2015   | Undertale                 |
-| 2018〜 | Deltarune（連作・進行中） |
-
-### Lucas Pope（1人開発）
-
-| 年   | タイトル                |
-| ---- | ----------------------- |
-| 2013 | Papers, Please          |
-| 2018 | Return of the Obra Dinn |
-
-### Jonathan Blow（1人〜小規模）
-
-| 年   | タイトル    |
-| ---- | ----------- |
-| 2008 | Braid       |
-| 2016 | The Witness |
-
-### Re-Logic（Andrew Spinks / 小規模）
-
-| 年   | タイトル |
-| ---- | -------- |
-| 2011 | Terraria |
-
-### Mojang（Markus Persson 原作 → Microsoft傘下）
-
-| 年   | タイトル           |
-| ---- | ------------------ |
-| 2011 | Minecraft          |
-| 2020 | Minecraft Dungeons |
-
-### Zachtronics（Zach Barth / 小規模）
-
-| 年   | タイトル      |
-| ---- | ------------- |
-| 2015 | Infinifactory |
-| 2016 | Shenzhen I/O  |
-| 2017 | Opus Magnum   |
-
-## 日本インディー・同人ゲーム
-
-### スタジオピクセル（Studio Pixel / Daisuke Amaya）
-
-| 年   | タイトル                             |
-| ---- | ------------------------------------ |
-| 2004 | 洞窟物語（Cave Story）フリーウェア版 |
-| 2010 | 洞窟物語+（商業版）                  |
-| 2015 | ケロブラスター                       |
-
-### ZUN / 上海アリス幻樂団
-
-| 年     | タイトル                                  |
-| ------ | ----------------------------------------- |
-| 1996〜 | 東方Project シリーズ（同人FPS / 弾幕STG） |
-| 1997   | 東方霊異伝（PC-98）                       |
-| 2002   | 東方紅魔郷（WinPC移行作）                 |
-| 2008   | 東方地霊殿                                |
-
-### その他日本同人・インディー名作
-
-| 年   | タイトル                                      | 開発者 / ツール                 |
-| ---- | --------------------------------------------- | ------------------------------- |
-| 2004 | 夢日記（Yume Nikki）                          | ききやま / RPGツクール          |
-| 2006 | ひぐらしのなく頃に（同人版）                  | 07th Expansion / 竜騎士07       |
-| 2012 | 魔女の家                                      | kouri / RPGツクール             |
-| 2012 | ib                                            | kouri / RPGツクール             |
-| 2012 | 青鬼（Ao Oni）                                | noprops                         |
-| 2014 | 怒首領蜂最大往生（CAVE）/ 参考: 弾幕STGの頂点 | CAVE                            |
-| 2022 | Vampire Survivors（ロールモデル）             | poncle（1人）                   |
-| 2023 | SANABI                                        | Wonder Potion（韓国インディー） |
