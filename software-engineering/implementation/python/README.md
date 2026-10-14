@@ -1,1 +1,0 @@
-https://chokkan.github.io/python/index.html
