@@ -20,9 +20,13 @@ Ragman promised to introduce me to a local trader who goes by the name Skier. I 
 
 I can now move into customs and start working with Skier. It's the only way I'll reach the port.
 
+Skier knows some kind of weapons specialist near the chemical plant. That's not the kind of contact I can afford to pass up. But in exchange for the info, Skier wants me to help gather building materials to rebuild one of his warehouses.
+
 ## Main objectives
 
-- [ ] Talk to Skier
+- [x] Talk to Skier
+- [ ] Survive and extract from Customs or visit Customs 3 times
+- [ ] Hand over any Building materials items to Skier (Items must have the Found in Raid mark)
 - [x] Tell Ragman what you found during the recon
 - [x] Survive and extract from Interchange or visit Interchange 3 times
 - [x] Talk to Ragman
@@ -32,5 +36,7 @@ I can now move into customs and start working with Skier. It's the only way I'll
 
 Optional objectives
 
+- [ ] Visit Customs 0/3
+- [ ] Find any item in raid from the Building materials category
 - [x] Visit Interchange 3/3
 - [x] Collect the required amount in RUB 250 000/250 000
