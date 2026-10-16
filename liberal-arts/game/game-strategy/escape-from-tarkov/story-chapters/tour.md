@@ -27,24 +27,28 @@ Tutorial chapter - unlock traders and explore Tarkov's maps
 
 ## Objectives
 
-During the assault on the TerraGroup office, a massive explosion erupted on top of one of the nearby high-rises. I got left on my own,
-with no contact with command. Looks like I'll have to handle the evacuation myself.
+During the assault on the TerraGroup office, a massive explosion erupted on top of one of the nearby high-rises. I got left on my own, with no contact with command. Looks like I'll have to handle the evacuation myself.
+
 But first things first, I have to get out of this Ground Zero.
-Therapist said she can secure safe exit routes, but it's gonna cost. I'm not sure I can trust her, but there's no other option. I need to
-gather the cash.
+
+Therapist said she can secure safe exit routes, but it's gonna cost. I'm not sure I can trust her, but there's no other option. I need to gather the cash.
+
 Therapist has provided me with safe routes through the city blocks.
+
 I can now access streets of Tarkov when needed.
-Ragman turned out to be a pretty reasonable person. He's not letting me through for free, but in exchange for a simple job, he's willing to
-introduce me to one of the local big shots over by the customs terminal. That's something, at least.
+
+Ragman turned out to be a pretty reasonable person. He's not letting me through for free, but in exchange for a simple job, he's willing to introduce me to one of the local big shots over by the customs terminal. That's something, at least.
 
 Main objectives
-☐ Survive and extract from Interchange or visit Interchange 3 times
-☑ Talk to Therapist
-☑ Hand over the cash to Therapist 250 000/250 000
+
+- ☐ Survive and extract from Interchange or visit Interchange 3 times
+- ☑ Talk to Therapist
+- ☑ Hand over the cash to Therapist 250 000/250 000
 
 Optional objectives
-☐ Visit Interchange 0/3
-☑ Collect the required amount in RUB 250 000/250 000
+
+- ☐ Visit Interchange 0/3
+- ☑ Collect the required amount in RUB 250 000/250 000
 
 17/17
 
