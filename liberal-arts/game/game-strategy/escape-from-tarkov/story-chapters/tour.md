@@ -18,12 +18,39 @@ Ragman turned out to be a pretty reasonable person.
 He's not letting me through for free, but in exchange for a simple job, he's willing to introduce me to one of the local big shots over by the customs terminal.
 That's something, at least.
 
+> Ragman: I was just thinking about you, bro!
+> 
+> Ivncer: I scouted all around Ultra. No working vehicles, no suspicious sounds. All quiet.
+> 
+> Ragman: Nothing at all, huh? Well, if the camp's empty too, then it's definitely not a convoy. Nothing to worry about then.
+>
+> Ivncer: JenBaseCo I did my part. You promised to show me the way forward.
+> 
+> Ragman: I remember, ahper! Head to Customs, it's an industrial zone near the factory.
+> Local trader runs it, goes by Skier. Make sure you see him, but don't bother looking for him on Customs.
+> He's likely moved back to his base in the north port. Talk to him there.
+> 
+> lvncer: How's this Skier with strangers?
+> 
+> Ragman: Expect anything. He's been through a lot himself!
+> But I'll explain things to him for you, so he'll let you talk.
+> After that, it's all on you, brother.
+>
+> lvncer: Well, Thanks for the help.
+> 
+> Ragman: And hey, if the evacuation doesn't pan out, swing by Ragman's! I always have work for guys like you!
+> 
+> lvncer: You've always been in trade, right? What's the strangest thing people ordered?
+> 
+> Ragman: T-shirts with one of Tarkov's politicians.
+> Can't recall his name, the bald guy... The funny thing is, I shipped them outside the cordon.
+> Don't know what they did with them, but they paid me pretty well.
+
 I managed to make a deal with Ragman for safe passage from the Interchange towards the Terminal. If the port really is sealed off, I'll need contacts like him.
 
 Ragman promised to introduce me to a local trader who goes by the name Skier. I should pay him a visit.
 
 I can now move into customs and start working with Skier. It's the only way I'll reach the port.
-
 
 > Skier: Hey you! What're you standing there for? Alright, don't stress, I've been told about you! Headed to the port, yeah? Plan's bollocks, but you do you.
 > 
