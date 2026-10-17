@@ -14,6 +14,45 @@ Therapist has provided me with safe routes through the city blocks.
 
 I can now access streets of Tarkov when needed.
 
+> Therapist: Greetings.
+>
+> lvncer: Hello.
+> Our guys were given your contract in case of emergency.
+> I need to reach the evacuation point at the port.
+> Can you help me with this?
+>
+> Therapist: You acted wisely in finding me.
+> However, I cannnot guide you through the entire city.
+> No one in Tarkov has complete control over the territory.
+>
+> lvncer: What can you help me with, then?
+> I need to know my way around this place.
+>
+> Therapist: I know people who could show you safe routes in the city blocks.
+> However, you must understand that maintaining these passages consumes signficant resources.
+>
+> lvncer: So I`ll have to pay for info on these routes...
+> How much?
+>
+> Therapist: We use these routes for civilian evacuation, and therefore do not economize on safety...
+>
+> lvncer: Alrignt, I`ve got the money. Here.
+> (Hand over 250,000 RUB)
+>
+> Therapist: I am glad that you care about the fate of civilian struggling to survive in the city blocks!
+> You made the correct choice.
+>
+> lvncer: I heard you used to be a regular doctor before.
+> Hou did you make all these connections?
+>
+> Therapist: Being a doctor always entails numerous contacts with various people.
+> That is the first point.
+> Secondly, what occurred before the...
+> changes in Tarkov, no longer matters.
+> I believe you understand exactly What I mean.
+> That therapist no longer exists.
+> Do no ask me about her.
+
 > Ragman: Come in, come in!
 >
 > lvncer: Hello. Our guys were told you could help if there are supply issues.
