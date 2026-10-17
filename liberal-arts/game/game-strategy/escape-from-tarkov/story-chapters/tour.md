@@ -14,6 +14,36 @@ Therapist has provided me with safe routes through the city blocks.
 
 I can now access streets of Tarkov when needed.
 
+> Ragman: Come in, come in!
+>
+> lvncer: Hello. Our guys were told you could help if there are supply issues.
+> 
+> Ragman: You flatter me, ahperl At Ragman's, you can find anything you need.
+> Armor, fancy clothes, we'll hook you up!
+> But you didn't just come here for shopping, huh?
+>
+> Ivncer: I need to get to the port, but I don't know the area.
+>
+> Ragman: Evacuating, huh?
+> Plenty have tried... But you came the right way!
+> I'll link you with the right people and show you the path.
+> Just do one little favor for me first.
+> 
+> lvncer: What do you need?
+> 
+> Ragman: There's been commotion in the forest near the Ultra mall, maybe even some vehicles involved. I want that place checked out. My crew's all tied up with other gigs, so you showed up at a good time.
+> 
+> Ivncer: So a regular recon job?
+>
+> Ragman: Yup, scout around Ultra at the Interchange and keep an ear out for running vehicles. Lemme know about everything you find.
+>
+> Ivncer: You've always been in trade, right? What's the strangest thing people ordered?
+> 
+> Ragman: You know Tarkov's still got plenty of collectors, right?
+> Sometimes I get orders for figurines of anime girls in fucking underwear.
+> And no, I won't tell you who.
+> Don't even ask.
+
 Ragman turned out to be a pretty reasonable person.
 He's not letting me through for free, but in exchange for a simple job, he's willing to introduce me to one of the local big shots over by the customs terminal.
 That's something, at least.
