@@ -334,7 +334,20 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 > 
 > Ivncer: What do you want me to do?
 >
+> Skier: To make some noise in that forest and drop someone.
+> I want everyone to know that crossing Skier is a death wishl If you find those two rat cunts – good, fuck them up. But I don't really care who you kill.
 > 
+> lvncer: Got it.
+> And what's in it for me?
+>
+> Skier: You're still trying to reach the port, right?
+> Without the right paths you won't even make it to Shoreline.
+> I'll point you the way.
+> Plus, I'll introduce you to someone important.
+> Connections like that don't grow on trees.
+> 
+> lvncer: Alright, deal.
+> I'll bring news from the Woods.
 
 ## Main objectives
 
