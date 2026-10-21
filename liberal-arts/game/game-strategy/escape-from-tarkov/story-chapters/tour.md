@@ -223,6 +223,11 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 > Mechanic: There's a simpler solution.
 > Just bring me a few of their guns.
 > I can tell enough from those alone.
+>
+> lvncer: And their owners?
+>
+> Mechanic: Do what you want..
+> But they won't hand the weapons over willingly.
 
 ## Main objectives
 
