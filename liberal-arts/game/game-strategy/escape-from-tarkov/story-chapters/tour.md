@@ -182,6 +182,28 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 > Mechanic: Trust but verify.
 > Good approach, even if it means extra work sometimes.
 > What do you need from me?
+> 
+> Ivncer: I don't know a safe route.
+> Heard the area around the factory's mined all over.
+> 
+> Mechanic: That I can help with.
+> There's a hidden path my mushroom picker friend uses.
+> Take it and you'll reach the Woods without trouble.
+> 
+> lvncer: Great.
+> Do you know where I can buy some gear, by the way?
+> Not the fancy stuff like yours.
+> Something more simple.... and maybe a bit cheaper.
+> 
+> Mechanic: Prapor could help you with this.
+> He's got supply lines from outside the cordon, so he's always got Russian weapons and gear Crude, but reliable.
+> Worth its price, that's for certain.
+> 
+> lvncer: Can you let him know I'll visit him?
+> Don't want our first meeting ending in blood.
+> 
+> Mechanic: Of course.
+> But before you move on, I've got a request.
 
 ## Main objectives
 
