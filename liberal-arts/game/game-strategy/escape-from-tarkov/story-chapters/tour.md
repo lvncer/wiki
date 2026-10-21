@@ -157,6 +157,13 @@ Skier knows some kind of weapons specialist near the chemical plant.
 That's not the kind of contact I can afford to pass up.
 But in exchange for the info, Skier wants me to help gather building materials to rebuild one of his warehouses.
 
+Skier pointed me the way to the factory and even gave me a contact to link up with Mechanic.
+
+Mechanic could turn out to be one of the most valuable contacts in Tarkov. I need to make this meeting happen soon.
+
+Mechanic is one of the few who's still trying to keep a human face in Tarkov. He's willing to put me in touch with Propor, who has supply channels for Russian weapons.
+But before he sends me, he asked a favor. I need to recon the Factory and find the bandits holed up there. Mechanic wants samples of their weaponry to determine exactly who's planning to seize the Factory.
+
 ## Main objectives
 
 - [x] Talk to Skier
