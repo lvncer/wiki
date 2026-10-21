@@ -165,6 +165,24 @@ Mechanic is one of the few who's still trying to keep a human face in Tarkov. He
 
 But before he sends me, he asked a favor. I need to recon the Factory and find the bandits holed up there. Mechanic wants samples of their weaponry to determine exactly who's planning to seize the Factory.
 
+> Mechanic: Hey. Hope you came here for business.
+> 
+> lvncer: That Skier guy told me how to find you. Says you know your weapons better than most.
+> 
+> Mechanic: If he means in Tarkov, he's probably right. Are you looking for new toys?
+> 
+> lvncer: Too pricey for me. Actually, I need something else from you.
+> I have to get to the port.
+> 
+> Mechanic: Why the port? I heard it's locked down.
+> 
+> lvncer: We were told the port is the final evac point.
+> I have to check it out, even if it really is locked down.
+> 
+> Mechanic: Trust but verify.
+> Good approach, even if it means extra work sometimes.
+> What do you need from me?
+
 ## Main objectives
 
 - [x] Talk to Skier
