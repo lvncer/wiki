@@ -349,6 +349,12 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 > lvncer: Alright, deal.
 > I'll bring news from the Woods.
 
+The road to the port runs from the Factory through the Priozersk nature reserve, and Mechanic shared a couple of routes with me along with a contact for Prapor, who can provide me with Russian-made equipment.
+
+Now I can access the woods area and start working with Propor.
+
+This time Skier gave me a tougher job. I need to stir up trouble in the nature reserve and neutralize the Scavs that attacked Skier's warehouses. I don't necessarily have to track down anyone specific. For Skier, the point is to make a loud statement.
+
 ## Main objectives
 
 - [ ] Survive and extract from Woods or visit Woods 3 times
