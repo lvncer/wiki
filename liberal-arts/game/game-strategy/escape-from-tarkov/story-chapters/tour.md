@@ -162,6 +162,7 @@ Skier pointed me the way to the factory and even gave me a contact to link up wi
 Mechanic could turn out to be one of the most valuable contacts in Tarkov. I need to make this meeting happen soon.
 
 Mechanic is one of the few who's still trying to keep a human face in Tarkov. He's willing to put me in touch with Propor, who has supply channels for Russian weapons.
+
 But before he sends me, he asked a favor. I need to recon the Factory and find the bandits holed up there. Mechanic wants samples of their weaponry to determine exactly who's planning to seize the Factory.
 
 ## Main objectives
