@@ -312,6 +312,30 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 > I already passed word to Prapor, so you can visit him when you are ready.
 > Or he may call you in himself.
 
+--- Skier Calling ---
+
+> Skier: Don't just stand there.
+> C'mere.
+>
+> Ivncer: You wanted to see me?
+> 
+> Skier: Since you're here, there's still hope for us to work together.
+> Here's the score: I found the rats who leaked our warehouse coordinates.
+>
+> lvncer: You dealt with them?
+> 
+> Skier: That's the catch.
+> They legged it right after the hit and left a couple of burning corpses as decoys.
+> We only twigged the swap yesterday.
+>
+> Ivncer: Any idea where they are now?
+>
+> Skier: Those fucks were spotted heading into the Woods, so that's where you'll find them. They're just small-time runners, didn't know much past the warehouse. But still, can't let that shit slide.
+> 
+> Ivncer: What do you want me to do?
+>
+> 
+
 ## Main objectives
 
 - [ ] Survive and extract from Factory or visit Factory 3 times
