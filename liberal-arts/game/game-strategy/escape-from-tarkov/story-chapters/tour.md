@@ -231,9 +231,11 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 
 ## Main objectives
 
+- [ ] Survive and extract from Factory or visit Factory 3 times
+- [x] Talk to Mechanic
 - [x] Talk to Skier
-- [ ] Survive and extract from Customs or visit Customs 3 times
-- [ ] Hand over any Building materials items to Skier (Items must have the Found in Raid mark)
+- [x] Survive and extract from Customs or visit Customs 3 times
+- [x] Hand over any Building materials items to Skier (Items must have the Found in Raid mark)
 - [x] Tell Ragman what you found during the recon
 - [x] Survive and extract from Interchange or visit Interchange 3 times
 - [x] Talk to Ragman
@@ -243,7 +245,9 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 
 Optional objectives
 
-- [ ] Visit Customs 0/3
-- [ ] Find any item in raid from the Building materials category
+- [ ] Visit Factory 0/3 
+- [x] Find any weapon in raid 2/2
+- [x] Visit Customs 3/3
+- [x] Find any item in raid from the Building materials category 5/5
 - [x] Visit Interchange 3/3
 - [x] Collect the required amount in RUB 250 000/250 000
