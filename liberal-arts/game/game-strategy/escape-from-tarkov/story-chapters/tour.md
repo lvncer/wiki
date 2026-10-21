@@ -300,7 +300,17 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 > Mechanic: It's a large area, and the main rules are simple: carry enough supplies and don't get lost.
 > Use landmarks such as the lake with the sawmill, the mountain north of it, and the crashed plane to the east.
 >
-> 
+> Ivncer: What about that plane? Did it go down recently?
+>
+> Mechanic: Definitely a civilian aircraft, but nobody knows when or how it was shot down.
+>
+> lvncer: Got it. I'll go and see check it out myself.
+>
+> Mechanic: Thank you for the work.
+> If you stick around, stop by again.
+> I could use people like you.
+> I already passed word to Prapor, so you can visit him when you are ready.
+> Or he may call you in himself.
 
 ## Main objectives
 
