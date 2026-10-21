@@ -209,10 +209,6 @@ Skier pointed me the way to the factory and even gave me a contact to link up wi
 
 Mechanic could turn out to be one of the most valuable contacts in Tarkov. I need to make this meeting happen soon.
 
-Mechanic is one of the few who's still trying to keep a human face in Tarkov. He's willing to put me in touch with Propor, who has supply channels for Russian weapons.
-
-But before he sends me, he asked a favor. I need to recon the Factory and find the bandits holed up there. Mechanic wants samples of their weaponry to determine exactly who's planning to seize the Factory.
-
 > Mechanic: Hey. Hope you came here for business.
 > 
 > lvncer: That Skier guy told me how to find you. Says you know your weapons better than most.
@@ -276,6 +272,35 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 >
 > Mechanic: Do what you want..
 > But they won't hand the weapons over willingly.
+
+Mechanic is one of the few who's still trying to keep a human face in Tarkov. He's willing to put me in touch with Propor, who has supply channels for Russian weapons.
+
+But before he sends me, he asked a favor. I need to recon the Factory and find the bandits holed up there. Mechanic wants samples of their weaponry to determine exactly who's planning to seize the Factory.
+
+> Mechanic: Mercenary. Here on business, or just wandering in?
+> 
+> lvncer: I did what you asked. Here are your "samples." You going to look them over?
+> 
+> Mechanic: I can tell from here it's just regular Scav junk.
+> Just leave them somewhere in the corner.
+> Did they really think they could drive Tagilla out with this?
+> They would have been better off shooting themselves.
+> Quicker and less painful than his sledgehammer.
+> 
+> lvncer: Tagilla?
+> That big guy with a welding mask?
+> 
+> Mechanic: Yes, him.
+> One of the two psycho brothers, both used to work at Polikhim.
+> It's best you stay out of their way if you're not ready for a hard fight.
+> 
+> lvncer: Understood.
+> Perhaps you know something useful about the nature reserve?
+> 
+> Mechanic: It's a large area, and the main rules are simple: carry enough supplies and don't get lost.
+> Use landmarks such as the lake with the sawmill, the mountain north of it, and the crashed plane to the east.
+>
+> 
 
 ## Main objectives
 
