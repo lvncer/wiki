@@ -351,8 +351,11 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 
 ## Main objectives
 
-- [ ] Survive and extract from Factory or visit Factory 3 times
+- [ ] Survive and extract from Woods or visit Woods 3 times
+- [ ] Eliminate any target on Woods
+- [x] Survive and extract from Factory or visit Factory 3 times
 - [x] Talk to Mechanic
+- [x] Hand over any weapon to Mechanic (Items must have the Found in Raid mark)
 - [x] Talk to Skier
 - [x] Survive and extract from Customs or visit Customs 3 times
 - [x] Hand over any Building materials items to Skier (Items must have the Found in Raid mark)
@@ -363,9 +366,10 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 - [x] Hand over the cash to Therapist 250 000/250 000
 - [x] Escape Ground Zero
 
-Optional objectives
+## Optional objectives
 
-- [ ] Visit Factory 0/3 
+- [ ] Visit Woods 0/3 
+- [x] Visit Factory 3/3 
 - [x] Find any weapon in raid 2/2
 - [x] Visit Customs 3/3
 - [x] Find any item in raid from the Building materials category 5/5
