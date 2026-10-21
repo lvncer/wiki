@@ -204,6 +204,25 @@ But before he sends me, he asked a favor. I need to recon the Factory and find t
 > 
 > Mechanic: Of course.
 > But before you move on, I've got a request.
+>
+> lvncer: Every other trader started with favors first, and only then offered help.
+> 
+> Mechanic: Hard to live any other way here.
+> You'll get used to it.
+> I need something checked at the Factory.
+> 
+> lvncer: Want me to recon some areas?
+> 
+> Mechanic: No.
+> The factory workshops have become quite a gathering spot for the Scavs lately, like someone's trying to take control over the plant.
+> I want to know who's behind them.
+> 
+> lvncer: And how are you planning to do that?
+> Want me to drag a Scav back alive?
+> 
+> Mechanic: There's a simpler solution.
+> Just bring me a few of their guns.
+> I can tell enough from those alone.
 
 ## Main objectives
 
