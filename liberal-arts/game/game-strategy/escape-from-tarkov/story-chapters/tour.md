@@ -157,6 +157,54 @@ Skier knows some kind of weapons specialist near the chemical plant.
 That's not the kind of contact I can afford to pass up.
 But in exchange for the info, Skier wants me to help gather building materials to rebuild one of his warehouses.
 
+> lvncer: Got the building materials.
+> will these do?
+>
+> Skier: Well i looks like some rubbish, but we'll make do.
+>
+> lvncer: What about that route to the port?
+> How do I get through?
+>
+> Skier: The main road's mined, but my boys will sort you out..
+> We use those paths ourselves, it's safe.
+>
+> lvncer: You mentioned some specialist too.
+>
+> Skier: Yeah, people call him Mechanic.
+> If you want top-tier guns, there's no one better in Tarkov.
+> Could've certainly left ages ago, but he's still here.
+>
+> lvncer: Why, thouth?
+> Why stay here in this sealed city?
+>
+> Skier: You just don't get him.
+> Mechanic may know a fuck ton of random shit, but he lives and breathes firearms.
+> So all this war is like a playground for him.
+>
+> lvncer: Has he ever served anywhere?
+> How'd he get so obsessed with firearms?
+>
+> Skier: Doubt it - he's a total nerd!
+> Ask him yourself about guns, I'm not that info it.
+> I'll let him know you're coming.
+>
+> lvncer: Got it.
+> Thanks for the help.
+>
+> Skier: No bother.
+> You seem alright, maybe we'll do more business later.
+> ...
+>
+
+> lvnver: Heard you're into different crime schemes.
+> What did you start with?
+>
+> Skier: Curiosity'll get you clipped, metal Yeah, it.
+> happened, so what?
+> You wanna climb outta the gutter, you've wade through some fifth.
+> Smuggled gear, banned goods, stereos, all that crap...
+> In this business, If you don't grab the chance, someone else will - and you'll be left with no coin or connections.
+
 Skier pointed me the way to the factory and even gave me a contact to link up with Mechanic.
 
 Mechanic could turn out to be one of the most valuable contacts in Tarkov. I need to make this meeting happen soon.
