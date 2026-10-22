@@ -1,24 +1,11 @@
-# Falling Skies
-
-Chapter 2
-Falling Skies
-Investigate the mysterious crashed plane in the nature reserve
+# Chapter: Falling Skies
 
 ## Story Context
 
-"In the nature reserve, I came across a downed plane - or rather, what's left of it. I couldn't tell why it went down after looking at the wreckage. I should ask around with the traders, maybe someone knows more. I've got a strong feeling this plane is important."
 
-## Required Items
+Mechanic and I got to talking about that plane that went down somewhere in the nature reserve. Nobody really knows what happened to it. I should track it down and take a look - maybe I'll find something interesting.
 
-- Dollars (Optional) ×2000
-- Toolset ×2 (FIR)
-- Rechargeable battery ×3 (FIR)
-- Printed circuit board ×5 (FIR)
-- Rewards 300,000-1,500,000 Roubles (depending on choices) (item)
-- Armored case (if kept) (item)
-- Just Business (if case kept) (achievement)
-- Man of His Word (if case handed over) (achievement)
-- Unlocks The Ticket chapter (story)
+In the nature reserve, I came across a downed plane - or rather, what's left of it. I couldn't tell why it went down after looking at the wreckage. I should ask around with the traders, maybe someone knows more. I've got a strong feeling this plane is important.
 
 ## Objectives
 
