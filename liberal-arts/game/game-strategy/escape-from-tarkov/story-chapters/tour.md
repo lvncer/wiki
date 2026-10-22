@@ -85,8 +85,10 @@ He said they couldn't have gone far and is demanding PMC dogtags in exchange for
 
 ## Main objectives
 
-- [ ] Survive and extract from Shoreline or visit Shoreline 3 times
-- [ ] Hand over the cash to Mechanic 0/8000
+- [ ] Access the secret TerraGroup facility
+- [x] Survive and extract from Shoreline or visit Shoreline 3 times
+- [x] Hand over the item to Prapor: PMC dogtag 5/5
+- [x] Hand over the cash to Mechanic 8000/8000
 - [ ] Learn how to escape Tarkov (Some of the traders must at least know something)
 - [x] Use the intercom to contact the port garrison
 - [x] Find a way to contact the soldiers at the Terminal (There's bound to be a radio or some other comms device somewhere along that road to the Terminal)
@@ -109,9 +111,12 @@ He said they couldn't have gone far and is demanding PMC dogtags in exchange for
 
 ## Optional objectives
 
-- [ ] Visit Shoreline 0/3
+- [ ] Locate the entrance to the facility on Factory (Polikhim #16 was bought out by TerraGroup, so it might be connected to their secret projects)
+- [ ] Locate the entrance to the facility on Streets of Tarkov (If the facility is somewhere downtown, I can get inside through the emergency exits)
+- [ ] Obtain a keycard or access codes to enter the facility (Entrances to the facility may be secured with a keycard or some kind of access code)
+- [x] Visit Shoreline 3/3
 - [x] Find the item in raid: PMC dogtag 5/5
-- [ ] Collect the required amount in USD 0/8000
+- [x] Collect the required amount in USD 8000/8000
 - [x] Visit Woods 0/3 
 - [x] Visit Factory 3/3 
 - [x] Find any weapon in raid 2/2
