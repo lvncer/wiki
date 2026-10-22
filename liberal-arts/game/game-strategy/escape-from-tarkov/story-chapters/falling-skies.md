@@ -7,7 +7,12 @@ Mechanic and I got to talking about that plane that went down somewhere in the n
 
 In the nature reserve, I came across a downed plane - or rather, what's left of it. I couldn't tell why it went down after looking at the wreckage. I should ask around with the traders, maybe someone knows more. I've got a strong feeling this plane is important.
 
-## Objectives
+Prapor doesn't trust me. He clearly won't be helping until I've earned his respect.
+
+## Main Objectives
+
+- [ ] Reach Loyalty Level 2 with Prapor (I'll need to prove myself by taking on Prapor's tasks)
+- [ ] Ask the traders about the fallen plane
 
 12/21 complete
 
