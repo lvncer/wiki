@@ -402,6 +402,49 @@ Now I can access shoreline, and I can also buy equipment from Peacekeeper.
 
 I can now get to the coast and investigate the evacuation point at the port terminal. The port must be guarded, but the military likely left some kind of comms to contact them from outside the gate. I need to find it and make contact with the garrison at the port.
 
+> Mechanic: Mercenary.
+> Here on business, or just wandering in?
+>
+> Ivncer: You called me.
+> Got any news about the Terminal?
+>
+> Mechanic: Yes.
+> I checked my channels about the port.
+> Your chance of evacuation there is almost zero, so I thought it was time to firm up our acquaintance.
+>
+> Ivncer: I've already been there.
+> The soldiers are asking for some pass.
+>
+> Mechanic: If you truly plan on getting out, the easy ways are long gone.
+> To break through the hard ones, you will need certain people.
+> The ones really running this city.
+>
+> Ivncer: You can connect me with someone that high up?
+>
+> Mechanic: Possibly.
+> Too early to say.
+> But you will certainly never reach the Lighthouse unless you know the route.
+>
+> Ivncer: Why would I need that Lighthouse if it's too early for me to meet the big shots?
+>
+> Mechanic: Equipment, weapons, intel... After the USEC first disembarked there, they left many valuable things.
+> So I decided to make a deal with Peacekeeper to arrange a safe passage for you.
+>
+> lvncer: Hope I don't regret this "deal".
+>
+> Mechanic: You will not.
+> The short path to the Lighthouse is too dangerous now, but Peacekeeper agreed to clear the way in exchange for an "investment" in the UNTAR mission.
+> He does not want to meet you himself, but through me he will provide a safe corridor.
+>
+> Ivncer: So I have to pay. How much?
+>
+> Mechanic: Quite a lot. But you will make it back in time.
+>
+> Ivncer: I don't have that much on me! (Gather 8,000 USD)
+>
+> Mechanic: Then come back once you do.
+> The offer stays open.
+
 ## Main objectives
 
 - [ ] Locate the entrance to the port Terminal (The only way to access the port should be through Shoreline)
