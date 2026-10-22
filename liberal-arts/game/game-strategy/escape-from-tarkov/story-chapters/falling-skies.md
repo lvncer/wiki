@@ -9,6 +9,20 @@ In the nature reserve, I came across a downed plane - or rather, what's left of 
 
 Prapor doesn't trust me. He clearly won't be helping until I've earned his respect.
 
+I've improved my standing with Prapor.
+Now I can return to the matter of the downed plane.
+
+Prapor sent me to find a flash drive in a G-Wagon.
+Now I just need to figure out where exactly it is.
+He said Therapist knows something about this.
+I should pay her a visit.
+
+Therapist's informant is asking for dollars in cash.
+I need to bring them, unless I want to track down the vehicle on my own.
+
+I gave the cash to Therapist.
+She told me to wait a while.
+
 ## Main Objectives
 
 - [ ] Reach Loyalty Level 2 with Prapor (I'll need to prove myself by taking on Prapor's tasks)
