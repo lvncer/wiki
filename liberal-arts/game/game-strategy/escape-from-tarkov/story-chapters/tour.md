@@ -395,10 +395,19 @@ This time Skier gave me a tougher job. I need to stir up trouble in the nature r
 > lvncer: Understood.
 > Thanks for the info.
 
+
+I completed the job for Skier, and in return he showed me a path to the coast. They say the Azure Coast health resort was an important TerraGroup point during the evacuation.
+
+Now I can access shoreline, and I can also buy equipment from Peacekeeper.
+
+I can now get to the coast and investigate the evacuation point at the port terminal. The port must be guarded, but the military likely left some kind of comms to contact them from outside the gate. I need to find it and make contact with the garrison at the port.
+
 ## Main objectives
 
-- [ ] Survive and extract from Woods or visit Woods 3 times
-- [ ] Eliminate any target on Woods
+- [ ] Locate the entrance to the port Terminal (The only way to access the port should be through Shoreline)
+- [x] Talk to Skier
+- [x] Survive and extract from Woods or visit Woods 3 times
+- [x] Eliminate any target on Woods 3/3
 - [x] Survive and extract from Factory or visit Factory 3 times
 - [x] Talk to Mechanic
 - [x] Hand over any weapon to Mechanic (Items must have the Found in Raid mark)
@@ -414,7 +423,7 @@ This time Skier gave me a tougher job. I need to stir up trouble in the nature r
 
 ## Optional objectives
 
-- [ ] Visit Woods 0/3 
+- [x] Visit Woods 0/3 
 - [x] Visit Factory 3/3 
 - [x] Find any weapon in raid 2/2
 - [x] Visit Customs 3/3
