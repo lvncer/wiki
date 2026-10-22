@@ -477,6 +477,32 @@ Looks like I'll have to pay for the ability to move freely in that area and to g
 >
 > Ivncer: You don't know my rank, and I don't answer to your command.
 > Let's get back to business, shall we?
+>
+> Prapor: What? I could crush you to bits if I wanted!
+> But I'll let it slide this time, since you're a tourist here.
+> Besides, the task is very urgent, no time to waste.
+>
+> Ivncer: So, the reward?
+>
+> Prapor: A fucker like you will probably be interested in getting access to the Reserve military base.
+> But now I'll add one more condition.
+>
+> Ivncer: What condition?
+>
+> Prapor: The base is crawling with looters trying to grab government property.
+> I don't need another idiot there like them.
+> Promise me that if you go on this mission, you'll squash those bastards like cockroaches.
+>
+> Ivncer: I wasn't planning to cooperate with them anyway.
+> I'll do what I can.
+>
+> Prapor: Do I have your word?
+>
+> Ivncer: Yeah.
+>
+> Prapor: Good, make sure you keep it....
+>
+> 
 
 ## Main objectives
 
