@@ -58,6 +58,10 @@ Through Mechanic I managed to get in touch with Peacekeeper, who operates on the
 
 Looks like I'll have to pay for the ability to move freely in that area and to gain access to Western gear. The money has to be delivered through Mechanic.
 
+Someone attacked Prapor's convoy on the coast near the health resort.
+Judging by their weapons, the attackers were clearly PMC operatives.
+Now Prapor wants to find out exactly who was behind the attack.
+He said they couldn't have gone far and is demanding PMC dogtags in exchange for the route to some military base.
 
 ## Main objectives
 
