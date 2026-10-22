@@ -83,6 +83,24 @@ Judging by their weapons, the attackers were clearly PMC operatives.
 Now Prapor wants to find out exactly who was behind the attack.
 He said they couldn't have gone far and is demanding PMC dogtags in exchange for the route to some military base.
 
+
+In exchange for the favor, Prapor gave me the coordinates of a local Russian military reserve base. The base could hold a lot of important supplies and data on what's happening in Tarkov.
+
+I can now access the reserve.
+
+Even before being sent to Tarkov, many of our guys were talking about some underground TerraGroup facilities.
+Maybe if I can grab a truly important sample or some real data from there, I'll have a better shot at getting out of the city.
+The locals still won't trust me with anything important.
+I have to act on my own.
+
+I won't be able to find TerraGroup's remote sites without a lead.
+But they must have had a hub or some facility inside the city.
+I need to find the entrance and figure out how to break in.
+For a site like that, TerraGroup probably set up an access system, meaning I can't get in without a specific keycard or access codes.
+
+I can now make my way to the lighthouse.
+I still don't know the details, but it seems one of the most influential people in locked-down Tarkov is there.
+
 ## Main objectives
 
 - [ ] Access the secret TerraGroup facility
