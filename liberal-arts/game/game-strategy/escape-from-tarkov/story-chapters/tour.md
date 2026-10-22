@@ -85,7 +85,12 @@ He said they couldn't have gone far and is demanding PMC dogtags in exchange for
 
 ## Main objectives
 
-- [ ] Locate the entrance to the port Terminal (The only way to access the port should be through Shoreline)
+- [ ] Survive and extract from Shoreline or visit Shoreline 3 times
+- [ ] Hand over the cash to Mechanic 0/8000
+- [ ] Learn how to escape Tarkov (Some of the traders must at least know something)
+- [x] Use the intercom to contact the port garrison
+- [x] Find a way to contact the soldiers at the Terminal (There's bound to be a radio or some other comms device somewhere along that road to the Terminal)
+- [x] Locate the entrance to the port Terminal (The only way to access the port should be through Shoreline)
 - [x] Talk to Skier
 - [x] Survive and extract from Woods or visit Woods 3 times
 - [x] Eliminate any target on Woods 3/3
@@ -104,6 +109,9 @@ He said they couldn't have gone far and is demanding PMC dogtags in exchange for
 
 ## Optional objectives
 
+- [ ] Visit Shoreline 0/3
+- [x] Find the item in raid: PMC dogtag 5/5
+- [ ] Collect the required amount in USD 0/8000
 - [x] Visit Woods 0/3 
 - [x] Visit Factory 3/3 
 - [x] Find any weapon in raid 2/2
