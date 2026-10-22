@@ -34,20 +34,22 @@ I'll have to wait until he's gone through all the data and calls me in.
 
 ## Main Objectives
 
-- [ ] Wait for information from Therapist (This shouldn't take long)
-- [ ] Ask Prapor about the fallen plane
+- [ ] Wait for information from Prapor (This shouldn't take long)
+- [x] Gather information from Therapist
+- [x] Wait for information from Therapist (This shouldn't take long)
+- [x] Ask Prapor about the fallen plane
 - [x] Reach Loyalty Level 2 with Prapor (I'll need to prove myself by taking on Prapor's tasks)
 - [x] Hand over the cash to Therapist 2000/2000
-- [ ] Hand over the flash drive to Prapor
+- [x] Hand over the flash drive to Prapor
 - [x] Ask the traders about the fallen plane
 - [x] Locate the fallen plane (The plane has crash-landed somewhere on Woods)
 
 ## Optional objectives
 
 - [x] Collect the required amount in USD 2000/2000
-- [ ] Locate the right G-Wagon SUV
-- [ ] Retrieve the flash drive from one of the G-Wagon SUVs
-- [ ] Learn details about the SUV from Therapist
+- [x] Locate the right G-Wagon SUV
+- [x] Retrieve the flash drive from one of the G-Wagon SUVs
+- [x] Learn details about the SUV from Therapist
 
 ## Story Choices
 
