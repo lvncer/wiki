@@ -455,6 +455,29 @@ Through Mechanic I managed to get in touch with Peacekeeper, who operates on the
 
 Looks like I'll have to pay for the ability to move freely in that area and to gain access to Western gear. The money has to be delivered through Mechanic.
 
+> Prapor: At ease, soldier!
+> I can see Tarkov's already roughed you up a bit.
+> Better get used to it now, since it's not gonna get any easier.
+>
+> Ivncer: Yeah, noticed that already.
+> You called me here.
+> Got a job for me?
+>
+> Prapor: Of course!
+> You impressed Mechanic with your skills, so I figure your head's in the right place and you aren't completely useless.
+> So I'm ready to trust you with a combat mission.
+>
+> Ivncer: What do I get in return?
+>
+> Prapor: What, gratitude from the Motherland isn't enough for you now?
+>
+> lvncer: I doubt your work has anything to do with the Motherland you're singing about.
+>
+> Prapor: How dare you talk to your seniors like that, rookie?!
+>
+> Ivncer: You don't know my rank, and I don't answer to your command.
+> Let's get back to business, shall we?
+
 ## Main objectives
 
 - [ ] Locate the entrance to the port Terminal (The only way to access the port should be through Shoreline)
