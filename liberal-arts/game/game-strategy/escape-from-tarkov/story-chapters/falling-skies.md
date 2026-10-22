@@ -23,6 +23,15 @@ I need to bring them, unless I want to track down the vehicle on my own.
 I gave the cash to Therapist.
 She told me to wait a while.
 
+Therapist's informant sent her a message: "Look for a black G-Wagon near the blown-out tunnel".
+
+I found the flash drive.
+Now I need to get it to Prapor.
+Hopefully, he'll tell me what's on it later.
+
+All done, the flash drive is now with Propor.
+I'll have to wait until he's gone through all the data and calls me in.
+
 ## Main Objectives
 
 - [ ] Wait for information from Therapist (This shouldn't take long)
