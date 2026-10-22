@@ -3,7 +3,7 @@
 - https://tarkovforge.com/story-guide
 
 | No | Chapter |
-| - | - | - |
+| - | - |
 | 1 | [Tour](./tour.md) |
 | 2 | [Falling Skies](falling-skies.md) |
 | 3 | [The Ticket](the-ticket.md) |
