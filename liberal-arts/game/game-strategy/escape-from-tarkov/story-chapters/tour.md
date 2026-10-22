@@ -445,6 +445,16 @@ I can now get to the coast and investigate the evacuation point at the port term
 > Mechanic: Then come back once you do.
 > The offer stays open.
 
+The port is indeed sealed off. They told me to get lost, and it doesn't look like they're letting anyone through at all.
+
+There's still no contact with command, but that doesn't necessarily mean anything. I doubt they'd abandon this many trained fighters in Tarkov. Either way, staying put without checking the evacuation point would've been a mistake.
+
+I need to talk to the locals. That might be my best chance of getting out of here.
+
+Through Mechanic I managed to get in touch with Peacekeeper, who operates on the coast around the Tarkov lighthouse. Without an "investment" in the UNTAR operation, Peacekeeper refuses to give a safe route to him.
+
+Looks like I'll have to pay for the ability to move freely in that area and to gain access to Western gear. The money has to be delivered through Mechanic.
+
 ## Main objectives
 
 - [ ] Locate the entrance to the port Terminal (The only way to access the port should be through Shoreline)
