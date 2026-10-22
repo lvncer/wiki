@@ -355,6 +355,46 @@ Now I can access the woods area and start working with Propor.
 
 This time Skier gave me a tougher job. I need to stir up trouble in the nature reserve and neutralize the Scavs that attacked Skier's warehouses. I don't necessarily have to track down anyone specific. For Skier, the point is to make a loud statement.
 
+> Skier: What'cha want?
+> 
+> Ivncer: Job's done.
+> Not sure if they were your rats, though.
+> 
+> Skier: Proper good fucking job!
+> One of those muppets crawled to me himself begging for forgiveness, the other one caught a bullet.
+> Might've been your handiwork.
+> 
+> Ivncer: And what happened to the one who came to you?
+>
+> Skier: I put him down, of course!
+>
+> Ivncer: He came to surrender.
+> Why kill him like that?
+>
+> Skier: What, you some kind of moral philosopher now?
+> In Tarkov, you screw up once, and that's it.
+> Remember that, and don't mess up over small stuff.
+>
+> Ivncer: You said you'd hook me up with some big shot and show me the way to Shoreline.
+>
+> Skier: That's right.
+> My lads will guide you there, while I, and only I, can get you Peacekeeper's contact, hehe!
+>
+> Ivncer: Is he tied to the UN or something?
+>
+> Skier: Yeah, like all of them!
+> Talks peace and order, but he's flogging European kit under the table, covering his own interests.
+> Don't get too comfy around him.
+>
+> Ivncer: Does he work with PMCs?
+>
+> Skier: He does, but he won't wade through muck with just anyone.
+> For now he'll only do trades with you, nothing else.
+> Maybe later, through me, you'll strike a proper deal.
+>
+> lvncer: Understood.
+> Thanks for the info.
+
 ## Main objectives
 
 - [ ] Survive and extract from Woods or visit Woods 3 times
