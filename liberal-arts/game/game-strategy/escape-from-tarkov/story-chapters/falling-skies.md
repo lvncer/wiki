@@ -32,9 +32,15 @@ Hopefully, he'll tell me what's on it later.
 All done, the flash drive is now with Propor.
 I'll have to wait until he's gone through all the data and calls me in.
 
+The flash drive revealed that the plane in the nature reserve was shot down deliberately.
+Prapor sent me to find the flight recorder.
+It should help shed light on what really happened there.
+
 ## Main Objectives
 
-- [ ] Wait for information from Prapor (This shouldn't take long)
+- [ ] Leave the flight recorder in the specified spot (Prapor said to leave it on Shoreline, in the house corner room at the fisher's island)
+- [ ] Retrieve the plane's flight recorder
+- [x] Wait for information from Prapor (This shouldn't take long)
 - [x] Gather information from Therapist
 - [x] Wait for information from Therapist (This shouldn't take long)
 - [x] Ask Prapor about the fallen plane
