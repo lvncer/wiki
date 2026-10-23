@@ -52,6 +52,10 @@ I have to bring it all to him, otherwise Elektronik won't be able to decrypt the
 
 ## Main Objectives
 
+- [ ] Hand over the item to Prapor: Rechargeable battery 0/3
+- [ ] Hand over the item to Prapor: Printed circuit board 0/5
+- [ ] Hand over the item to Prapor: Toolset 0/2
+- [x] Visit Prapor
 - [ ] Leave the flight recorder in the specified spot (Prapor said to leave it on Shoreline, in the house corner room at the fisher's island)
 - [ ] Retrieve the plane's flight recorder
 - [x] Wait for information from Prapor (This shouldn't take long)
@@ -66,6 +70,9 @@ I have to bring it all to him, otherwise Elektronik won't be able to decrypt the
 
 ## Optional objectives
 
+- [ ] Find the item in raid: Rechargeable battery 2/3
+- [ ] Find the item in raid: Printed circuit board 1/5
+- [x] Find the item in raid: Toolset 2/2
 - [x] Collect the required amount in USD 2000/2000
 - [x] Locate the right G-Wagon SUV
 - [x] Retrieve the flash drive from one of the G-Wagon SUVs
