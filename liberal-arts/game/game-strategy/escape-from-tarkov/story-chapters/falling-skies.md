@@ -36,6 +36,20 @@ The flash drive revealed that the plane in the nature reserve was shot down deli
 Prapor sent me to find the flight recorder.
 It should help shed light on what really happened there.
 
+I found the box.
+Elektronik will decrypt it, but I need to leave it on the fishing island at the coast, in the corner room.
+
+I left the flight recorder in place.
+Now all that's left is to wait for the decryption results.
+Hopefully, it'll be worth all this running around.
+
+Prapor contacted me and called me over.
+I didn't get any useful info, just another task.
+But I have to complete it if I want to get to the truth.
+
+He gave me a list of everything he needs.
+I have to bring it all to him, otherwise Elektronik won't be able to decrypt the flight recorder.
+
 ## Main Objectives
 
 - [ ] Leave the flight recorder in the specified spot (Prapor said to leave it on Shoreline, in the house corner room at the fisher's island)
