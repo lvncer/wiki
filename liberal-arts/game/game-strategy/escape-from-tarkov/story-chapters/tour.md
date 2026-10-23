@@ -137,11 +137,18 @@ I should keep building bridges and shoring up my position, because it's going to
 
 ## Main objectives
 
-- [ ] Access the secret TerraGroup facility
+- [x] Ensure access to The Lab
+- [x] Ensure access to Reserve
+- [x] Ensure access to Lighthouse
+- [x] Ensure access to Streets of Tarkov
+- [x] Access the secret TerraGroup facility
+- [x] Search the top management offices in The Lab
+- [x] Search the server room in The Lab
+- [x] Locate the escape path through the drainage system in The Lab
 - [x] Survive and extract from Shoreline or visit Shoreline 3 times
 - [x] Hand over the item to Prapor: PMC dogtag 5/5
 - [x] Hand over the cash to Mechanic 8000/8000
-- [ ] Learn how to escape Tarkov (Some of the traders must at least know something)
+- [ ] (FAILED) Learn how to escape Tarkov (Some of the traders must at least know something)
 - [x] Use the intercom to contact the port garrison
 - [x] Find a way to contact the soldiers at the Terminal (There's bound to be a radio or some other comms device somewhere along that road to the Terminal)
 - [x] Locate the entrance to the port Terminal (The only way to access the port should be through Shoreline)
@@ -163,8 +170,8 @@ I should keep building bridges and shoring up my position, because it's going to
 
 ## Optional objectives
 
-- [ ] Locate the entrance to the facility on Factory (Polikhim #16 was bought out by TerraGroup, so it might be connected to their secret projects)
-- [ ] Locate the entrance to the facility on Streets of Tarkov (If the facility is somewhere downtown, I can get inside through the emergency exits)
+- [x] Locate the entrance to the facility on Factory (Polikhim #16 was bought out by TerraGroup, so it might be connected to their secret projects)
+- [x] Locate the entrance to the facility on Streets of Tarkov (If the facility is somewhere downtown, I can get inside through the emergency exits)
 - [ ] Obtain a keycard or access codes to enter the facility (Entrances to the facility may be secured with a keycard or some kind of access code)
 - [x] Visit Shoreline 3/3
 - [x] Find the item in raid: PMC dogtag 5/5
