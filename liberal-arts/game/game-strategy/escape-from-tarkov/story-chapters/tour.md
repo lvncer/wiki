@@ -101,6 +101,40 @@ For a site like that, TerraGroup probably set up an access system, meaning I can
 I can now make my way to the lighthouse.
 I still don't know the details, but it seems one of the most influential people in locked-down Tarkov is there.
 
+I found an access keycard to TerraGroup Labs.
+I doubt it has top-level clearance, but it should at least open the way into the facility.
+
+I managed to get into an underground TerraGroup laboratory.
+I need to thoroughly search the interior and get my bearings here.
+
+I found not just a TerraGroup basement room under the city blocks, but a full-fledged underground laboratory...
+It looks like this is where the main work of TerraGroup Labs was done.
+Many doors are locked with keycards at different access levels.
+
+I'm going to have to come back here, and more than once.
+But first I need to score better gear.
+
+In any case, now I can access the lab.
+
+
+None of the traders know how to get out of Tarkov.
+Or maybe they just don't trust me, or are stalling for time.
+
+Either way, I need to build stronger ties with them if I want even a small chance of evacuation.
+It'll take time and effort.
+
+That means I'll have to set up my own hideout and dig in.
+Without any kind of support from the locals, I won't last long.
+
+I need to learn this city, every route and district.
+The more I understand Tarkov, the closer I'll get to leaving it behind.
+
+The evacuation at the port has been shut down.
+But I've managed to get my bearings in Tarkov and now know safe approaches to almost every district.
+I've also met several traders who are willing to work with me.
+
+I should keep building bridges and shoring up my position, because it's going to be a long time before I get out of here.
+
 ## Main objectives
 
 - [ ] Access the secret TerraGroup facility
