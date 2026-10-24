@@ -1,0 +1,19 @@
+{
+  "search": "-path:tools/development-environment/obsidian/templates",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "showArrow": false,
+  "colorGroups": [
+    { "query": "path:software-engineering", "color": { "a": 1, "rgb": 5016565 } },
+    { "query": "path:computer-science", "color": { "a": 1, "rgb": 8086015 } },
+    { "query": "path:business-administration", "color": { "a": 1, "rgb": 16098851 } },
+    { "query": "path:information", "color": { "a": 1, "rgb": 1752220 } },
+    { "query": "path:liberal-arts", "color": { "a": 1, "rgb": 15290234 } },
+    { "query": "path:humanities", "color": { "a": 1, "rgb": 10181046 } },
+    { "query": "path:tools", "color": { "a": 1, "rgb": 8359053 } },
+    { "query": "path:science", "color": { "a": 1, "rgb": 3066993 } },
+    { "query": "path:design", "color": { "a": 1, "rgb": 15105570 } }
+  ]
+}
