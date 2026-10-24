@@ -8,125 +8,14 @@ title: "lvncerpedia" # gen_index
 
 ## 全体マップ
 
-### business-administration
-
-- [corporate-strategy](./business-administration/corporate-strategy/README.md)
-- [Logical Thinking](./business-administration/logical-thinking/README.md)
-- [organizational-behavior](./business-administration/organizational-behavior/README.md)
-- [Project Management](./business-administration/project-management/README.md)
-
-### computer-science
-
-- [computer-graphics](./computer-science/computer-graphics/README.md)
-- [Computer Science](./computer-science/computer-science/README.md)
-- [OS](./computer-science/os/README.md)
-
-### design
-
-- [Audio](./design/audio/README.md)
-- [Design](./design/design/README.md)
-- [Figma](./design/figma/README.md)
-- [fonts](./design/fonts/README.md)
-- [Presentation](./design/presentation/README.md)
-- [sound](./design/sound/README.md)
-
-### humanities
-
-- [english](./humanities/english/README.md)
-
-### information
-
-- ai-and-llm
-  - [ai-agents](./information/ai-and-llm/ai-agents/README.md)
-  - [ai-positions](./information/ai-and-llm/ai-positions/README.md)
-  - [Claude Code](./information/ai-and-llm/claude-code/README.md)
-  - [humanoid-robots](./information/ai-and-llm/humanoid-robots/README.md)
-  - [LLM](./information/ai-and-llm/llm/README.md)
-  - [local-llm](./information/ai-and-llm/local-llm/README.md)
-  - [MCP](./information/ai-and-llm/mcp/README.md)
-  - [ML](./information/ai-and-llm/ml/README.md)
-- data
-  - [database](./information/data/database/README.md)
-  - [orm](./information/data/orm/README.md)
-  - [SQL](./information/data/sql/README.md)
-
-### liberal-arts
-
-- affairs
-  - [Events](./liberal-arts/affairs/events/README.md)
-  - [news](./liberal-arts/affairs/news/README.md)
-  - [News Source](./liberal-arts/affairs/news-source/README.md)
-- game
-  - [ゲームノウハウ](./liberal-arts/game/game-knowhow/README.md)
-  - [Game List](./liberal-arts/game/game-list/README.md)
-  - [Game Making](./liberal-arts/game/game-making/README.md)
-  - [Game Review Template](./liberal-arts/game/game-review/README.md)
-  - game-strategy
-    - [darksoul-1](./liberal-arts/game/game-strategy/darksoul-1/README.md)
-    - [darksoul-2](./liberal-arts/game/game-strategy/darksoul-2/README.md)
-    - [ELDENRING](./liberal-arts/game/game-strategy/eldenring/README.md)
-    - [escape-from-tarkov](./liberal-arts/game/game-strategy/escape-from-tarkov/README.md)
-    - [ff7-remake](./liberal-arts/game/game-strategy/ff7-remake/README.md)
-    - [geoguessr](./liberal-arts/game/game-strategy/geoguessr/README.md)
-    - [metalgear](./liberal-arts/game/game-strategy/metalgear/README.md)
-    - [minecraft](./liberal-arts/game/game-strategy/minecraft/README.md)
-    - [monster-hunter-wilds](./liberal-arts/game/game-strategy/monster-hunter-wilds/README.md)
-    - monster-hunter-world
-      - [Monster Hunter World - ICEBORNE](./liberal-arts/game/game-strategy/monster-hunter-world/Iceborne/README.md)
-      - [Monster Hunter World](./liberal-arts/game/game-strategy/monster-hunter-world/world/README.md)
-    - [steins;gate](./liberal-arts/game/game-strategy/steins%3Bgate/README.md)
-    - [Vampire Survivors](./liberal-arts/game/game-strategy/vampire-survivors/README.md)
-- knowledges
-  - [exams](./liberal-arts/knowledges/exams/README.md)
-  - [Military](./liberal-arts/knowledges/military/README.md)
-  - [Universe](./liberal-arts/knowledges/universe/README.md)
-- [Workout](./liberal-arts/workout/README.md)
-
-### science
-
-- [Math](./science/math/README.md)
-
-### software-engineering
-
-- design
-  - [api](./software-engineering/design/api/README.md)
-  - [Software Architecture](./software-engineering/design/architecture/README.md)
-  - [development-philosophy](./software-engineering/design/development-philosophy/README.md)
-  - [Development Principles](./software-engineering/design/development-principles/README.md)
-  - [mermaid](./software-engineering/design/mermaid/README.md)
-  - [PlantUML](./software-engineering/design/uml/README.md)
-- implementation
-  - [programming](./software-engineering/implementation/programming/README.md)
-  - [Programming Langueges](./software-engineering/implementation/programming-lang/README.md)
-  - [web-saas](./software-engineering/implementation/web-saas/README.md)
-- operation
-  - [AWS](./software-engineering/operation/aws/README.md)
-  - [deploy](./software-engineering/operation/deploy/README.md)
-  - [Docker](./software-engineering/operation/docker/README.md)
-  - [Github Knowledges](./software-engineering/operation/git/README.md)
-  - [IaC](./software-engineering/operation/iac/README.md)
-  - [Kubernetes](./software-engineering/operation/kubernetes/README.md)
-  - [Monitoring](./software-engineering/operation/monitoring/README.md)
-  - [Network](./software-engineering/operation/network/README.md)
-  - [version-control](./software-engineering/operation/version-control/README.md)
-  - [workflows](./software-engineering/operation/workflows/README.md)
-- quality
-  - [Debug](./software-engineering/quality/debug/README.md)
-  - [software-test](./software-engineering/quality/software-test/README.md)
-  - [usertest](./software-engineering/quality/usertest/README.md)
-
-### tools
-
-- development-environment
-  - [NeoVim](./tools/development-environment/nvim/README.md)
-  - [obsidian](./tools/development-environment/obsidian/README.md)
-  - [Toolchain](./tools/development-environment/toolchain/README.md)
-- hardware
-  - [Custom Built PC](./tools/hardware/custom-built-PC/README.md)
-  - [Gadget](./tools/hardware/gadget/README.md)
-- operation
-  - [Setup](./tools/operation/setup/README.md)
-  - [shortcut](./tools/operation/shortcut/README.md)
-  - [unixporn](./tools/operation/unixporn/README.md)
+- [business-administration](./business-administration/README.md)
+- [computer-science](./computer-science/README.md)
+- [design](./design/README.md)
+- [humanities](./humanities/README.md)
+- [information](./information/README.md)
+- [liberal-arts](./liberal-arts/README.md)
+- [science](./science/README.md)
+- [software-engineering](./software-engineering/README.md)
+- [tools](./tools/README.md)
 
 <!-- index:end -->
