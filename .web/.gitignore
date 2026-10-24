@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+
+# generated at build/dev time (regenerated every run, never commit)
+.content-cache/
+public/generated/
+public/wiki-assets/
+
+# env
+.env*.local
+
+# misc
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
