@@ -1,3 +1,7 @@
+---
+title: "Java Basic" # gen_index
+---
+
 # Java Basic
 
 ## Agenda

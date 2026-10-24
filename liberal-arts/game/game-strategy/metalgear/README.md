@@ -1,3 +1,7 @@
+---
+title: "metalgear" # gen_index
+---
+
 | Numbering | Year | Pack |
 | - | - | - |
 | MGS3/Δ | 1964 | Remake |

@@ -1,3 +1,7 @@
+---
+title: "Logical Thinking" # gen_index
+---
+
 # Logical Thinking
 
 ## 参考資料

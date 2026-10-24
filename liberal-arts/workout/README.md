@@ -1,3 +1,7 @@
+---
+title: "Workout" # gen_index
+---
+
 # Workout
 
 ## 主な筋トレ部位と代表的な筋肉・種目

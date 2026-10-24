@@ -1,3 +1,7 @@
+---
+title: "obsidian" # gen_index
+---
+
 `[[note-name]]`: ノート間リンク。Graph Viewの線になる一番大事なやつ。
 `[[path/to/note|表示名]]`: パスは正確に、表示名だけ短くできる。今のindexはこれ。
 #tag: タグ。#ai, #database, #git みたいに分類できる。

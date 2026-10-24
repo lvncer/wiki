@@ -1,3 +1,7 @@
+---
+title: "Cloudflare" # gen_index
+---
+
 # Cloudflare
 
 **結論：CloudflareはDNS/CDNから始まって今やセキュリティ・開発者プラットフォーム・ゼロトラストまでカバーするインターネットインフラ企業！**

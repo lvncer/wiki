@@ -1,3 +1,7 @@
+---
+title: "AWS" # gen_index
+---
+
 # AWS
 
 Amazon が提供する世界最大級のクラウドコンピューティングサービス

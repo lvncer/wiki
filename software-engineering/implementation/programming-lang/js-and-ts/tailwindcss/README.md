@@ -1,3 +1,7 @@
+---
+title: "Tailwind CSS" # gen_index
+---
+
 # Tailwind CSS
 
 HTMLのタグに短いクラス名を組み合わせるだけで、Webサイトやアプリの装飾を行える「ユーティリティファースト」のCSSフレームワーク。

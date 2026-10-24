@@ -1,3 +1,7 @@
+---
+title: "基本構成" # gen_index
+---
+
 # 基本構成
 
 - Namespace で環境を分離して

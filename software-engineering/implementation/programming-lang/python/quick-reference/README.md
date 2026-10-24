@@ -1,3 +1,7 @@
+---
+title: "Python早見帳（拡張版）" # gen_index
+---
+
 # Python早見帳（拡張版）
 
 元ネタ: [https://chokkan.github.io/python/index.html](https://chokkan.github.io/python/index.html)

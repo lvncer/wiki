@@ -1,3 +1,7 @@
+---
+title: "PlantUML" # gen_index
+---
+
 # PlantUML
 
 _All these sample images are taken from [https://www.uml-diagrams.org/index-examples.html](https://www.uml-diagrams.org/index-examples.html).Thanks._

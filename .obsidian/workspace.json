@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8702bd680348602d",
+        "id": "06c9b2dcc29c0b96",
         "type": "tabs",
         "children": [
           {
-            "id": "a9bf9bf8b2220faf",
+            "id": "5f55400ed0334569",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -176,8 +176,12 @@
       "bases:新規ベースを作成": false
     }
   },
-  "active": "a9bf9bf8b2220faf",
+  "active": "5f55400ed0334569",
   "lastOpenFiles": [
+    "business-administration/corporate-strategy/organizational-form.md",
+    "liberal-arts/game/game-strategy/steins%3Bgate",
+    "software-engineering/operation/iac/README.md",
+    "design/fonts/README.md",
     "information/ai-and-llm/ai-positions/moozaru/README.md",
     "README.md",
     "software-engineering/operation/monitoring/README.md"

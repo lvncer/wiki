@@ -1,3 +1,7 @@
+---
+title: "shortcut" # gen_index
+---
+
 # shortcut
 
 特定の機能を動作させるために押すキーをまとめた。

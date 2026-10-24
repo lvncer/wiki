@@ -1,3 +1,7 @@
+---
+title: "Blender完全入門［5.x対応］" # gen_index
+---
+
 # Blender完全入門［5.x対応］
 
 - [Blender完全入門［5.x対応］](https://www.sbcr.jp/product/4815633325/)

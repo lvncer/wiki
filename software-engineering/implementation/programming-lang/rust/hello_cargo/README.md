@@ -1,3 +1,7 @@
+---
+title: "Hello, Cargo" # gen_index
+---
+
 # Hello, Cargo
 
 ## Whats this??
