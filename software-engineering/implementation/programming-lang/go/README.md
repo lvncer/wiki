@@ -5,23 +5,23 @@ Googleが2009年に開発したオープンソースの静的型付けコンパ�
 
 ## For Start
 
-- [GO-SETUP.md](/GO-SETUP.md)
+- [GO-SETUP.md](./GO-SETUP.md)
 
 ## Syntaxes
 
 - https://zenn.dev/urakawa_jinsei/articles/facf886c446dfb
-- [syntaxes.md](/syntaxes.md)
+- [syntaxes.md](./syntaxes.md)
 
 ## Basic Concept for Go
 
-- [basic-concept.md](/basic-concept.md)
-- [error-handling-and-pointer.md](/error-handling-and-pointer.md)
+- [basic-concept.md](./basic-concept.md)
+- [error-handling-and-pointer.md](./error-handling-and-pointer.md)
 
 ## Gin Framework
 
-- [GIN-SETUP.md](/GIN-SETUP.md)
+- [GIN-SETUP.md](./GIN-SETUP.md)
 
 ## Ent. ORM
 
-- [ent-ORM.md](/ent-ORM.md)
-- [atlas.md](/atlas.md)
+- [ent-ORM.md](./ent-ORM.md)
+- [atlas.md](./atlas.md)
