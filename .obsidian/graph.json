@@ -1,19 +1,86 @@
 {
+  "collapse-filter": true,
   "search": "-path:tools/development-environment/obsidian/templates",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "showArrow": false,
+  "collapse-color-groups": true,
   "colorGroups": [
-    { "query": "path:software-engineering", "color": { "a": 1, "rgb": 5016565 } },
-    { "query": "path:computer-science", "color": { "a": 1, "rgb": 8086015 } },
-    { "query": "path:business-administration", "color": { "a": 1, "rgb": 16098851 } },
-    { "query": "path:information", "color": { "a": 1, "rgb": 1752220 } },
-    { "query": "path:liberal-arts", "color": { "a": 1, "rgb": 15290234 } },
-    { "query": "path:humanities", "color": { "a": 1, "rgb": 10181046 } },
-    { "query": "path:tools", "color": { "a": 1, "rgb": 8359053 } },
-    { "query": "path:science", "color": { "a": 1, "rgb": 3066993 } },
-    { "query": "path:design", "color": { "a": 1, "rgb": 15105570 } }
-  ]
+    {
+      "query": "path:software-engineering",
+      "color": {
+        "a": 1,
+        "rgb": 5016565
+      }
+    },
+    {
+      "query": "path:computer-science",
+      "color": {
+        "a": 1,
+        "rgb": 8086015
+      }
+    },
+    {
+      "query": "path:business-administration",
+      "color": {
+        "a": 1,
+        "rgb": 16098851
+      }
+    },
+    {
+      "query": "path:information",
+      "color": {
+        "a": 1,
+        "rgb": 1752220
+      }
+    },
+    {
+      "query": "path:liberal-arts",
+      "color": {
+        "a": 1,
+        "rgb": 15290234
+      }
+    },
+    {
+      "query": "path:humanities",
+      "color": {
+        "a": 1,
+        "rgb": 10181046
+      }
+    },
+    {
+      "query": "path:tools",
+      "color": {
+        "a": 1,
+        "rgb": 8359053
+      }
+    },
+    {
+      "query": "path:science",
+      "color": {
+        "a": 1,
+        "rgb": 3066993
+      }
+    },
+    {
+      "query": "path:design",
+      "color": {
+        "a": 1,
+        "rgb": 15105570
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 1.8561962347754108,
+  "close": false
 }
