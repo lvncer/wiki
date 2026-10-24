@@ -63,10 +63,26 @@ def discover_wiki_topics(root):
     return sorted(set(topics))
 
 
+CONTAINER_MARK = "<!-- container -->"
+
+
+def _is_container_readme(path):
+    """gen_index.py --containers が親フォルダに作る README（印つき）。トピックの根拠にしない。"""
+    if path.name != "README.md":
+        return False
+    try:
+        return CONTAINER_MARK in path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return False
+
+
 def _collect_topics(path, topics):
     entries = list(path.iterdir())
     dirs = [e for e in entries if e.is_dir() and not e.name.startswith(".")]
-    has_file = any(e.is_file() and not e.name.startswith(".") for e in entries)
+    has_file = any(
+        e.is_file() and not e.name.startswith(".") and not _is_container_readme(e)
+        for e in entries
+    )
     if has_file:
         topics.append(path.name)
         return
