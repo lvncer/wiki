@@ -12,12 +12,12 @@ export default function Breadcrumbs({ slug }: { slug: string }) {
     crumbs.push({ href: `/wiki/${acc.split("/").map(encodeURIComponent).join("/")}`, label: note?.title ?? seg });
   }
   return (
-    <nav aria-label="breadcrumb" className="mb-4 text-sm text-ink-500">
+    <nav aria-label="breadcrumb" className="mb-4 text-sm text-ink-500 dark:text-ink-400">
       {crumbs.map((c, i) => (
         <span key={c.href}>
           {i > 0 && <span className="mx-1">/</span>}
           {i === crumbs.length - 1 ? (
-            <span className="text-ink-700">{c.label}</span>
+            <span className="text-ink-700 dark:text-ink-300">{c.label}</span>
           ) : (
             <Link href={c.href} className="hover:underline">
               {c.label}

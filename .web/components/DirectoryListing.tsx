@@ -24,11 +24,11 @@ function hrefFor(slug: string): string {
 export default function DirectoryListing({ entries }: { entries?: DirectoryEntry[] }) {
   if (!entries || entries.length === 0) return null;
   return (
-    <table className="mb-8 w-full table-fixed border border-ink-200 text-sm">
+    <table className="mb-8 w-full table-fixed border border-ink-200 text-sm dark:border-ink-700">
       <tbody>
         {entries.map((e) => (
-          <tr key={e.slug} className="border-t border-ink-100 first:border-t-0 hover:bg-ink-50">
-            <td className="w-8 py-2 pl-3 text-ink-400">
+          <tr key={e.slug} className="border-t border-ink-100 first:border-t-0 hover:bg-ink-50 dark:border-ink-800 dark:hover:bg-ink-800">
+            <td className="w-8 py-2 pl-3 text-ink-400 dark:text-ink-500">
               {e.kind === "folder" ? <FolderIcon /> : <FileIcon />}
             </td>
             <td className="truncate py-2 pr-3">

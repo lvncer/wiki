@@ -6,9 +6,8 @@
   color-scheme: light;
 }
 
-body {
-  background-color: #ffffff;
-  color: #2a2a2a;
+:root.dark {
+  color-scheme: dark;
 }
 
 .broken-link {
@@ -30,7 +29,7 @@ details > summary::before {
   content: "▸";
   display: inline-block;
   width: 1em;
-  color: #5a5a5a;
+  color: #767676;
 }
 
 details[open] > summary::before {

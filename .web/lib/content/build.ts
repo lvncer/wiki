@@ -41,17 +41,16 @@ function directoryChildrenFor(absPath: string, bySlug: Map<string, InternalRecor
   const { dirs, files } = listImmediateChildren(path.dirname(absPath));
   const entries: DirectoryEntry[] = [];
 
+  // 表示名は H1(表記ゆれが大きい)ではなく、実際のフォルダ名・ファイル名をそのまま使う。
   for (const d of dirs) {
     const slug = fileToSlug(path.join(d, "README.md"));
-    const rec = bySlug.get(slug);
-    if (rec) entries.push({ kind: "folder", slug, title: rec.title });
+    if (bySlug.has(slug)) entries.push({ kind: "folder", slug, title: path.basename(d) });
   }
   for (const f of files) {
     if (!f.toLowerCase().endsWith(".md")) continue;
     if (path.basename(f).toLowerCase() === "readme.md") continue;
     const slug = fileToSlug(f);
-    const rec = bySlug.get(slug);
-    if (rec) entries.push({ kind: "file", slug, title: rec.title });
+    if (bySlug.has(slug)) entries.push({ kind: "file", slug, title: path.basename(f, ".md") });
   }
   return entries.length > 0 ? entries : undefined;
 }

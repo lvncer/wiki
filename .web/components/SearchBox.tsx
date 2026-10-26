@@ -76,15 +76,15 @@ export default function SearchBox() {
         onBlur={() => setTimeout(() => setOpen(false), 120)}
         placeholder="検索"
         aria-label="ウィキ内検索"
-        className="w-full rounded border border-ink-300 bg-white px-3 py-1.5 text-sm text-ink-900 focus:border-ink-600 focus:outline-none"
+        className="w-full rounded border border-ink-300 bg-white px-3 py-1.5 text-sm text-ink-900 focus:border-ink-600 focus:outline-none dark:border-ink-700 dark:bg-ink-800 dark:text-ink-100 dark:focus:border-ink-400"
       />
       {open && results.length > 0 && (
-        <ul className="absolute z-20 mt-1 w-full max-h-80 overflow-auto border border-ink-300 bg-white shadow-sm">
+        <ul className="absolute z-20 mt-1 w-full max-h-80 overflow-auto border border-ink-300 bg-white shadow-sm dark:border-ink-700 dark:bg-ink-800">
           {results.map((r) => (
-            <li key={r.id} className="border-b border-ink-100 last:border-b-0">
-              <a href={hrefForSlug(r.slug)} className="block px-3 py-2 text-sm hover:bg-ink-50">
-                <div className="font-medium text-ink-900">{r.title}</div>
-                {r.category && <div className="text-xs text-ink-500">{r.category}</div>}
+            <li key={r.id} className="border-b border-ink-100 last:border-b-0 dark:border-ink-700">
+              <a href={hrefForSlug(r.slug)} className="block px-3 py-2 text-sm hover:bg-ink-50 dark:hover:bg-ink-700">
+                <div className="font-medium text-ink-900 dark:text-ink-100">{r.title}</div>
+                {r.category && <div className="text-xs text-ink-500 dark:text-ink-400">{r.category}</div>}
               </a>
             </li>
           ))}

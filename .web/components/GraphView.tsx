@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import type { GraphData } from "@/lib/content/graph";
+import { isDarkMode, THEME_CHANGE_EVENT } from "@/lib/theme";
 
 // Canvas / window に依存するため SSR 禁止。型は react-force-graph-2d のジェネリクスが
 // 動的 import + ref forwarding と噛み合いにくいので、このコンポーネント内だけ any を許容する。
@@ -17,10 +18,18 @@ function hrefFor(slug: string): string {
 export default function GraphView() {
   const [data, setData] = useState<GraphData | null>(null);
   const [hoverId, setHoverId] = useState<string | null>(null);
+  const [dark, setDark] = useState(false);
   const router = useRouter();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fgRef = useRef<any>(null);
   const neighborsRef = useRef<Map<string, Set<string>>>(new Map());
+
+  useEffect(() => {
+    setDark(isDarkMode());
+    const handler = () => setDark(isDarkMode());
+    window.addEventListener(THEME_CHANGE_EVENT, handler);
+    return () => window.removeEventListener(THEME_CHANGE_EVENT, handler);
+  }, []);
 
   useEffect(() => {
     fetch("/generated/graph.json")
@@ -55,21 +64,25 @@ export default function GraphView() {
   );
 
   if (!data) {
-    return <div className="p-8 text-sm text-ink-500">グラフを読み込み中…</div>;
+    return <div className="p-8 text-sm text-ink-500 dark:text-ink-400">グラフを読み込み中…</div>;
   }
 
+  const dimmedNodeColor = dark ? "#4a4a4a" : "#e2e2e2";
+  const linkColor = dark ? "#4a4a4a" : "#c7c7c7";
+
   return (
-    <div className="h-[calc(100vh-10rem)] w-full border border-ink-200">
+    <div className="h-[calc(100vh-10rem)] w-full border border-ink-200 dark:border-ink-700">
       <ForceGraph2D
         ref={fgRef}
         graphData={data}
+        backgroundColor={dark ? "#161616" : "#ffffff"}
         nodeId="id"
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         nodeLabel={(n: any) => `${n.title}${n.category ? ` (${n.category})` : ""}`}
         nodeRelSize={4}
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        nodeColor={(n: any) => (isDimmed(n.id) ? "#e2e2e2" : n.color)}
-        linkColor={() => "#c7c7c7"}
+        nodeColor={(n: any) => (isDimmed(n.id) ? dimmedNodeColor : n.color)}
+        linkColor={() => linkColor}
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         linkWidth={(l: any) => {
           const s = typeof l.source === "string" ? l.source : l.source.id;
