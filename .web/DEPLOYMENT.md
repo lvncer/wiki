@@ -68,6 +68,23 @@ exit 1
 
 ---
 
+## 3-1. トップページの「最近の更新」用に GitHub トークンを設定する(必須)
+
+トップページの「最近の更新」は、ビルド時に GitHub API でコミット履歴を取得して表示する。`GITHUB_TOKEN` が未設定の場合は **ビルドは落ちずに、このセクションが単に表示されないだけ**(壊れない設計)。表示させたい場合のみ以下を行う。
+
+1. GitHub の [Settings → Developer settings → Personal access tokens → Fine-grained tokens](https://github.com/settings/tokens?type=beta) で新規トークンを発行する。
+   - Repository access: このリポジトリ(`lvncerpedia/wiki`)のみに限定する。
+   - Permissions: **Contents: Read-only** のみで足りる。
+2. Vercel プロジェクトの **Settings → Environment Variables** で以下を追加する。
+   - Key: `GITHUB_TOKEN`
+   - Value: 発行したトークン
+   - Environment: Production(必要なら Preview も)
+3. 再デプロイすると反映される(環境変数の追加はデプロイをトリガーしないので、何もしなければ次の push まで反映されない。すぐ試したい場合は Deployments タブから **Redeploy** する)。
+
+ローカルで試したい場合は `.web/.env.local` に `GITHUB_TOKEN=xxxx` と書いて `npm run build` / `npm run dev`(このファイルは `.gitignore` 対象なのでコミットされない)。
+
+---
+
 ## 4. 日常運用
 
 - 通常の Obsidian での編集フロー(ノートを書く → `git add` → `git commit` → `git push`)をそのまま続けるだけでよい。`.scripts/gen_index.py` 等の既存ワークフローも今まで通り使える。
