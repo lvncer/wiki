@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import { walkMarkdownFiles, topCategoryOf, readFileUtf8 } from "./fs";
-import { splitFrontmatter, titleOf } from "./frontmatter";
+import { walkMarkdownFiles, topCategoryOf, readFileUtf8, listImmediateChildren } from "./fs";
+import { splitFrontmatter, titleOf, stripGeneratedIndexBlock } from "./frontmatter";
 import { processMarkdown, type LinkedNote } from "./markdown";
 import { fileToSlug } from "./slug";
 import { colorForCategory } from "./categories";
@@ -9,12 +9,20 @@ import { colorForCategory } from "./categories";
 const CACHE_DIR = path.resolve(process.cwd(), ".content-cache");
 const PUBLIC_GENERATED_DIR = path.resolve(process.cwd(), "public", "generated");
 
+export interface DirectoryEntry {
+  kind: "folder" | "file";
+  slug: string;
+  title: string;
+}
+
 export interface NoteRecord {
   slug: string;
   title: string;
   category?: string;
   html: string;
   backlinks: { slug: string; title: string }[];
+  /** README.md かつ直下に子がある場合のみ: GitHub 風のフォルダ内一覧(サブフォルダ→ファイルの順)。 */
+  children?: DirectoryEntry[];
 }
 
 interface InternalRecord {
@@ -24,6 +32,28 @@ interface InternalRecord {
   html: string;
   plainText: string;
   linkedNotes: LinkedNote[];
+}
+
+/** README.md のファイルについてのみ、直下の子(サブフォルダ→ファイルの順)を一覧化する。
+ *  GitHub のリポジトリブラウザ相当の一覧を Web 側だけで組み立てる(ソースの .md は変更しない)。 */
+function directoryChildrenFor(absPath: string, bySlug: Map<string, InternalRecord>): DirectoryEntry[] | undefined {
+  if (path.basename(absPath).toLowerCase() !== "readme.md") return undefined;
+  const { dirs, files } = listImmediateChildren(path.dirname(absPath));
+  const entries: DirectoryEntry[] = [];
+
+  for (const d of dirs) {
+    const slug = fileToSlug(path.join(d, "README.md"));
+    const rec = bySlug.get(slug);
+    if (rec) entries.push({ kind: "folder", slug, title: rec.title });
+  }
+  for (const f of files) {
+    if (!f.toLowerCase().endsWith(".md")) continue;
+    if (path.basename(f).toLowerCase() === "readme.md") continue;
+    const slug = fileToSlug(f);
+    const rec = bySlug.get(slug);
+    if (rec) entries.push({ kind: "file", slug, title: rec.title });
+  }
+  return entries.length > 0 ? entries : undefined;
 }
 
 function fallbackTitleFor(absPath: string, slug: string): string {
@@ -46,12 +76,18 @@ export function buildContentData(): { notes: NoteRecord[] } {
     const { content } = splitFrontmatter(raw);
     const slug = fileToSlug(absPath);
     const title = titleOf(content, fallbackTitleFor(absPath, slug));
+    // linkedNotes(グラフ・バックリンク用)は元の本文(自動生成ブロック込み)から抽出する。
+    // .scripts/gen_index.py --stats のエッジ数(477)はこのブロック内のリンクが大半を占めるため、
+    // ここで取りこぼすとグラフがスカスカになる。
     const { html, linkedNotes, plainText } = processMarkdown(absPath, content);
+    // 表示用 HTML だけ、GitHub 風の一覧コンポーネントに置き換える自動生成ブロックを取り除く
+    // (コメントマーカーはレンダリング後も HTML コメントとして残るため、同じ正規表現で除去できる)。
+    const displayHtml = stripGeneratedIndexBlock(html);
     bySlug.set(slug, {
       absPath,
       title,
       category: topCategoryOf(absPath),
-      html,
+      html: displayHtml,
       plainText: plainText.slice(0, 20000),
       linkedNotes,
     });
@@ -82,6 +118,7 @@ export function buildContentData(): { notes: NoteRecord[] } {
       backlinks: [...(backlinkMap.get(slug) ?? [])]
         .map((s) => ({ slug: s, title: bySlug.get(s)!.title }))
         .sort((a, b) => a.title.localeCompare(b.title, "ja")),
+      children: directoryChildrenFor(rec.absPath, bySlug),
     }))
     .sort((a, b) => a.slug.localeCompare(b.slug));
 

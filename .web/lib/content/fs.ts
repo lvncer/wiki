@@ -65,3 +65,19 @@ export function topCategoryOf(absPath: string): string | undefined {
   if (rel.length <= 1) return undefined;
   return rel[0];
 }
+
+/** 指定フォルダ直下の子(サブフォルダ・ファイル)を casefold 順で返す。
+ *  .scripts/gen_index.py の Wiki.children() と同じ除外規則(ドット始まり・EXCLUDE_DIRS を除外)。 */
+export function listImmediateChildren(dirAbsPath: string): { dirs: string[]; files: string[] } {
+  const entries = readDirSafe(dirAbsPath)
+    .filter((e) => !isExcludedName(e.name))
+    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
+  const dirs: string[] = [];
+  const files: string[] = [];
+  for (const e of entries) {
+    const full = path.join(dirAbsPath, e.name);
+    if (e.isDirectory()) dirs.push(full);
+    else if (e.isFile()) files.push(full);
+  }
+  return { dirs, files };
+}

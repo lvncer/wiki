@@ -4,6 +4,7 @@ import MarkdownArticle from "@/components/MarkdownArticle";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Backlinks from "@/components/Backlinks";
 import ArticleLayout from "@/components/ArticleLayout";
+import DirectoryListing from "@/components/DirectoryListing";
 
 export function generateStaticParams() {
   return getAllNotes()
@@ -20,6 +21,7 @@ export default async function WikiPage({ params }: { params: Promise<{ slug: str
   return (
     <ArticleLayout slug={slug}>
       <Breadcrumbs slug={slug} />
+      <DirectoryListing entries={note.children} />
       <MarkdownArticle html={note.html} />
       <Backlinks backlinks={note.backlinks} />
     </ArticleLayout>
