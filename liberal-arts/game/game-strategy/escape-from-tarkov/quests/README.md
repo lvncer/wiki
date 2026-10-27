@@ -1,9 +1,9 @@
 # Quests
 
 - [Prapor](./prapor.md)
-- Therapist
+- [Therapist](./therapist.md)
 - Fence
-- Skier
+- [Skier](./skier.md)
 - Peacekeeper
 - Mechanic
 - Ragman
