@@ -12,7 +12,8 @@ export function getThemePreference(): ThemePreference {
   if (typeof window === "undefined") return "system";
   try {
     const stored = localStorage.getItem(THEME_STORAGE_KEY);
-    if (stored === "light" || stored === "dark" || stored === "system") return stored;
+    if (stored === "light" || stored === "dark" || stored === "system")
+      return stored;
   } catch {
     // localStorage が使えない環境(プライベートモード等)では無視する
   }

@@ -1,7 +1,7 @@
 import path from "node:path";
 import { REPO_ROOT } from "./fs";
-import { fileToSlug } from "./slug";
 import { getNoteBySlug } from "./note";
+import { fileToSlug } from "./slug";
 
 const OWNER = "lvncerpedia";
 const REPO = "wiki";
@@ -26,7 +26,10 @@ interface CommitDetail {
 function authHeaders(): Record<string, string> | undefined {
   const token = process.env.GITHUB_TOKEN;
   if (!token) return undefined;
-  return { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" };
+  return {
+    Authorization: `Bearer ${token}`,
+    Accept: "application/vnd.github+json",
+  };
 }
 
 /** 直近のコミットを新しい順に辿り、.md ファイルが最後に変更されたコミットを集める。
@@ -46,7 +49,9 @@ export async function getRecentChanges(limit = 8): Promise<RecentChange[]> {
 
     for (const c of commits) {
       if (changes.length >= limit) break;
-      const detailRes = await fetch(`${API_BASE}/commits/${c.sha}`, { headers });
+      const detailRes = await fetch(`${API_BASE}/commits/${c.sha}`, {
+        headers,
+      });
       if (!detailRes.ok) continue;
       const detail: CommitDetail = await detailRes.json();
       const date = detail.commit.author?.date;
@@ -56,7 +61,8 @@ export async function getRecentChanges(limit = 8): Promise<RecentChange[]> {
       for (const f of detail.files ?? []) {
         if (changes.length >= limit) break;
         if (!f.filename.toLowerCase().endsWith(".md")) continue;
-        if (f.filename.startsWith(".web/") || f.filename.startsWith(".github/")) continue;
+        if (f.filename.startsWith(".web/") || f.filename.startsWith(".github/"))
+          continue;
         if (seenPaths.has(f.filename)) continue;
         seenPaths.add(f.filename);
 

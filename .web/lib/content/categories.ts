@@ -18,7 +18,7 @@ const RAW_COLOR_GROUPS: Record<string, number> = {
 };
 
 export const CATEGORY_COLORS: Record<string, string> = Object.fromEntries(
-  Object.entries(RAW_COLOR_GROUPS).map(([k, v]) => [k, rgbIntToHex(v)])
+  Object.entries(RAW_COLOR_GROUPS).map(([k, v]) => [k, rgbIntToHex(v)]),
 );
 
 // .obsidian/graph.json の colorGroups に定義が無いトップレベルフォルダ(development-principles 等)

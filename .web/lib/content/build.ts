@@ -1,10 +1,19 @@
 import fs from "node:fs";
 import path from "node:path";
-import { walkMarkdownFiles, topCategoryOf, readFileUtf8, listImmediateChildren } from "./fs";
-import { splitFrontmatter, titleOf, stripGeneratedIndexBlock } from "./frontmatter";
-import { processMarkdown, type LinkedNote } from "./markdown";
-import { fileToSlug } from "./slug";
 import { colorForCategory } from "./categories";
+import {
+  splitFrontmatter,
+  stripGeneratedIndexBlock,
+  titleOf,
+} from "./frontmatter";
+import {
+  listImmediateChildren,
+  readFileUtf8,
+  topCategoryOf,
+  walkMarkdownFiles,
+} from "./fs";
+import { type LinkedNote, processMarkdown } from "./markdown";
+import { fileToSlug } from "./slug";
 
 const CACHE_DIR = path.resolve(process.cwd(), ".content-cache");
 const PUBLIC_GENERATED_DIR = path.resolve(process.cwd(), "public", "generated");
@@ -36,7 +45,10 @@ interface InternalRecord {
 
 /** README.md のファイルについてのみ、直下の子(サブフォルダ→ファイルの順)を一覧化する。
  *  GitHub のリポジトリブラウザ相当の一覧を Web 側だけで組み立てる(ソースの .md は変更しない)。 */
-function directoryChildrenFor(absPath: string, bySlug: Map<string, InternalRecord>): DirectoryEntry[] | undefined {
+function directoryChildrenFor(
+  absPath: string,
+  bySlug: Map<string, InternalRecord>,
+): DirectoryEntry[] | undefined {
   if (path.basename(absPath).toLowerCase() !== "readme.md") return undefined;
   const { dirs, files } = listImmediateChildren(path.dirname(absPath));
   const entries: DirectoryEntry[] = [];
@@ -44,13 +56,15 @@ function directoryChildrenFor(absPath: string, bySlug: Map<string, InternalRecor
   // 表示名は H1(表記ゆれが大きい)ではなく、実際のフォルダ名・ファイル名をそのまま使う。
   for (const d of dirs) {
     const slug = fileToSlug(path.join(d, "README.md"));
-    if (bySlug.has(slug)) entries.push({ kind: "folder", slug, title: path.basename(d) });
+    if (bySlug.has(slug))
+      entries.push({ kind: "folder", slug, title: path.basename(d) });
   }
   for (const f of files) {
     if (!f.toLowerCase().endsWith(".md")) continue;
     if (path.basename(f).toLowerCase() === "readme.md") continue;
     const slug = fileToSlug(f);
-    if (bySlug.has(slug)) entries.push({ kind: "file", slug, title: path.basename(f, ".md") });
+    if (bySlug.has(slug))
+      entries.push({ kind: "file", slug, title: path.basename(f, ".md") });
   }
   return entries.length > 0 ? entries : undefined;
 }
@@ -102,7 +116,8 @@ export function buildContentData(): { notes: NoteRecord[] } {
       const targetSlug = fileToSlug(link.absPath);
       if (targetSlug === slug) continue;
       if (!bySlug.has(targetSlug)) continue;
-      if (!link.isDirectoryLink) graphLinks.push({ source: slug, target: targetSlug });
+      if (!link.isDirectoryLink)
+        graphLinks.push({ source: slug, target: targetSlug });
       if (!backlinkMap.has(targetSlug)) backlinkMap.set(targetSlug, new Set());
       backlinkMap.get(targetSlug)!.add(slug);
     }
@@ -123,7 +138,11 @@ export function buildContentData(): { notes: NoteRecord[] } {
 
   // --- 内部キャッシュ(public 配下には置かない=ブラウザから直接見えない) ---
   fs.mkdirSync(CACHE_DIR, { recursive: true });
-  fs.writeFileSync(path.join(CACHE_DIR, "notes.json"), JSON.stringify(notes), "utf-8");
+  fs.writeFileSync(
+    path.join(CACHE_DIR, "notes.json"),
+    JSON.stringify(notes),
+    "utf-8",
+  );
 
   // --- ブラウザから fetch される生成物 ---
   fs.mkdirSync(PUBLIC_GENERATED_DIR, { recursive: true });
@@ -137,7 +156,7 @@ export function buildContentData(): { notes: NoteRecord[] } {
   fs.writeFileSync(
     path.join(PUBLIC_GENERATED_DIR, "graph.json"),
     JSON.stringify({ nodes: graphNodes, links: graphLinks }),
-    "utf-8"
+    "utf-8",
   );
 
   const searchDocs = notes.map((n) => ({
@@ -147,7 +166,11 @@ export function buildContentData(): { notes: NoteRecord[] } {
     slug: n.slug,
     body: bySlug.get(n.slug)!.plainText,
   }));
-  fs.writeFileSync(path.join(PUBLIC_GENERATED_DIR, "search-docs.json"), JSON.stringify(searchDocs), "utf-8");
+  fs.writeFileSync(
+    path.join(PUBLIC_GENERATED_DIR, "search-docs.json"),
+    JSON.stringify(searchDocs),
+    "utf-8",
+  );
 
   return { notes };
 }

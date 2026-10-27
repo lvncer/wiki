@@ -1,18 +1,22 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { GraphData } from "@/lib/content/graph";
 import { isDarkMode, THEME_CHANGE_EVENT } from "@/lib/theme";
 
 // Canvas / window に依存するため SSR 禁止。型は react-force-graph-2d のジェネリクスが
 // 動的 import + ref forwarding と噛み合いにくいので、このコンポーネント内だけ any を許容する。
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), { ssr: false }) as any;
+const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
+  ssr: false,
+}) as any;
 
 function hrefFor(slug: string): string {
-  return slug === "" ? "/" : `/wiki/${slug.split("/").map(encodeURIComponent).join("/")}`;
+  return slug === ""
+    ? "/"
+    : `/wiki/${slug.split("/").map(encodeURIComponent).join("/")}`;
 }
 
 export default function GraphView() {
@@ -60,11 +64,15 @@ export default function GraphView() {
       if (id === hoverId) return false;
       return !neighborsRef.current.get(hoverId)?.has(id);
     },
-    [hoverId]
+    [hoverId],
   );
 
   if (!data) {
-    return <div className="p-8 text-sm text-ink-500 dark:text-ink-400">グラフを読み込み中…</div>;
+    return (
+      <div className="p-8 text-sm text-ink-500 dark:text-ink-400">
+        グラフを読み込み中…
+      </div>
+    );
   }
 
   const dimmedNodeColor = dark ? "#4a4a4a" : "#e2e2e2";
@@ -78,7 +86,9 @@ export default function GraphView() {
         backgroundColor={dark ? "#161616" : "#ffffff"}
         nodeId="id"
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        nodeLabel={(n: any) => `${n.title}${n.category ? ` (${n.category})` : ""}`}
+        nodeLabel={(n: any) =>
+          `${n.title}${n.category ? ` (${n.category})` : ""}`
+        }
         nodeRelSize={4}
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         nodeColor={(n: any) => (isDimmed(n.id) ? dimmedNodeColor : n.color)}

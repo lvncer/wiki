@@ -1,8 +1,8 @@
+import ArticleLayout from "@/components/ArticleLayout";
+import MarkdownArticle from "@/components/MarkdownArticle";
+import RecentChanges from "@/components/RecentChanges";
 import { getHomeContent } from "@/lib/content/home";
 import { getRecentChanges } from "@/lib/content/recentChanges";
-import MarkdownArticle from "@/components/MarkdownArticle";
-import ArticleLayout from "@/components/ArticleLayout";
-import RecentChanges from "@/components/RecentChanges";
 
 export default async function HomePage() {
   const { html } = getHomeContent();

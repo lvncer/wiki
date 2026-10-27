@@ -1,9 +1,9 @@
 import Link from "next/link";
-import SearchBox from "./SearchBox";
-import ThemeToggle from "./ThemeToggle";
+import { getTopCategories } from "@/lib/content/note";
 import CategoryMenu from "./CategoryMenu";
 import GitHubLink from "./GitHubLink";
-import { getTopCategories } from "@/lib/content/note";
+import SearchBox from "./SearchBox";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const categories = getTopCategories();
@@ -11,7 +11,10 @@ export default function Header() {
   return (
     <header className="border-b border-ink-300 dark:border-ink-700">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="whitespace-nowrap font-serif text-xl font-bold text-ink-900 dark:text-ink-50">
+        <Link
+          href="/"
+          className="whitespace-nowrap font-serif text-xl font-bold text-ink-900 dark:text-ink-50"
+        >
           lvncerpedia
         </Link>
         <nav className="flex gap-4 text-sm text-ink-700 dark:text-ink-300">

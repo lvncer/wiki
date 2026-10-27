@@ -68,7 +68,10 @@ export function topCategoryOf(absPath: string): string | undefined {
 
 /** 指定フォルダ直下の子(サブフォルダ・ファイル)を casefold 順で返す。
  *  .scripts/gen_index.py の Wiki.children() と同じ除外規則(ドット始まり・EXCLUDE_DIRS を除外)。 */
-export function listImmediateChildren(dirAbsPath: string): { dirs: string[]; files: string[] } {
+export function listImmediateChildren(dirAbsPath: string): {
+  dirs: string[];
+  files: string[];
+} {
   const entries = readDirSafe(dirAbsPath)
     .filter((e) => !isExcludedName(e.name))
     .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));

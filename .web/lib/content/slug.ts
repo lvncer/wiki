@@ -1,5 +1,5 @@
 import path from "node:path";
-import { REPO_ROOT, fileExists } from "./fs";
+import { fileExists, REPO_ROOT } from "./fs";
 
 function toPosix(p: string): string {
   return p.split(path.sep).join("/");

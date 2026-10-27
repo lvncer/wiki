@@ -12,5 +12,7 @@ export function copyAssetToPublic(absPath: string): string {
   const dest = path.join(PUBLIC_DIR, ASSET_SUBDIR, rel);
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.copyFileSync(absPath, dest);
-  return "/" + [ASSET_SUBDIR, ...rel.split("/")].map(encodeURIComponent).join("/");
+  return (
+    "/" + [ASSET_SUBDIR, ...rel.split("/")].map(encodeURIComponent).join("/")
+  );
 }

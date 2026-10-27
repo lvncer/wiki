@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
 import type MiniSearch from "minisearch";
+import { useRef, useState } from "react";
 
 interface SearchDoc {
   id: string;
@@ -36,7 +36,9 @@ export default function SearchBox() {
       loadingRef.current = (async () => {
         const [{ default: MiniSearch }, docs] = await Promise.all([
           import("minisearch"),
-          fetch("/generated/search-docs.json").then((r) => r.json() as Promise<SearchDoc[]>),
+          fetch("/generated/search-docs.json").then(
+            (r) => r.json() as Promise<SearchDoc[]>,
+          ),
         ]);
         const ms = new MiniSearch<SearchDoc>({
           fields: ["title", "body"],
@@ -81,10 +83,22 @@ export default function SearchBox() {
       {open && results.length > 0 && (
         <ul className="absolute z-20 mt-1 w-full max-h-80 overflow-auto border border-ink-300 bg-white shadow-xs dark:border-ink-700 dark:bg-ink-800">
           {results.map((r) => (
-            <li key={r.id} className="border-b border-ink-100 last:border-b-0 dark:border-ink-700">
-              <a href={hrefForSlug(r.slug)} className="block px-3 py-2 text-sm hover:bg-ink-50 dark:hover:bg-ink-700">
-                <div className="font-medium text-ink-900 dark:text-ink-100">{r.title}</div>
-                {r.category && <div className="text-xs text-ink-500 dark:text-ink-400">{r.category}</div>}
+            <li
+              key={r.id}
+              className="border-b border-ink-100 last:border-b-0 dark:border-ink-700"
+            >
+              <a
+                href={hrefForSlug(r.slug)}
+                className="block px-3 py-2 text-sm hover:bg-ink-50 dark:hover:bg-ink-700"
+              >
+                <div className="font-medium text-ink-900 dark:text-ink-100">
+                  {r.title}
+                </div>
+                {r.category && (
+                  <div className="text-xs text-ink-500 dark:text-ink-400">
+                    {r.category}
+                  </div>
+                )}
               </a>
             </li>
           ))}

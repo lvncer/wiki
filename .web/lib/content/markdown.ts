@@ -1,15 +1,15 @@
 import path from "node:path";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
+import { toString as mdastToString } from "mdast-util-to-string";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
 import { visit } from "unist-util-visit";
-import { toString as mdastToString } from "mdast-util-to-string";
+import { copyAssetToPublic } from "./assets";
 import { resolveLink } from "./links";
 import { fileToSlug } from "./slug";
-import { copyAssetToPublic } from "./assets";
 
 type MdastLike = Parameters<typeof visit>[0];
 type LinkNode = {
@@ -43,11 +43,18 @@ export interface MarkdownResult {
  *  サイト内パス(/wiki/...)やコピー後のアセットパス(/wiki-assets/...)に書き換える。 */
 function noteOrDirSlugUrl(absPath: string, hash?: string): string {
   const slug = fileToSlug(absPath);
-  const base = slug === "" ? "/" : `/wiki/${slug.split("/").map(encodeURIComponent).join("/")}`;
+  const base =
+    slug === ""
+      ? "/"
+      : `/wiki/${slug.split("/").map(encodeURIComponent).join("/")}`;
   return hash ? `${base}#${hash}` : base;
 }
 
-function rewriteUrl(fromAbsFile: string, rawUrl: string, collected: LinkedNote[]): string {
+function rewriteUrl(
+  fromAbsFile: string,
+  rawUrl: string,
+  collected: LinkedNote[],
+): string {
   const res = resolveLink(fromAbsFile, rawUrl);
   switch (res.type) {
     case "note":
@@ -78,7 +85,11 @@ function remarkRewriteLinks(fromAbsFile: string, collected: LinkedNote[]) {
       if (n.url === "#" && before !== "#") {
         n.data = {
           ...n.data,
-          hProperties: { ...n.data?.hProperties, className: "broken-link", title: `リンク先が見つかりません: ${before}` },
+          hProperties: {
+            ...n.data?.hProperties,
+            className: "broken-link",
+            title: `リンク先が見つかりません: ${before}`,
+          },
         };
       }
     });
@@ -97,16 +108,24 @@ function rehypeRewriteRawHtml(fromAbsFile: string, collected: LinkedNote[]) {
       if (!el.properties) return;
       if (el.tagName === "img" && typeof el.properties.src === "string") {
         const res = resolveLink(fromAbsFile, el.properties.src);
-        if (res.type === "asset") el.properties.src = copyAssetToPublic(res.absPath);
+        if (res.type === "asset")
+          el.properties.src = copyAssetToPublic(res.absPath);
       }
       if (el.tagName === "a" && typeof el.properties.href === "string") {
-        el.properties.href = rewriteUrl(fromAbsFile, el.properties.href, collected);
+        el.properties.href = rewriteUrl(
+          fromAbsFile,
+          el.properties.href,
+          collected,
+        );
       }
     });
   };
 }
 
-export function processMarkdown(absFile: string, content: string): MarkdownResult {
+export function processMarkdown(
+  absFile: string,
+  content: string,
+): MarkdownResult {
   const linkedNotes: LinkedNote[] = [];
 
   const mdastTree = unified().use(remarkParse).use(remarkGfm).parse(content);

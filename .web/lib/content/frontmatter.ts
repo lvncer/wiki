@@ -3,7 +3,8 @@ import matter from "gray-matter";
 // .scripts/gen_index.py の BLOCK_RE と同じ範囲(START〜END の HTML コメントに挟まれた
 // 自動生成の「## このフォルダの中身」節)。Web 側では GitHub 風の一覧コンポーネントに
 // 置き換えるため、本文からはこのブロックだけを取り除く(手書き部分は一切触らない)。
-const INDEX_BLOCK_RE = /<!--\s*index:start[\s\S]*?-->[\s\S]*?<!--\s*index:end\s*-->/g;
+const INDEX_BLOCK_RE =
+  /<!--\s*index:start[\s\S]*?-->[\s\S]*?<!--\s*index:end\s*-->/g;
 
 export function stripGeneratedIndexBlock(content: string): string {
   return content.replace(INDEX_BLOCK_RE, "").trim();

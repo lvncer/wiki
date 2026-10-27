@@ -3,13 +3,18 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export default function CategoryMenu({ categories }: { categories: { slug: string; title: string }[] }) {
+export default function CategoryMenu({
+  categories,
+}: {
+  categories: { slug: string; title: string }[];
+}) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target as Node))
+        setOpen(false);
     }
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);

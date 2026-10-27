@@ -7,7 +7,9 @@ import { useEffect } from "react";
  *  Markdown の生成ロジックには触れず、レンダリング後の DOM を後付けで強化するだけ。 */
 export default function SortableTables() {
   useEffect(() => {
-    const tables = Array.from(document.querySelectorAll<HTMLTableElement>("article table"));
+    const tables = Array.from(
+      document.querySelectorAll<HTMLTableElement>("article table"),
+    );
     const cleanups: (() => void)[] = [];
 
     for (const table of tables) {
@@ -46,7 +48,10 @@ export default function SortableTables() {
         th.style.userSelect = "none";
         th.setAttribute("role", "button");
         th.setAttribute("tabindex", "0");
-        th.setAttribute("aria-label", `${th.textContent?.trim() ?? ""} で並び替え`);
+        th.setAttribute(
+          "aria-label",
+          `${th.textContent?.trim() ?? ""} で並び替え`,
+        );
 
         const indicator = document.createElement("span");
         indicator.className = "ml-1 inline-block text-xs opacity-50";
@@ -57,10 +62,15 @@ export default function SortableTables() {
           dir = sortedCol === colIndex && dir === "asc" ? "desc" : "asc";
           sortedCol = colIndex;
           resetBtn.disabled = false;
-          indicators.forEach((ind, i) => (ind.textContent = i === colIndex ? (dir === "asc" ? " ▲" : " ▼") : ""));
+          indicators.forEach(
+            (ind, i) =>
+              (ind.textContent =
+                i === colIndex ? (dir === "asc" ? " ▲" : " ▼") : ""),
+          );
 
           const rows = Array.from(tbody.rows);
-          const getValue = (row: HTMLTableRowElement) => row.cells[colIndex]?.textContent?.trim() ?? "";
+          const getValue = (row: HTMLTableRowElement) =>
+            row.cells[colIndex]?.textContent?.trim() ?? "";
           const isNumeric = rows.every((r) => {
             const v = getValue(r).replace(/[,%]/g, "");
             return v === "" || !Number.isNaN(Number(v));
@@ -70,7 +80,8 @@ export default function SortableTables() {
             const va = getValue(a);
             const vb = getValue(b);
             const cmp = isNumeric
-              ? (parseFloat(va.replace(/[,%]/g, "")) || 0) - (parseFloat(vb.replace(/[,%]/g, "")) || 0)
+              ? (parseFloat(va.replace(/[,%]/g, "")) || 0) -
+                (parseFloat(vb.replace(/[,%]/g, "")) || 0)
               : va.localeCompare(vb, "ja");
             return dir === "asc" ? cmp : -cmp;
           });
