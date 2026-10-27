@@ -6,7 +6,7 @@ export default function MarkdownArticle({ html }: { html: string }) {
   return (
     <>
       <article
-        className="prose dark:prose-invert max-w-none [&_table]:max-w-5xl xl:[&_table]:-mx-16 xl:[&_table]:w-[calc(100%+8rem)]"
+        className="prose dark:prose-invert max-w-none [&_table]:max-w-4xl xl:[&_table]:-mx-16 xl:[&_table]:w-[calc(100%+8rem)]"
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <SortableTables />
