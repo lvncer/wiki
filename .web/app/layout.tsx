@@ -3,6 +3,11 @@ import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import "./globals.css";
 
+// @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
+// Remove this opt-out after verifying the segment passes validation without it.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+export const instant = false;
+
 export const metadata: Metadata = {
   title: "lvncerpedia",
   description: "個人の学習メモ Wiki(Obsidian Vault を Web 公開)",

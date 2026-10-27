@@ -76,10 +76,10 @@ export default function SearchBox() {
         onBlur={() => setTimeout(() => setOpen(false), 120)}
         placeholder="検索"
         aria-label="ウィキ内検索"
-        className="w-full rounded border border-ink-300 bg-white px-3 py-1.5 text-sm text-ink-900 focus:border-ink-600 focus:outline-none dark:border-ink-700 dark:bg-ink-800 dark:text-ink-100 dark:focus:border-ink-400"
+        className="w-full rounded-sm border border-ink-300 bg-white px-3 py-1.5 text-sm text-ink-900 focus:border-ink-600 focus:outline-hidden dark:border-ink-700 dark:bg-ink-800 dark:text-ink-100 dark:focus:border-ink-400"
       />
       {open && results.length > 0 && (
-        <ul className="absolute z-20 mt-1 w-full max-h-80 overflow-auto border border-ink-300 bg-white shadow-sm dark:border-ink-700 dark:bg-ink-800">
+        <ul className="absolute z-20 mt-1 w-full max-h-80 overflow-auto border border-ink-300 bg-white shadow-xs dark:border-ink-700 dark:bg-ink-800">
           {results.map((r) => (
             <li key={r.id} className="border-b border-ink-100 last:border-b-0 dark:border-ink-700">
               <a href={hrefForSlug(r.slug)} className="block px-3 py-2 text-sm hover:bg-ink-50 dark:hover:bg-ink-700">

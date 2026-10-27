@@ -40,7 +40,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={dark ? "ライトテーマに切り替え" : "ダークテーマに切り替え"}
-      className="rounded border border-ink-300 p-1.5 text-ink-700 hover:bg-ink-50 dark:border-ink-700 dark:text-ink-300 dark:hover:bg-ink-800"
+      className="rounded-sm border border-ink-300 p-1.5 text-ink-700 hover:bg-ink-50 dark:border-ink-700 dark:text-ink-300 dark:hover:bg-ink-800"
     >
       {mounted ? dark ? <SunIcon /> : <MoonIcon /> : <span className="block h-[18px] w-[18px]" />}
     </button>

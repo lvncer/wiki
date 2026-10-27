@@ -37,7 +37,7 @@ export default function CategoryMenu({ categories }: { categories: { slug: strin
         <ul
           role="menu"
           aria-label="カテゴリ一覧"
-          className="absolute left-0 top-full z-10 mt-2 w-48 rounded border border-ink-300 bg-white py-1 shadow-lg dark:border-ink-700 dark:bg-ink-900"
+          className="absolute left-0 top-full z-10 mt-2 w-48 rounded-sm border border-ink-300 bg-white py-1 shadow-lg dark:border-ink-700 dark:bg-ink-900"
         >
           {categories.map((c) => (
             <li key={c.slug} role="none">
