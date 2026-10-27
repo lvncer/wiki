@@ -38,6 +38,23 @@ export function walkMarkdownFiles(root: string = REPO_ROOT): string[] {
   return out.sort();
 }
 
+/** REPO_ROOT 以下の全ディレクトリ(除外規則適用後)の絶対パス一覧を返す。
+ *  README.md を持たないフォルダにも最低限のページ(ファイルツリーのみ)を用意するために使う。 */
+export function walkDirectories(root: string = REPO_ROOT): string[] {
+  const out: string[] = [];
+  const visit = (dir: string) => {
+    for (const entry of readDirSafe(dir)) {
+      if (isExcludedName(entry.name)) continue;
+      if (!entry.isDirectory()) continue;
+      const full = path.join(dir, entry.name);
+      out.push(full);
+      visit(full);
+    }
+  };
+  visit(root);
+  return out.sort();
+}
+
 /** リンク/画像から参照されている非 .md ファイルを静的配信用にコピーする際の存在確認に使う。 */
 export function fileExists(absPath: string): boolean {
   try {

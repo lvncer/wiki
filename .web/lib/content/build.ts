@@ -10,6 +10,7 @@ import {
   listImmediateChildren,
   readFileUtf8,
   topCategoryOf,
+  walkDirectories,
   walkMarkdownFiles,
 } from "./fs";
 import { type LinkedNote, processMarkdown } from "./markdown";
@@ -43,30 +44,39 @@ interface InternalRecord {
   linkedNotes: LinkedNote[];
 }
 
-/** README.md のファイルについてのみ、直下の子(サブフォルダ→ファイルの順)を一覧化する。
- *  GitHub のリポジトリブラウザ相当の一覧を Web 側だけで組み立てる(ソースの .md は変更しない)。 */
-function directoryChildrenFor(
-  absPath: string,
-  bySlug: Map<string, InternalRecord>,
+/** 指定フォルダ直下の子(サブフォルダ→ファイルの順)を一覧化する。
+ *  GitHub のリポジトリブラウザ相当の一覧を Web 側だけで組み立てる(ソースの .md は変更しない)。
+ *  `allSlugs` には実ファイルだけでなく README.md を持たない合成ディレクトリページも含める。 */
+function directoryChildrenForDir(
+  dirAbsPath: string,
+  allSlugs: Set<string>,
 ): DirectoryEntry[] | undefined {
-  if (path.basename(absPath).toLowerCase() !== "readme.md") return undefined;
-  const { dirs, files } = listImmediateChildren(path.dirname(absPath));
+  const { dirs, files } = listImmediateChildren(dirAbsPath);
   const entries: DirectoryEntry[] = [];
 
   // 表示名は H1(表記ゆれが大きい)ではなく、実際のフォルダ名・ファイル名をそのまま使う。
   for (const d of dirs) {
     const slug = fileToSlug(path.join(d, "README.md"));
-    if (bySlug.has(slug))
+    if (allSlugs.has(slug))
       entries.push({ kind: "folder", slug, title: path.basename(d) });
   }
   for (const f of files) {
     if (!f.toLowerCase().endsWith(".md")) continue;
     if (path.basename(f).toLowerCase() === "readme.md") continue;
     const slug = fileToSlug(f);
-    if (bySlug.has(slug))
+    if (allSlugs.has(slug))
       entries.push({ kind: "file", slug, title: path.basename(f, ".md") });
   }
   return entries.length > 0 ? entries : undefined;
+}
+
+/** README.md のファイルについてのみ、直下の子を一覧化する(それ以外の .md は一覧を持たない)。 */
+function directoryChildrenFor(
+  absPath: string,
+  allSlugs: Set<string>,
+): DirectoryEntry[] | undefined {
+  if (path.basename(absPath).toLowerCase() !== "readme.md") return undefined;
+  return directoryChildrenForDir(path.dirname(absPath), allSlugs);
 }
 
 function fallbackTitleFor(absPath: string, slug: string): string {
@@ -106,6 +116,24 @@ export function buildContentData(): { notes: NoteRecord[] } {
     });
   }
 
+  // README.md を持たないフォルダにも、最低限ファイルツリーだけは表示できるよう合成ページを用意する
+  // (直下に何かしら子がある場合のみ。完全に空のフォルダは対象外)。
+  const allSlugs = new Set(bySlug.keys());
+  const syntheticDirs: { slug: string; absPath: string }[] = [];
+  for (const absPath of walkDirectories()) {
+    const slug = fileToSlug(path.join(absPath, "README.md"));
+    if (allSlugs.has(slug)) continue;
+    const { dirs, files } = listImmediateChildren(absPath);
+    if (dirs.length === 0 && files.length === 0) continue;
+    allSlugs.add(slug);
+    syntheticDirs.push({ slug, absPath });
+  }
+
+  const titleBySlug = new Map<string, string>();
+  for (const [slug, rec] of bySlug) titleBySlug.set(slug, rec.title);
+  for (const { slug, absPath } of syntheticDirs)
+    titleBySlug.set(slug, path.basename(absPath));
+
   // バックリンク(逆引き): UI 表示用なので同じ相手からの重複リンクは1件にまとめる(フォルダ宛リンクも含める)
   const backlinkMap = new Map<string, Set<string>>();
   // グラフのエッジ: .scripts/gen_index.py --stats のエッジ数(=フォルダ宛リンクを除いた全出現回数)と一致させる
@@ -115,7 +143,7 @@ export function buildContentData(): { notes: NoteRecord[] } {
     for (const link of rec.linkedNotes) {
       const targetSlug = fileToSlug(link.absPath);
       if (targetSlug === slug) continue;
-      if (!bySlug.has(targetSlug)) continue;
+      if (!allSlugs.has(targetSlug)) continue;
       if (!link.isDirectoryLink)
         graphLinks.push({ source: slug, target: targetSlug });
       if (!backlinkMap.has(targetSlug)) backlinkMap.set(targetSlug, new Set());
@@ -123,18 +151,38 @@ export function buildContentData(): { notes: NoteRecord[] } {
     }
   }
 
-  const notes: NoteRecord[] = [...bySlug.entries()]
-    .map(([slug, rec]) => ({
-      slug,
-      title: rec.title,
-      category: rec.category,
-      html: rec.html,
-      backlinks: [...(backlinkMap.get(slug) ?? [])]
-        .map((s) => ({ slug: s, title: bySlug.get(s)!.title }))
-        .sort((a, b) => a.title.localeCompare(b.title, "ja")),
-      children: directoryChildrenFor(rec.absPath, bySlug),
-    }))
-    .sort((a, b) => a.slug.localeCompare(b.slug));
+  const realNotes: NoteRecord[] = [...bySlug.entries()].map(([slug, rec]) => ({
+    slug,
+    title: rec.title,
+    category: rec.category,
+    html: rec.html,
+    backlinks: [...(backlinkMap.get(slug) ?? [])]
+      .map((s) => ({ slug: s, title: titleBySlug.get(s) ?? s }))
+      .sort((a, b) => a.title.localeCompare(b.title, "ja")),
+    children: directoryChildrenFor(rec.absPath, allSlugs),
+  }));
+
+  const syntheticNotes: NoteRecord[] = syntheticDirs.map(
+    ({ slug, absPath }) => {
+      const title = path.basename(absPath);
+      const virtualReadme = path.join(absPath, "README.md");
+      const { html } = processMarkdown(virtualReadme, `# ${title}\n`);
+      return {
+        slug,
+        title,
+        category: topCategoryOf(virtualReadme),
+        html,
+        backlinks: [...(backlinkMap.get(slug) ?? [])]
+          .map((s) => ({ slug: s, title: titleBySlug.get(s) ?? s }))
+          .sort((a, b) => a.title.localeCompare(b.title, "ja")),
+        children: directoryChildrenForDir(absPath, allSlugs),
+      };
+    },
+  );
+
+  const notes: NoteRecord[] = [...realNotes, ...syntheticNotes].sort((a, b) =>
+    a.slug.localeCompare(b.slug),
+  );
 
   // --- 内部キャッシュ(public 配下には置かない=ブラウザから直接見えない) ---
   fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -164,7 +212,7 @@ export function buildContentData(): { notes: NoteRecord[] } {
     title: n.title,
     category: n.category ?? null,
     slug: n.slug,
-    body: bySlug.get(n.slug)!.plainText,
+    body: bySlug.get(n.slug)?.plainText ?? "",
   }));
   fs.writeFileSync(
     path.join(PUBLIC_GENERATED_DIR, "search-docs.json"),
