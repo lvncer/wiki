@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { getNoteBySlug } from "@/lib/content/note";
 
 export default function Breadcrumbs({ slug }: { slug: string }) {
   if (slug === "") return null;
@@ -8,8 +7,7 @@ export default function Breadcrumbs({ slug }: { slug: string }) {
   let acc = "";
   for (const seg of segments) {
     acc = acc ? `${acc}/${seg}` : seg;
-    const note = getNoteBySlug(acc);
-    crumbs.push({ href: `/wiki/${acc.split("/").map(encodeURIComponent).join("/")}`, label: note?.title ?? seg });
+    crumbs.push({ href: `/wiki/${acc.split("/").map(encodeURIComponent).join("/")}`, label: seg });
   }
   return (
     <nav aria-label="breadcrumb" className="mb-4 text-sm text-ink-500 dark:text-ink-400">
