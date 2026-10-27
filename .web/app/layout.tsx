@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 // ハイドレーション前に <html> へ dark クラスを同期的に付与し、テーマのちらつき(FOUC)を防ぐ。
 // キー名 "theme" は lib/theme.ts の THEME_STORAGE_KEY と一致させること。
-const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");var d=t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;if(d)document.documentElement.classList.add("dark");}catch(e){}})();`;
+const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||((!t||t==="system")&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark");}catch(e){}})();`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

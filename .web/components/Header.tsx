@@ -2,6 +2,7 @@ import Link from "next/link";
 import SearchBox from "./SearchBox";
 import ThemeToggle from "./ThemeToggle";
 import CategoryMenu from "./CategoryMenu";
+import GitHubLink from "./GitHubLink";
 import { getTopCategories } from "@/lib/content/note";
 
 export default function Header() {
@@ -25,6 +26,7 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-3">
           <SearchBox />
           <ThemeToggle />
+          <GitHubLink />
         </div>
       </div>
     </header>

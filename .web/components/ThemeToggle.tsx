@@ -1,7 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { isDarkMode, setDarkMode } from "@/lib/theme";
+import { useEffect, useRef, useState } from "react";
+import { type ThemePreference, applyThemePreference, getThemePreference, setThemePreference } from "@/lib/theme";
+
+const OPTIONS: { value: ThemePreference; label: string }[] = [
+  { value: "light", label: "ライト" },
+  { value: "dark", label: "ダーク" },
+  { value: "system", label: "システム" },
+];
 
 function SunIcon() {
   return (
@@ -20,29 +26,99 @@ function MoonIcon() {
   );
 }
 
+function SystemIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="12" rx="1.5" />
+      <path d="M8 20h8M12 16v4" />
+    </svg>
+  );
+}
+
+function iconFor(pref: ThemePreference) {
+  if (pref === "system") return <SystemIcon />;
+  return pref === "dark" ? <MoonIcon /> : <SunIcon />;
+}
+
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  const [dark, setDark] = useState(false);
+  const [pref, setPref] = useState<ThemePreference>("system");
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setDark(isDarkMode());
+    setPref(getThemePreference());
     setMounted(true);
   }, []);
 
-  function toggle() {
-    const next = !dark;
-    setDarkMode(next);
-    setDark(next);
+  // OS のテーマ設定が変わった時、「システム」選択中なら追従させる。
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    function onChange() {
+      if (getThemePreference() === "system") applyThemePreference("system");
+    }
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    function onClickOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("mousedown", onClickOutside);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onClickOutside);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, []);
+
+  function choose(next: ThemePreference) {
+    setThemePreference(next);
+    setPref(next);
+    setOpen(false);
   }
 
   return (
-    <button
-      type="button"
-      onClick={toggle}
-      aria-label={dark ? "ライトテーマに切り替え" : "ダークテーマに切り替え"}
-      className="rounded-sm border border-ink-300 p-1.5 text-ink-700 hover:bg-ink-50 dark:border-ink-700 dark:text-ink-300 dark:hover:bg-ink-800"
-    >
-      {mounted ? dark ? <SunIcon /> : <MoonIcon /> : <span className="block h-[18px] w-[18px]" />}
-    </button>
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-haspopup="true"
+        aria-label="テーマ設定"
+        className="rounded-sm border border-ink-300 p-1.5 text-ink-700 hover:bg-ink-50 dark:border-ink-700 dark:text-ink-300 dark:hover:bg-ink-800"
+      >
+        {mounted ? iconFor(pref) : <span className="block h-[18px] w-[18px]" />}
+      </button>
+      {open && (
+        <ul
+          role="menu"
+          aria-label="テーマ設定"
+          className="absolute right-0 top-full z-10 mt-2 w-32 rounded-sm border border-ink-300 bg-white py-1 shadow-lg dark:border-ink-700 dark:bg-ink-900"
+        >
+          {OPTIONS.map((opt) => (
+            <li key={opt.value} role="none">
+              <button
+                type="button"
+                role="menuitemradio"
+                aria-checked={pref === opt.value}
+                onClick={() => choose(opt.value)}
+                className={
+                  "flex w-full items-center justify-between px-3 py-1.5 text-left text-sm hover:bg-ink-50 dark:hover:bg-ink-800 " +
+                  (pref === opt.value ? "font-semibold text-ink-900 dark:text-ink-50" : "text-ink-700 dark:text-ink-300")
+                }
+              >
+                {opt.label}
+                {pref === opt.value && <span aria-hidden="true">✓</span>}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
