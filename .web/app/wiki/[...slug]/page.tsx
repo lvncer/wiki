@@ -19,7 +19,7 @@ export default async function WikiPage({ params }: { params: Promise<{ slug: str
   if (!note) notFound();
 
   return (
-    <ArticleLayout slug={slug}>
+    <ArticleLayout>
       <Breadcrumbs slug={slug} />
       <DirectoryListing entries={note.children} />
       <MarkdownArticle html={note.html} />

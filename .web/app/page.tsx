@@ -9,7 +9,7 @@ export default async function HomePage() {
   const recentChanges = await getRecentChanges(8);
 
   return (
-    <ArticleLayout slug="">
+    <ArticleLayout>
       <MarkdownArticle html={html} />
       <RecentChanges items={recentChanges} />
     </ArticleLayout>
