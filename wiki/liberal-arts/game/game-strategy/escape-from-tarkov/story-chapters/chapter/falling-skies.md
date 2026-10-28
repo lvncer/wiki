@@ -91,9 +91,16 @@ Also, I have a feeling Kerman is going to contact me soon. It's best I stay put.
 
 ## Main Objectives
 
-- [ ] Hand over the item to Prapor: Rechargeable battery 0/3
-- [ ] Hand over the item to Prapor: Printed circuit board 0/5
-- [ ] Hand over the item to Prapor: Toolset 0/2
+- [x] Keep the armored case for yourself (I could hand it to Prapor, or keep it and deal with the consequences)
+- [ ] (FAILED) Hand over the armored case to Prapor (I could hand it to Prapor, or keep it and deal with the consequences)
+- [ ] (FAILED) Retrieve the armored case (The case went down when the plane was coming apart, so it should be close to the crash site)
+- [x] Wait for the information from Prapor (All that's left is waiting - fingers crossed it won't take long.)
+- [x] Hand over the flight crew's transcript to Prapor
+- [x] Hand over Elektronik's secure flash drive to Prapor
+- [x] Wait for the information from Prapor (Seems like I'm in for a longer wait this time)
+- [x] Hand over the item to Prapor: Rechargeable battery 3/3
+- [x] Hand over the item to Prapor: Printed circuit board 5/5
+- [x] Hand over the item to Prapor: Toolset 2/2
 - [x] Visit Prapor
 - [ ] Leave the flight recorder in the specified spot (Prapor said to leave it on Shoreline, in the house corner room at the fisher's island)
 - [ ] Retrieve the plane's flight recorder
