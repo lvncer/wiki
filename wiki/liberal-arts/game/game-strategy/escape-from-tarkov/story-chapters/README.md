@@ -23,13 +23,8 @@ title: "Story Chapters" # gen_index
 
 ## このフォルダの中身
 
-### ノート
+### サブトピック
 
-- [Accidental Witness](./Accidental-Witness.md)
-- [Batya](./Batya.md)
-- [Chapter: Blue Fire](./bluefire.md)
-- [Chapter: Falling Skies](./falling-skies.md)
-- [The Ticket](./the-ticket.md)
-- [CHAPTER Tour](./tour.md)
+- [chapter](./chapter/README.md)
 
 <!-- index:end -->
