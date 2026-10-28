@@ -8,6 +8,10 @@ export const EXCLUDE_DIRS = new Set(["images", "templates"]);
 // cwd は `.web/`(next dev / next build の実行ディレクトリ)なので、1つ上がリポジトリルート。
 export const REPO_ROOT = path.resolve(process.cwd(), "..");
 
+// 実際の記事(.md)は `wiki/` 配下に置かれている(.web, .obsidian 等のツール類と分離するため)。
+// カテゴリ判定・スラッグ生成はここを起点にする。
+export const CONTENT_ROOT = path.join(REPO_ROOT, "wiki");
+
 export function isExcludedName(name: string): boolean {
   return name.startsWith(".") || EXCLUDE_DIRS.has(name);
 }
@@ -20,8 +24,8 @@ function readDirSafe(dir: string): fs.Dirent[] {
   }
 }
 
-/** REPO_ROOT 以下を再帰的に歩いて .md ファイルの絶対パス一覧を返す(gen_index.py の os.walk と同じ除外規則)。 */
-export function walkMarkdownFiles(root: string = REPO_ROOT): string[] {
+/** CONTENT_ROOT 以下を再帰的に歩いて .md ファイルの絶対パス一覧を返す(gen_index.py の os.walk と同じ除外規則)。 */
+export function walkMarkdownFiles(root: string = CONTENT_ROOT): string[] {
   const out: string[] = [];
   const visit = (dir: string) => {
     for (const entry of readDirSafe(dir)) {
@@ -38,9 +42,9 @@ export function walkMarkdownFiles(root: string = REPO_ROOT): string[] {
   return out.sort();
 }
 
-/** REPO_ROOT 以下の全ディレクトリ(除外規則適用後)の絶対パス一覧を返す。
+/** CONTENT_ROOT 以下の全ディレクトリ(除外規則適用後)の絶対パス一覧を返す。
  *  README.md を持たないフォルダにも最低限のページ(ファイルツリーのみ)を用意するために使う。 */
-export function walkDirectories(root: string = REPO_ROOT): string[] {
+export function walkDirectories(root: string = CONTENT_ROOT): string[] {
   const out: string[] = [];
   const visit = (dir: string) => {
     for (const entry of readDirSafe(dir)) {
@@ -76,9 +80,9 @@ export function readFileUtf8(absPath: string): string {
   return fs.readFileSync(absPath, "utf-8");
 }
 
-/** REPO_ROOT からの先頭カテゴリ名(例: "software-engineering")。ルートの README.md では undefined。 */
+/** CONTENT_ROOT からの先頭カテゴリ名(例: "software-engineering")。wiki/README.md では undefined。 */
 export function topCategoryOf(absPath: string): string | undefined {
-  const rel = path.relative(REPO_ROOT, absPath).split(path.sep);
+  const rel = path.relative(CONTENT_ROOT, absPath).split(path.sep);
   if (rel.length <= 1) return undefined;
   return rel[0];
 }

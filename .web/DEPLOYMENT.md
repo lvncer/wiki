@@ -25,7 +25,7 @@
 
 ### 1-1. 「Root Directory 外のファイルを含める」設定(必須)
 
-Root Directory を `.web` にしただけでは、ビルドコンテナが `.web` の中身しか見られない設定になっている場合がある。本サイトは `.web/next.config.ts` がビルド時にリポジトリ直下の9カテゴリフォルダ(`../software-engineering` 等)を読みにいくため、これを有効化しないとビルドが失敗する。
+Root Directory を `.web` にしただけでは、ビルドコンテナが `.web` の中身しか見られない設定になっている場合がある。本サイトは `.web/next.config.ts` がビルド時にリポジトリ直下の `wiki/` フォルダ(`../wiki/software-engineering` 等)を読みにいくため、これを有効化しないとビルドが失敗する。
 
 - プロジェクト作成画面、または作成後の **Settings → General → Root Directory** のすぐ下にある
   **「Include files outside of the Root Directory in the Build Step」** のチェックボックスを **ON** にする。

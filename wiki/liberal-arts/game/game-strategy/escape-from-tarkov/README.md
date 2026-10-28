@@ -12,6 +12,7 @@ title: "escape-from-tarkov" # gen_index
 
 ### サブトピック
 
+- [Quests](./quests/README.md)
 - [Story Chapters](./story-chapters/README.md)
 
 ### ノート
