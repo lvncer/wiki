@@ -38,7 +38,7 @@ from collections import Counter
 from pathlib import Path
 from urllib.parse import quote, unquote
 
-DEFAULT_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_ROOT = Path(__file__).resolve().parent.parent / "wiki"
 ROOT_TITLE = "lvncerpedia"
 EXCLUDE_DIRS = {"images", "templates"}  # 索引に載せない／READMEを作らないフォルダ名
 GENERIC_TITLES = {"readme", "overview", "index"}  # リンク名として情報が無い見出し
