@@ -116,8 +116,11 @@ Also, I have a feeling Kerman is going to contact me soon. It's best I stay put.
 
 ## Optional objectives
 
-- [ ] Find the item in raid: Rechargeable battery 2/3
-- [ ] Find the item in raid: Printed circuit board 1/5
+- [x] Find any additional clues
+- [x] Find Elektronik's secure flash drive (The flash drive should be with the transcript in the moldy house somewhere on Shoreline)
+- [x] Find the pilots' transcript (Prapor referred to some moldy house on Shoreline, but left the details unclear)
+- [x] Find the item in raid: Rechargeable battery 3/3
+- [x] Find the item in raid: Printed circuit board 5/5
 - [x] Find the item in raid: Toolset 2/2
 - [x] Collect the required amount in USD 2000/2000
 - [x] Locate the right G-Wagon SUV
