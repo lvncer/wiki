@@ -4,10 +4,10 @@ title: "Quests" # gen_index
 
 # Quests
 
-- [Prapor](./trader-quest/prapor.md)
-- [Therapist](./trader-quest/therapist.md)
+- [Prapor](./prapor.md)
+- [Therapist](./therapist.md)
 - Fence
-- [Skier](./trader-quest/skier.md)
+- [Skier](./skier.md)
 - Peacekeeper
 - Mechanic
 - Ragman
