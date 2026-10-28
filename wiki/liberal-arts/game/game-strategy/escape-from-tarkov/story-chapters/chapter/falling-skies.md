@@ -50,6 +50,45 @@ But I have to complete it if I want to get to the truth.
 He gave me a list of everything he needs.
 I have to bring it all to him, otherwise Elektronik won't be able to decrypt the flight recorder.
 
+
+I've handed over everything Propor needs. Now all that's left is to wait.
+
+Once again, instead of any info, Prapor gave me another task.
+
+I need to retrieve the flash drive and a transcript printout of the plane crew conversations. Elektronik left them at the agreed-upon location.
+
+I found the transcript. It took a while to find Elektronik's stash, but it was worth it.
+
+
+I have the flash drive. Now's the final step.
+
+Prapor started reading the transcript, and at that moment someone called him - clearly about something important.
+He kicked me out.
+I'll have to wait until he's dealt with his business.
+
+Turns out Prapor got a call from Mr. Kerman!
+It's the same guy mentioned in the transcript.
+Something shady is going on....
+
+Prapor said I need to find an armored case near the plane crash site. He - and this Mr. Kerman call it the "Ticket".
+After that, I'm supposed to bring the case to Propor.
+Unless... Well, I haven't decided yet.
+
+I found the case near the plane crash site.
+It's pretty well preserved.
+Now I need to decide what to do with it next.
+
+I found a note from Kerman. How did he even manage to get it here?
+Or did someone write it for him...?
+Either way, he clearly doesn't want me to give the case to Prapor.
+I need to think this through.
+
+This Mr. Kerman is shady, sure, but Prapor's even shadier, so I decided to keep the case for myself.
+This "Ticket" isn't called that for nothing.
+I figure I can use it to get out of Tarkov. As for my rep with Prapor... I'll manage.
+
+Also, I have a feeling Kerman is going to contact me soon. It's best I stay put.
+
 ## Main Objectives
 
 - [ ] Hand over the item to Prapor: Rechargeable battery 0/3
