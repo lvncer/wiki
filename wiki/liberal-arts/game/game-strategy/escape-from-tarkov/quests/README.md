@@ -8,10 +8,10 @@ title: "Quests" # gen_index
 - [Therapist](./therapist.md)
 - Fence
 - [Skier](./skier.md)
-- Peacekeeper
-- Mechanic
-- Ragman
-- Jeager
+- [Peacekeeper](./peacekeeper.md)
+- [Mechanic](./mechanic.md)
+- [Ragman](./ragman.md)
+- [Jeager](./jeager.md)
 - Ref
 - Lightkeeper
 - BTR Driver
