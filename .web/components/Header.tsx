@@ -1,13 +1,9 @@
 import Link from "next/link";
-import { getTopCategories } from "@/lib/content/note";
-import CategoryMenu from "./CategoryMenu";
 import GitHubLink from "./GitHubLink";
 import SearchBox from "./SearchBox";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
-  const categories = getTopCategories();
-
   return (
     <header className="border-b border-ink-300 dark:border-ink-700">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4 px-4 py-3 sm:px-6">
@@ -21,7 +17,9 @@ export default function Header() {
           <Link href="/" className="hover:underline">
             トップ
           </Link>
-          <CategoryMenu categories={categories} />
+          <Link href="/categories" className="hover:underline">
+            カテゴリー
+          </Link>
           <Link href="/graph" className="hover:underline">
             グラフ
           </Link>
