@@ -21,10 +21,10 @@ export default function Header() {
           <Link href="/" className="hover:underline">
             トップ
           </Link>
+          <CategoryMenu categories={categories} />
           <Link href="/graph" className="hover:underline">
             グラフ
           </Link>
-          <CategoryMenu categories={categories} />
         </nav>
         <div className="ml-auto flex items-center gap-3">
           <SearchBox />

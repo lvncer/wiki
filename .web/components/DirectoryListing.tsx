@@ -50,10 +50,12 @@ export default function DirectoryListing({
             className="border-t border-ink-100 first:border-t-0 hover:bg-ink-50 dark:border-ink-800 dark:hover:bg-ink-800"
           >
             <td className="w-8 py-2 pl-3 text-ink-400 dark:text-ink-500">
-              {e.kind === "folder" ? <FolderIcon /> : <FileIcon />}
+              <Link href={hrefFor(e.slug)} className="block">
+                {e.kind === "folder" ? <FolderIcon /> : <FileIcon />}
+              </Link>
             </td>
             <td className="truncate py-2 pr-3">
-              <Link href={hrefFor(e.slug)} className="hover:underline">
+              <Link href={hrefFor(e.slug)} className="block hover:underline">
                 {e.title}
               </Link>
             </td>
