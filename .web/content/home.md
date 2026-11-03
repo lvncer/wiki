@@ -4,8 +4,8 @@ title: "lvncerpedia"
 
 # lvncerpedia
 
-<red><marker>知性とは、生涯をかけて紡ぐ魂の軌跡。</marker></red>
-記録なき知は、降りしきる雪に埋もれる足跡のように、やがて無へと還る。
+<marker>知性とは、生涯をかけて紡ぐ魂の軌跡。</marker>
+<red>記録なき知は、降りしきる雪に埋もれる足跡のように、やがて無へと還る。</red>
 
 ## License
 
