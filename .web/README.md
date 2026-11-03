@@ -20,3 +20,7 @@ npm run build   # 静的エクスポート → .web/out/
 ## デプロイ
 
 Vercel への公開手順は [DEPLOYMENT.md](./DEPLOYMENT.md) を参照。
+
+## ドキュメント
+
+- [カスタム装飾タグ](./docs/custom-markdown-tags.md)
