@@ -23,6 +23,13 @@ type HastElement = {
   tagName: string;
   properties?: Record<string, unknown>;
 };
+type TextNode = { type: "text"; value: string };
+type ListItemNode = {
+  type: "listItem";
+  checked?: boolean | null;
+  children?: Array<{ type: string; children?: unknown[] }>;
+  data?: { hProperties?: Record<string, unknown> };
+};
 
 export interface LinkedNote {
   absPath: string;
@@ -101,6 +108,34 @@ function remarkRewriteLinks(fromAbsFile: string, collected: LinkedNote[]) {
   };
 }
 
+const FAILED_TASK_PREFIX = /^\[xx\]\s*/;
+
+/** `- [xx] ...` を FAILED 扱いのタスク項目にする。remark-gfm はこの2文字ブラケットを
+ *  チェックボックスとして解釈できず(checked は undefined のまま)、`[xx]` がリテラル
+ *  テキストとして残るので、ここでその接頭辞を取り除いて専用クラスを付与する。 */
+function remarkFailedTaskList() {
+  return (tree: MdastLike) => {
+    visit(tree, "listItem", (node) => {
+      const item = node as unknown as ListItemNode;
+      if (typeof item.checked === "boolean") return;
+      const paragraph = item.children?.[0];
+      if (!paragraph || paragraph.type !== "paragraph") return;
+      const textNode = paragraph.children?.[0] as TextNode | undefined;
+      if (!textNode || textNode.type !== "text") return;
+      const match = FAILED_TASK_PREFIX.exec(textNode.value);
+      if (!match) return;
+      textNode.value = textNode.value.slice(match[0].length);
+      item.data = {
+        ...item.data,
+        hProperties: {
+          ...item.data?.hProperties,
+          className: ["task-list-item", "task-failed"],
+        },
+      };
+    });
+  };
+}
+
 function rehypeRewriteRawHtml(fromAbsFile: string, collected: LinkedNote[]) {
   return (tree: MdastLike) => {
     visit(tree, "element", (node) => {
@@ -134,6 +169,7 @@ export function processMarkdown(
   const file = unified()
     .use(remarkParse)
     .use(remarkGfm)
+    .use(remarkFailedTaskList)
     .use(() => remarkRewriteLinks(absFile, linkedNotes))
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
