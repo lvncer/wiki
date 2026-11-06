@@ -4,6 +4,8 @@ title: "Quests" # gen_index
 
 # Quests
 
+[https://escapefromtarkov.fandom.com/wiki/Quests](https://escapefromtarkov.fandom.com/wiki/Quests)
+
 - [Prapor](./prapor.md)
 - [Therapist](./therapist.md)
 - Fence

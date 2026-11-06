@@ -1,34 +1,110 @@
 # Jeager Quest
 
+## Checklist
+
+### Loyalty Level 1
+
+- [x] Work Smarter
+- [x] Acquaintance
+- [x] The Huntsman Path - Angry Watchman
+- [x] Swift
+- [ ] The Huntsman Path - Trophy
+- [x] The Huntsman Path - Woods Keeper
+- [x] Rough Tarkov
+- [x] All This Filth...
+- [x] First Aid
+
+### Loyalty Level 2
+
+- [ ] Dragnet
+- [x] Cease Fire!
+- [ ] The Huntsman Path - Crooked Cop
+- [ ] The Huntsman Path - Big Game
+- [ ] The Huntsman Path - Sellout
+- [x] Courtesy Visit
+- [x] The Delicious Sausage
+- [x] Every Hunter Knows This
+- [ ] Claustrophobia
+- [x] Nostalgia
+- [x] The Huntsman Path - Factory Chief
+
+### Loyalty Level 3
+
+- [ ] Reserve
+- [ ] Fishing Place
+- [ ] The Hermit
+- [ ] The Huntsman Path - Administrator
+
+### Essential Tasks
+
+- [ ] The Tarkov Shooter - Part 1
+- [ ] The Tarkov Shooter - Part 2
+- [ ] The Tarkov Shooter - Part 3
+- [ ] The Tarkov Shooter - Part 4
+- [ ] The Tarkov Shooter - Part 5
+- [ ] The Tarkov Shooter - Part 6
+- [ ] The Tarkov Shooter - Part 7
+- [ ] The Survivalist Path - Unprotected but Dangerous
+- [x] The Survivalist Path - Thrifty
+- [x] The Survivalist Path - Zhivchik
+- [x] Thirsty - Hounds
+
+### ???
+
+- [ ] The Survivalist Path - Wounded Beast
+- [ ] The Survivalist Path - Tough Guy
+- [ ] The Survivalist Path - Cold Blooded
+- [ ] The Survivalist Path - Junkie
+- [ ] The Survivalist Path - Eagle-Owl
+- [ ] The Huntsman Path - Secured Perimeter
+- [ ] The Huntsman Path - Forest Cleaning
+- [ ] The Huntsman Path - Controller
+- [ ] The Huntsman Path - Control
+- [ ] The Huntsman Path - Justice
+- [ ] Hunting Trip
+- [ ] The Huntsman Path - Eraser
+- [ ] The Huntsman Path - Liberation
+- [ ] The Huntsman Path - Sadist
+- [ ] Pest Control
+- [ ] The Huntsman Path - Relentless
+- [ ] The Huntsman Path - Outcasts
+- [ ] Stray Dogs
+- [ ] Slaughterhouse
+- [ ] Broadcast - Part 3
+- [ ] Broadcast - Part 4
+- [ ] Broadcast - Part 5
+- [ ] Forester's Duty
+- [ ] A Wedge Between Us
+
 ## Loyalty Level 1
 
-| Quest                                 | Objectives                                                                                                                                                    | Rewards |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| ✅ Work Smarter                       | Locate the secret exfil on Customs <br> (Optional) Obtain the special item to extract through the secret exfil                                                |         |
-| ✅ Acquaintance                       | Hand over any 10 items from the Food Category                                                                                                                 |         |
-| ✅ The Huntsman Path - Angry Watchman | Eliminate 5 PMCs in the Dorms area on Customs                                                                                                                 |         |
-| ✅ Swift                              | Eliminate 15 PMCs without using any armor or helmets on Woods                                                                                                 |         |
-| The Huntsman Path - Trophy            | Locate and neutralize Reshala <br> Hand over the found in raid Reshala's Golden TT-33 pistol to Jaeger                                                        |         |
-| ✅ The Huntsman Path - Woods Keeper   | Locate and neutralize Shturman <br> Search Shturman for his stash key <br> Hand over 1 Shturman's stash key to Jaeger                                         |         |
-| ✅ Rough Tarkov                       | Locate the heavily mined area on Woods <br> Locate the Claymore mine on Ground Zero                                                                           |         |
-| ✅ All This Filth...                  | Eliminate 20 Scavs on Interchange, Ground Zero, Woods or Customs                                                                                              |         |
-| ✅ First Aid                          | Find 4 items from the Medkits category in raid <br> Hand over the items <br> Find 4 items from the Injury treatment category in raid <br> Hand over the items |         |
+| Quest                              | Objectives                                                                                                                                                    | Rewards |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Work Smarter                       | Locate the secret exfil on Customs <br> (Optional) Obtain the special item to extract through the secret exfil                                                |         |
+| Acquaintance                       | Hand over any 10 items from the Food Category                                                                                                                 |         |
+| The Huntsman Path - Angry Watchman | Eliminate 5 PMCs in the Dorms area on Customs                                                                                                                 |         |
+| Swift                              | Eliminate 15 PMCs without using any armor or helmets on Woods                                                                                                 |         |
+| The Huntsman Path - Trophy         | Locate and neutralize Reshala <br> Hand over the found in raid Reshala's Golden TT-33 pistol to Jaeger                                                        |         |
+| The Huntsman Path - Woods Keeper   | Locate and neutralize Shturman <br> Search Shturman for his stash key <br> Hand over 1 Shturman's stash key to Jaeger                                         |         |
+| Rough Tarkov                       | Locate the heavily mined area on Woods <br> Locate the Claymore mine on Ground Zero                                                                           |         |
+| All This Filth...                  | Eliminate 20 Scavs on Interchange, Ground Zero, Woods or Customs                                                                                              |         |
+| First Aid                          | Find 4 items from the Medkits category in raid <br> Hand over the items <br> Find 4 items from the Injury treatment category in raid <br> Hand over the items |         |
 
 ## Loyalty Level 2
 
-| Quest                                | Objectives                                                                                                                                                                                                                                                                       | Rewards                                                                                                                                |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Dragnet                              | Locate and obtain the chemical container at the TerraGroup warehouse on Factory <br> Hand over the chemical container                                                                                                                                                            |                                                                                                                                        |
-| ✅ Cease Fire!                       | Survive and extract from Streets of Tarkov through Klimov Street                                                                                                                                                                                                                 |                                                                                                                                        |
-| The Huntsman Path - Crooked Cop      | Locate and neutralize Kollontay <br> Hand over the found in raid Kollontay's police baton                                                                                                                                                                                        |                                                                                                                                        |
-| The Huntsman Path - Big Game         | Locate and eliminate Kaban <br> Locate and eliminate Basmach <br> Locate and eliminate Gus <br> Eliminate 5 of Kaban's guards at the car dealership on Streets of Tarkov                                                                                                         | Unlocks barter for Armasight Zeus-Pro 640 2-8x50 30Hz thermal scope at Jaeger LL4 <br> Unlocks Hog Hideout shooting range target style |
-| The Huntsman Path - Sellout          | Locate and neutralize Killa <br> Find 1 Killa's helmet in raid <br> Hand over 1 Killa's helmet to Jaeger                                                                                                                                                                         |                                                                                                                                        |
-| ✅ Courtesy Visit                    | Find the chairman's house in the abandoned village on Shoreline <br> Find the fisherman's house in the abandoned village on Shoreline <br> Find the priest's house in the abandoned village on Shoreline <br> Survive and extract from Shoreline with the "Survived" exit status |                                                                                                                                        |
-| ✅ The Delicious Sausage             | Scout the Shestyorochka store at Nikitskaya street <br> Scout the Sparja store at Primorsky ave <br> Scout the Sparja store in Pinewood hotel <br> Scout the Goshan store in Concordia <br> Hand over the found in raid Salty Dog beef sausage                                   |                                                                                                                                        |
-| ✅ Every Hunter Knows This           | Locate a good tripwire installation spot on Factory <br> Locate a good tripwire installation spot on Customs                                                                                                                                                                     | Unlocks purchase of Tripwire installation kit at Jaeger LL1                                                                            |
-| Claustrophobia                       | Eliminate any 5 targets in the old cellars while using a shotgun on Factory                                                                                                                                                                                                      |                                                                                                                                        |
-| ✅ Nostalgia                         | Locate Jaeger's Health Resort room with a view of the bay on Shoreline <br> Locate and obtain Jaeger's Photo album <br> Hand over the Photo album to Jaeger                                                                                                                      |                                                                                                                                        |
-| ✅ The Huntsman Path - Factory Chief | Eliminate Tagilla <br> Find 1 BOSS cap in raid <br> Hand over 1 BOSS cap to Jaeger                                                                                                                                                                                               |                                                                                                                                        |
+| Quest                             | Objectives                                                                                                                                                                                                                                                                       | Rewards                                                                                                                                |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Dragnet                           | Locate and obtain the chemical container at the TerraGroup warehouse on Factory <br> Hand over the chemical container                                                                                                                                                            |                                                                                                                                        |
+| Cease Fire!                       | Survive and extract from Streets of Tarkov through Klimov Street                                                                                                                                                                                                                 |                                                                                                                                        |
+| The Huntsman Path - Crooked Cop   | Locate and neutralize Kollontay <br> Hand over the found in raid Kollontay's police baton                                                                                                                                                                                        |                                                                                                                                        |
+| The Huntsman Path - Big Game      | Locate and eliminate Kaban <br> Locate and eliminate Basmach <br> Locate and eliminate Gus <br> Eliminate 5 of Kaban's guards at the car dealership on Streets of Tarkov                                                                                                         | Unlocks barter for Armasight Zeus-Pro 640 2-8x50 30Hz thermal scope at Jaeger LL4 <br> Unlocks Hog Hideout shooting range target style |
+| The Huntsman Path - Sellout       | Locate and neutralize Killa <br> Find 1 Killa's helmet in raid <br> Hand over 1 Killa's helmet to Jaeger                                                                                                                                                                         |                                                                                                                                        |
+| Courtesy Visit                    | Find the chairman's house in the abandoned village on Shoreline <br> Find the fisherman's house in the abandoned village on Shoreline <br> Find the priest's house in the abandoned village on Shoreline <br> Survive and extract from Shoreline with the "Survived" exit status |                                                                                                                                        |
+| The Delicious Sausage             | Scout the Shestyorochka store at Nikitskaya street <br> Scout the Sparja store at Primorsky ave <br> Scout the Sparja store in Pinewood hotel <br> Scout the Goshan store in Concordia <br> Hand over the found in raid Salty Dog beef sausage                                   |                                                                                                                                        |
+| Every Hunter Knows This           | Locate a good tripwire installation spot on Factory <br> Locate a good tripwire installation spot on Customs                                                                                                                                                                     | Unlocks purchase of Tripwire installation kit at Jaeger LL1                                                                            |
+| Claustrophobia                    | Eliminate any 5 targets in the old cellars while using a shotgun on Factory                                                                                                                                                                                                      |                                                                                                                                        |
+| Nostalgia                         | Locate Jaeger's Health Resort room with a view of the bay on Shoreline <br> Locate and obtain Jaeger's Photo album <br> Hand over the Photo album to Jaeger                                                                                                                      |                                                                                                                                        |
+| The Huntsman Path - Factory Chief | Eliminate Tagilla <br> Find 1 BOSS cap in raid <br> Hand over 1 BOSS cap to Jaeger                                                                                                                                                                                               |                                                                                                                                        |
 
 ## Loyalty Level 3
 
@@ -51,9 +127,9 @@
 | The Tarkov Shooter - Part 6                      | Eliminate 5 Sniper Scavs while using a bolt-action rifle                                                                                                                                                                                   | Unlocks purchase of Mosin Rifle ATI Monte Carlo stock at Jaeger LL3                                                                                                                                                                                                                  |
 | The Tarkov Shooter - Part 7                      | Eliminate 5 PMC operatives with a bolt-action rifle without dying                                                                                                                                                                          | Unlocks purchase of SWORD International Mk-18 .338 LM marksman rifle at Jaeger LL4                                                                                                                                                                                                   |
 | The Survivalist Path - Unprotected but Dangerous | Eliminate 5 PMC operatives without wearing any body armor or plate carriers                                                                                                                                                                | Unlocks barter for Surv12 field surgical kit at Jaeger LL2                                                                                                                                                                                                                           |
-| ✅ The Survivalist Path - Thrifty                | Stash 1 Iskra ration pack in the ZB-016 bunker on Woods <br> Stash 1 Bottle of water in the ZB-016 bunker on Woods <br> Stash 1 Iskra ration pack in the ZB-014 bunker on Woods <br> Stash 1 Bottle of water in the ZB-014 bunker on Woods | Unlocks purchase of Iskra ration pack at Jaeger LL2                                                                                                                                                                                                                                  |
-| ✅ The Survivalist Path - Zhivchik               | Survive for 5 minutes while suffering from complete dehydration (Excluding Factory) <br> Survive and extract from the location                                                                                                             | Unlocks barter for SOG Voodoo Hawk tactical tomahawk at Jaeger LL2                                                                                                                                                                                                                   |
-| ✅ Thirsty - Hounds                              | Eliminate 12 Scavs in the time period of 22:00-7:00 on Shoreline                                                                                                                                                                           |                                                                                                                                                                                                                                                                                      |
+| The Survivalist Path - Thrifty                   | Stash 1 Iskra ration pack in the ZB-016 bunker on Woods <br> Stash 1 Bottle of water in the ZB-016 bunker on Woods <br> Stash 1 Iskra ration pack in the ZB-014 bunker on Woods <br> Stash 1 Bottle of water in the ZB-014 bunker on Woods | Unlocks purchase of Iskra ration pack at Jaeger LL2                                                                                                                                                                                                                                  |
+| The Survivalist Path - Zhivchik                  | Survive for 5 minutes while suffering from complete dehydration (Excluding Factory) <br> Survive and extract from the location                                                                                                             | Unlocks barter for SOG Voodoo Hawk tactical tomahawk at Jaeger LL2                                                                                                                                                                                                                   |
+| Thirsty - Hounds                                 | Eliminate 12 Scavs in the time period of 22:00-7:00 on Shoreline                                                                                                                                                                           |                                                                                                                                                                                                                                                                                      |
 
 ## ???
 

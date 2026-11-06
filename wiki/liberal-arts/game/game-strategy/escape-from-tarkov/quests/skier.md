@@ -1,33 +1,112 @@
 # Skier Quest
 
+## Checklist
+
+### Loyalty Level 1
+
+- [x] What's on the Flash Drive?
+- [x] Burning Rubber
+- [x] Golden Swag
+- [x] Supplier
+- [x] Informed Means Armed
+- [x] No Swiping
+- [x] The Extortionist
+- [x] Private Club
+- [x] Polikhim Hobo
+
+### Loyalty Level 2
+
+- [ ] Supplements
+- [ ] Setup
+- [x] Beyond the Red Meat
+- [ ] The Secret Recipe
+- [x] Chumming
+- [ ] The Walls Have Eyes
+- [x] Friend From the West
+- [x] Exit Here
+- [ ] House Arrest
+- [x] Stirrup
+
+### Loyalty Level 3
+
+- [ ] Missing Cargo
+- [ ] Classified Technologies
+
+### Essential Tasks
+
+- [x] Chemical - Part 1
+- [x] Chemical - Part 2
+- [x] Chemical - Part 3
+- [ ] Chemical - Part 4
+- [x] Thirsty - Breadwinner
+- [ ] Thirsty - Delivery
+- [x] Easy Money - Part 1
+
+### ???
+
+- [ ] From Hand to Hand
+- [ ] Vitamins
+- [ ] Silent Caliber
+- [ ] Bullshit
+- [ ] Rigged Game
+- [ ] Safe Corridor
+- [ ] Night Sweep
+- [ ] Long Road
+- [ ] Top Secret
+- [ ] Debtor
+- [ ] Stimulating Demand
+- [ ] Pyramid Scheme
+- [ ] Irresistible
+- [ ] Dangerous Props
+- [ ] Connections Up North
+- [ ] The Higher They Fly
+- [ ] Minute of Fame
+- [ ] Serious Allegations
+- [ ] Proper Comeback
+- [ ] Route Deviation
+- [ ] Hindsight 20/20
+- [ ] Key Partner
+- [ ] Killer Argument
+- [ ] Choose Your Friends Wisely
+- [ ] Indisputable Authority
+- [ ] Fair Price - Part 1
+- [ ] Fair Price - Part 2
+- [ ] Profitable Venture
+- [ ] Safety Guarantee
+- [ ] Never Too Late To Learn
+- [ ] Get a Foothold
+- [ ] Profit Retention
+- [ ] A Life Lesson
+- [ ] Consolation Prize
+
 ## Loyalty Level 1
 
-| Quest                         | Objectives                                                                                                                                                                                                                    | Rewards |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| ✅ What's on the Flash Drive? | Find 2 item in raid: Secure Flash drive <br> Hand over 2 items                                                                                                                                                                |         |
-| ✅ Burning Rubber             | Use the paid vehicle extraction on Ground Zero                                                                                                                                                                                |         |
-| ✅ Golden Swag                | Locate and obtain the Golden Zibbo lighter from Dorm room 303 on Customs <br> Stash a regular Zibbo at Dorm room 303 on Customs <br> Hand over the Golden Zibbo lighter                                                       |         |
-| ✅ Supplier                   | Hand over 1 item: BNTI Module-3M body armor <br> Hand over 1 item: TOZ-106 20ga bolt-action shotgun                                                                                                                           |         |
-| ✅ Informed Means Armed       | Install a WI-FI Camera to watch the sawmill dock on Woods <br> Install a WI-FI Camera to watch the Kiba Arms store entrance on Interchange                                                                                    |         |
-| ✅ No Swiping                 | Eliminate 10 any target at the smuggler bases on Shoreline or Interchange                                                                                                                                                     |         |
-| ✅ The Extortionist           | Locate and obtain the hidden valuable cargo on Customs <br> (Optional) Locate the messenger's body on Customs <br> (Optional) Locate the place where the messenger hid the cargo on Customs <br> Hand over the valuable cargo |         |
-| ✅ Private Club               | Locate and obtain Skier's wallet on Customs <br> Hand over the found item                                                                                                                                                     |         |
-| ✅ Polikhim Hobo              | Eliminate 25 Scavs on Interchange, Ground Zero or Woods                                                                                                                                                                       |         |
+| Quest                      | Objectives                                                                                                                                                                                                                    | Rewards |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| What's on the Flash Drive? | Find 2 item in raid: Secure Flash drive <br> Hand over 2 items                                                                                                                                                                |         |
+| Burning Rubber             | Use the paid vehicle extraction on Ground Zero                                                                                                                                                                                |         |
+| Golden Swag                | Locate and obtain the Golden Zibbo lighter from Dorm room 303 on Customs <br> Stash a regular Zibbo at Dorm room 303 on Customs <br> Hand over the Golden Zibbo lighter                                                       |         |
+| Supplier                   | Hand over 1 item: BNTI Module-3M body armor <br> Hand over 1 item: TOZ-106 20ga bolt-action shotgun                                                                                                                           |         |
+| Informed Means Armed       | Install a WI-FI Camera to watch the sawmill dock on Woods <br> Install a WI-FI Camera to watch the Kiba Arms store entrance on Interchange                                                                                    |         |
+| No Swiping                 | Eliminate 10 any target at the smuggler bases on Shoreline or Interchange                                                                                                                                                     |         |
+| The Extortionist           | Locate and obtain the hidden valuable cargo on Customs <br> (Optional) Locate the messenger's body on Customs <br> (Optional) Locate the place where the messenger hid the cargo on Customs <br> Hand over the valuable cargo |         |
+| Private Club               | Locate and obtain Skier's wallet on Customs <br> Hand over the found item                                                                                                                                                     |         |
+| Polikhim Hobo              | Eliminate 25 Scavs on Interchange, Ground Zero or Woods                                                                                                                                                                       |         |
 
 ## Loyalty Level 2
 
-| Quest                   | Objectives                                                                                                                                                                                                                          | Rewards                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| Supplements             | Locate and obtain the chemical vial on Customs <br> Hand over the container <br> Find 4 Respirators in raid <br> Hand over 4 Respirators to Skier <br> Find 3 Medical bloodsets in raid <br> Hand over 3 Medical bloodsets to Skier |                                                             |
-| Setup                   | Eliminate 8 PMC operatives with Scav weapons while wearing the specified gear on Customs                                                                                                                                            |                                                             |
-| ✅ Beyond the Red Meat  | Locate and obtain information on culinary secrets at the Beluga restaurant on Streets of Tarkov <br> Hand over the found data                                                                                                       |                                                             |
-| The Secret Recipe       | Locate and obtain the secret ingredient at the TerraGroup office on Streets of Tarkov <br> Hand over the chemical additive                                                                                                          |                                                             |
-| ✅ Chumming             | Stash 3 Golden neck chains in the microwave on the 3rd floor of the dorm on Customs <br> Stash 3 Golden neck chains in the middle wooden cabin at the sawmill on Woods                                                              |                                                             |
-| The Walls Have Eyes     | Install a WI-FI Camera in the first crane's cockpit on Factory <br> Install a WI-FI Camera in the second crane's cockpit on Factory <br> Install a WI-FI Camera in the third crane's cockpit on Factory                             | Unlocks barter for 12/70 RIP ammo pack (5 pcs) at Skier LL2 |
-| ✅ Friend From the West | Eliminate 5 PMCs operatives                                                                                                                                                                                                         |                                                             |
-| ✅ Exit Here            | Survive and extract from Factory through the main exit                                                                                                                                                                              |                                                             |
-| House Arrest            | Locate where the missing group was held captive on Streets of Tarkov <br> Locate the debtor on Streets of Tarkov <br> Hand over the item: Chekannaya 15 apartment key                                                               |                                                             |
-| ✅ Stirrup              | Eliminate any 10 target with pistols on Factory                                                                                                                                                                                     |                                                             |
+| Quest                | Objectives                                                                                                                                                                                                                          | Rewards                                                     |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Supplements          | Locate and obtain the chemical vial on Customs <br> Hand over the container <br> Find 4 Respirators in raid <br> Hand over 4 Respirators to Skier <br> Find 3 Medical bloodsets in raid <br> Hand over 3 Medical bloodsets to Skier |                                                             |
+| Setup                | Eliminate 8 PMC operatives with Scav weapons while wearing the specified gear on Customs                                                                                                                                            |                                                             |
+| Beyond the Red Meat  | Locate and obtain information on culinary secrets at the Beluga restaurant on Streets of Tarkov <br> Hand over the found data                                                                                                       |                                                             |
+| The Secret Recipe    | Locate and obtain the secret ingredient at the TerraGroup office on Streets of Tarkov <br> Hand over the chemical additive                                                                                                          |                                                             |
+| Chumming             | Stash 3 Golden neck chains in the microwave on the 3rd floor of the dorm on Customs <br> Stash 3 Golden neck chains in the middle wooden cabin at the sawmill on Woods                                                              |                                                             |
+| The Walls Have Eyes  | Install a WI-FI Camera in the first crane's cockpit on Factory <br> Install a WI-FI Camera in the second crane's cockpit on Factory <br> Install a WI-FI Camera in the third crane's cockpit on Factory                             | Unlocks barter for 12/70 RIP ammo pack (5 pcs) at Skier LL2 |
+| Friend From the West | Eliminate 5 PMCs operatives                                                                                                                                                                                                         |                                                             |
+| Exit Here            | Survive and extract from Factory through the main exit                                                                                                                                                                              |                                                             |
+| House Arrest         | Locate where the missing group was held captive on Streets of Tarkov <br> Locate the debtor on Streets of Tarkov <br> Hand over the item: Chekannaya 15 apartment key                                                               |                                                             |
+| Stirrup              | Eliminate any 10 target with pistols on Factory                                                                                                                                                                                     |                                                             |
 
 ## Loyalty Level 3
 
@@ -38,15 +117,15 @@
 
 ## Essential Tasks
 
-| Quest                    | Objectives                                                                                                                                                                                                                                                                                                                   | Rewards                                                                                                                                       |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅ Chemical - Part 1     | Locate and obtain any information about the Deputy Chief's past life on Customs <br> (Optional) Locate the sleeping place of the former Deputy Chief of Security on Customs <br> Hand over the information to Skier <br> Locate and obtain any item that could help with the investigation <br> Hand over the items to Skier | Unlocks purchase of 7.62x54mm R SP BT at Skier LL1                                                                                            |
-| ✅ Chemical - Part 2     | Locate and obtain any evidence on Customs that could help with the investigation <br> Hand over the evidence to Skier <br> Locate and obtain any information on Customs that could help with the investigation <br> Hand over the info to Skier                                                                              | Unlocks purchase of AK-74 Hexagon 5.45x39 sound suppressor at Skier LL1 <br> Unlocks craft for xTG-12 antidote injector at Medstation level 2 |
-| ✅ Chemical - Part 3     | Obtain the chemical-filled syringe hidden in Factory <br> Hand over the chemical-filled syringe to Skier                                                                                                                                                                                                                     | Unlocks purchase of ORSIS T-5000M 7.62x51 bolt-action sniper rifle at Skier LL2                                                               |
-| ❌ Chemical - Part 4     | Locate the transport with the chemicals on Customs <br> Mark the vehicle with an MS2000 Marker                                                                                                                                                                                                                               |                                                                                                                                               |
-| ✅ Thirsty - Breadwinner | Find 2 Propane tanks (5L) in raid <br> Hand over the items                                                                                                                                                                                                                                                                   |                                                                                                                                               |
-| Thirsty - Delivery       | Locate the specified stash spot on Woods <br> Locate the specified stash spot on Customs <br> Stash the first Propane tank (5L) <br> Stash the second Propane tank (5L)                                                                                                                                                      |                                                                                                                                               |
-| ✅ Easy Money - Part 1   | Plant the Bison vs Undertaker poster in the living quarters at the Scav base on Customs                                                                                                                                                                                                                                      | Unlocks Ref as trader                                                                                                                         |
+| Quest                 | Objectives                                                                                                                                                                                                                                                                                                                   | Rewards                                                                                                                                       |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Chemical - Part 1     | Locate and obtain any information about the Deputy Chief's past life on Customs <br> (Optional) Locate the sleeping place of the former Deputy Chief of Security on Customs <br> Hand over the information to Skier <br> Locate and obtain any item that could help with the investigation <br> Hand over the items to Skier | Unlocks purchase of 7.62x54mm R SP BT at Skier LL1                                                                                            |
+| Chemical - Part 2     | Locate and obtain any evidence on Customs that could help with the investigation <br> Hand over the evidence to Skier <br> Locate and obtain any information on Customs that could help with the investigation <br> Hand over the info to Skier                                                                              | Unlocks purchase of AK-74 Hexagon 5.45x39 sound suppressor at Skier LL1 <br> Unlocks craft for xTG-12 antidote injector at Medstation level 2 |
+| Chemical - Part 3     | Obtain the chemical-filled syringe hidden in Factory <br> Hand over the chemical-filled syringe to Skier                                                                                                                                                                                                                     | Unlocks purchase of ORSIS T-5000M 7.62x51 bolt-action sniper rifle at Skier LL2                                                               |
+| Chemical - Part 4     | Locate the transport with the chemicals on Customs <br> Mark the vehicle with an MS2000 Marker                                                                                                                                                                                                                               |                                                                                                                                               |
+| Thirsty - Breadwinner | Find 2 Propane tanks (5L) in raid <br> Hand over the items                                                                                                                                                                                                                                                                   |                                                                                                                                               |
+| Thirsty - Delivery    | Locate the specified stash spot on Woods <br> Locate the specified stash spot on Customs <br> Stash the first Propane tank (5L) <br> Stash the second Propane tank (5L)                                                                                                                                                      |                                                                                                                                               |
+| Easy Money - Part 1   | Plant the Bison vs Undertaker poster in the living quarters at the Scav base on Customs                                                                                                                                                                                                                                      | Unlocks Ref as trader                                                                                                                         |
 
 ## ???
 

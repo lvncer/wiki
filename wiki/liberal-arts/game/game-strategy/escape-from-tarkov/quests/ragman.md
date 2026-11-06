@@ -1,17 +1,90 @@
 # Ragman Quest
 
+## Checklist
+
+### Loyalty Level 1
+
+- [ ] Dressed to Kill
+- [x] Gratitude
+- [x] A Big Loss
+- [x] Fuel Crisis
+- [x] Pathfinder
+- [ ] Long Line
+- [x] Small Things, Big Help
+- [x] Make ULTRA Great Again
+
+### Loyalty Level 2
+
+- [ ] Dandies
+- [ ] The Key to Success
+- [ ] Hot Delivery
+- [x] Big Sale
+- [ ] Supervisor
+- [x] Break the Deal
+- [x] Audit
+- [x] Minibus
+- [x] Nothing Fishy About This
+- [ ] Ballet Lover
+
+### Loyalty Level 3
+
+- [ ] Audiophile
+- [ ] A Fuel Matter
+- [ ] Booze
+- [ ] Know Your Place!
+
+### Essential Tasks
+
+- [ ] Sew it Good - Part 1
+- [ ] Sew it Good - Part 2
+- [ ] Sew it Good - Part 3
+- [ ] Drip-Out - Part 1
+- [ ] Drip-Out - Part 2
+
+### ???
+
+- [ ] Reserve Expert
+- [ ] Scavenger
+- [ ] Inventory Files
+- [ ] Living High is Not a Crime
+- [ ] Antique Enthusiast
+- [ ] Sew it Good - Part 4
+- [ ] Textile - Part 1
+- [ ] Textile - Part 2
+- [ ] Key to the City
+- [ ] The Invisible Hand
+- [ ] Circulate
+- [ ] Special Offer
+- [ ] Combat Proven
+- [ ] Old Patterns
+- [ ] Another Shipping Delay
+- [ ] Stabilize Business
+- [ ] Sensory Analysis - Part 1
+- [ ] Vacate the Premises
+- [ ] Fresh Stock
+- [ ] Can't Drink Away Skill
+- [ ] Pay the Fare!
+- [ ] Akimbo
+- [ ] Sisyphus
+- [ ] New Beginning (Prestige 1)
+- [ ] New Beginning (Prestige 2)
+- [ ] New Beginning (Prestige 3)
+- [ ] New Beginning (Prestige 4)
+- [ ] New Beginning (Prestige 5)
+- [ ] New Beginning (Prestige 6)
+
 ## Loyalty Level 1
 
 | Quest                  | Objectives                                                                                                                                                                                                       | Rewards |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Dressed to Kill        | Find the item in raid: 2 any Ushanka hat <br> Find the item in raid: 2 Kinda cowboy hat <br> Hand over the items <br> Hand over the items                                                                        |         |
-| ✅ Gratitude              | Stash a Shemagh (Green) at the sawmill docks on Woods <br> Stash RayBench Hipster Reserve sunglasses at the sawmill docks on Woods                                                                               |         |
-| ✅ A Big Loss             | Locate and obtain the OLI cargo route documents on Interchange <br> Hand over the documents to Ragman                                                                                                            |         |
-| ✅ Fuel Crisis            | Locate and mark any fuel tank near the power station with an MS2000 Marker on Interchange <br> Locate and mark any fuel tank in the northern territory with an MS2000 Marker on Interchange                      |         |
-| ✅ Pathfinder             | Visit the Railway Exfil exit <br> Visit the Emercom Checkpoint exit <br> Visit the Power Station V-Ex exit                                                                                                       |         |
+| Gratitude              | Stash a Shemagh (Green) at the sawmill docks on Woods <br> Stash RayBench Hipster Reserve sunglasses at the sawmill docks on Woods                                                                               |         |
+| A Big Loss             | Locate and obtain the OLI cargo route documents on Interchange <br> Hand over the documents to Ragman                                                                                                            |         |
+| Fuel Crisis            | Locate and mark any fuel tank near the power station with an MS2000 Marker on Interchange <br> Locate and mark any fuel tank in the northern territory with an MS2000 Marker on Interchange                      |         |
+| Pathfinder             | Visit the Railway Exfil exit <br> Visit the Emercom Checkpoint exit <br> Visit the Power Station V-Ex exit                                                                                                       |         |
 | Long Line              | Eliminate 4 PMC operatives on Interchange                                                                                                                                                                        |         |
-| ✅ Small Things, Big Help | Find and mark the first fuel stash with an MS2000 Marker on Woods <br> Find and mark the second fuel stash with an MS2000 Marker on Woods <br> Find and mark the third fuel stash with an MS2000 Marker on Woods |         |
-| ✅ Make ULTRA Great Again | Eliminate 10 any target on Interchange                                                                                                                                                                           |         |
+| Small Things, Big Help | Find and mark the first fuel stash with an MS2000 Marker on Woods <br> Find and mark the second fuel stash with an MS2000 Marker on Woods <br> Find and mark the third fuel stash with an MS2000 Marker on Woods |         |
+| Make ULTRA Great Again | Eliminate 10 any target on Interchange                                                                                                                                                                           |         |
 
 ## Loyalty Level 2
 
@@ -20,12 +93,12 @@
 | Dandies                  | Eliminate any 15 enemies while wearing a Bomber beanie and RayBench Hipster Reserve sunglasses on Streets of Tarkov <br> Stash a Bomber beanie inside the barber shop on Streets of Tarkov <br> Stash RayBench Hipster Reserve sunglasses inside the barber shop on Streets of Tarkov                                                                                                |         |
 | The Key to Success       | Obtain the first book of clothes design on Interchange <br> Hand over the first book of clothes design to Ragman <br> Obtain the second book of clothes design on Interchange <br> Hand over the second book of clothes design to Ragman                                                                                                                                             |         |
 | Hot Delivery             | Stash a ComTac II headset in the specified place on Interchange <br> Stash a 6B47 helmet (Olive Drab) in the specified place on Interchange <br> Stash a Gzhel-K body armor in the specified place on Interchange                                                                                                                                                                    |         |
-| ✅ Big Sale                 | Locate the AVOKADO store on Interchange <br> Locate the KOSTIN store on Interchange <br> Locate the tRend store on Interchange <br> Locate the DINO CLOTHES store on Interchange <br> Locate the TOP BRAND store on Interchange                                                                                                                                                      |         |
+| Big Sale                 | Locate the AVOKADO store on Interchange <br> Locate the KOSTIN store on Interchange <br> Locate the tRend store on Interchange <br> Locate the DINO CLOTHES store on Interchange <br> Locate the TOP BRAND store on Interchange                                                                                                                                                      |         |
 | Supervisor               | Stash the Goshan cash register key at the BIZARRO store fitting rooms on Interchange <br> (Optional) Obtain the Goshan cash register key <br> Stash the IDEA cash register key at Register #9 on Interchange <br> (Optional) Obtain the IDEA cash register key <br> Stash the OLI cash register key at Register #7-8 on Interchange <br> (Optional) Obtain the OLI cash register key |         |
-| ✅ Break the Deal           | Stash a DVL-10 sniper rifle at the specified spot on Customs <br> Stash a DVL-10 magazine at the specified spot on Customs <br> Stash an ELCAN SpecterDR scope at the specified spot on Customs <br> Stash a pack of any 7.62x51 ammo at the specified spot on Customs                                                                                                               |         |
-| ✅ Audit                    | Obtain the financial records on Streets of Tarkov <br> Hand over the journal                                                                                                                                                                                                                                                                                                         |         |
-| ✅ Minibus                  | Locate and mark the first yellow minibus with an MS2000 Marker on Interchange <br> Locate and mark the second yellow minibus with an MS2000 Marker on Interchange <br> Locate and mark the third yellow minibus with an MS2000 Marker on Interchange <br> Hand over 10 any found in raid items from the Tools category                                                               |         |
-| ✅ Nothing Fishy About This | Locate Ragman's SUV on Shoreline <br> Survive and extract from the location                                                                                                                                                                                                                                                                                                          |         |
+| Break the Deal           | Stash a DVL-10 sniper rifle at the specified spot on Customs <br> Stash a DVL-10 magazine at the specified spot on Customs <br> Stash an ELCAN SpecterDR scope at the specified spot on Customs <br> Stash a pack of any 7.62x51 ammo at the specified spot on Customs                                                                                                               |         |
+| Audit                    | Obtain the financial records on Streets of Tarkov <br> Hand over the journal                                                                                                                                                                                                                                                                                                         |         |
+| Minibus                  | Locate and mark the first yellow minibus with an MS2000 Marker on Interchange <br> Locate and mark the second yellow minibus with an MS2000 Marker on Interchange <br> Locate and mark the third yellow minibus with an MS2000 Marker on Interchange <br> Hand over 10 any found in raid items from the Tools category                                                               |         |
+| Nothing Fishy About This | Locate Ragman's SUV on Shoreline <br> Survive and extract from the location                                                                                                                                                                                                                                                                                                          |         |
 | Ballet Lover             | Locate the balletmeister's apartment on Streets of Tarkov <br> Survive and extract from the location                                                                                                                                                                                                                                                                                 |         |
 
 ## Loyalty Level 3

@@ -1,46 +1,148 @@
 # Mechanic Quest
 
+## Checklist
+
+### Loyalty Level 1
+
+- [x] Steady Signal
+- [x] Passion for Ergonomics
+- [x] Gunsmith - HK MP5
+- [x] Farming
+- [x] Gunsmith - AKS-74U
+- [x] The Courier
+- [x] Bad Habit
+- [x] Gunsmith - MP-133
+- [x] Saving the Mole
+
+### Loyalty Level 2
+
+- [x] Rat Hunting
+- [ ] Watching You
+- [ ] Secrets of Polikhim
+- [ ] Playing the Market
+- [ ] Surveillance
+- [x] Ill-Wisher
+- [x] Black Swan
+- [x] Scout
+- [x] Gunsmith - OP-SKS
+- [ ] Chemistry Closet
+- [x] Gunsmith - Model 870
+- [ ] The Secret to Productivity
+
+### Loyalty Level 3
+
+- [ ] Surplus Goods
+- [ ] Back Door
+- [x] Gunsmith - M4A1
+- [ ] Gunsmith - P226R
+- [ ] Corporate Secrets
+- [ ] The Door
+
+### Essential Tasks
+
+- [ ] Needle in a Haystack
+- [ ] Shady Contractor
+- [ ] Broadcast - Part 1
+- [x] A Helping Hand
+- [ ] To the Light - Trust but Verify
+- [x] Introduction
+
+### ???
+
+- [ ] Gunsmith - AKM
+- [ ] Gunsmith - AKS-74N
+- [ ] Gunsmith - AK-105
+- [ ] Gunsmith - Vector 9x19
+- [ ] Gunsmith - MPX
+- [ ] Gunsmith Master - Part 2
+- [ ] Gunsmith Master - Part 1
+- [ ] Gunsmith - AS VAL
+- [ ] Gunsmith Master - Part 3
+- [ ] Gunsmith Master - Part 4
+- [ ] Gunsmith Master - Part 5
+- [ ] Gunsmith Master - Part 6
+- [ ] Gunsmith Master - Part 7
+- [ ] Gunsmith Master - Part 8
+- [ ] Gunsmith Master - Part 9
+- [ ] Gunsmith Master - Part 10
+- [ ] Gunsmith Master - Part 11
+- [ ] Gunsmith Master - Part 13
+- [ ] Gunsmith Master - Part 12
+- [ ] Semiconductor Crisis
+- [ ] Psycho Sniper
+- [ ] Shooter Born in Heaven
+- [ ] Fertilizers
+- [ ] Import
+- [ ] Goals and Means
+- [ ] Calibration
+- [ ] Energy Crisis
+- [ ] Broadcast - Part 2
+- [ ] To the Light - False Call
+- [ ] To the Light - Someone Called?
+- [ ] To the Light - Clip Their Wings
+- [ ] To the Light - Fallen Bird
+- [ ] To the Light - Dangerous Ambitions
+- [ ] To the Light - A Time to Throw Stones
+- [ ] To the Light - A Time to Gather Stones
+- [ ] To the Light - The Other Side
+- [ ] To the Light - Getting Acquainted
+- [ ] Corporate Perks
+- [ ] Airmail
+- [ ] Camera, Action!
+- [ ] Hidden Layer
+- [ ] Offensive Reconnaissance
+- [ ] Hypotheses Testing
+- [ ] Hobby Club
+- [ ] Setting Priorities
+- [ ] Make Amends - Buyout
+- [ ] Make Amends - Equipment
+- [ ] Make Amends - Security
+- [ ] Make Amends - Sweep Up
+- [ ] Make Amends - Software
+- [ ] Make Amends - Quarantine
+- [ ] Make Amends
+
 ## Loyalty Level 1
 
-| Quest                     | Objectives                                                                                                                                                                                                                                                                             | Rewards                                                                                                                                                                        |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ✅ Steady Signal          | Mark any of the weather stations with an MS2000 Marker on Woods                                                                                                                                                                                                                        |                                                                                                                                                                                |
-| ✅ Passion for Ergonomics | Locate and obtain the customized tool set at the garage complex on Customs <br> Hand over the found item                                                                                                                                                                               |                                                                                                                                                                                |
-| ✅ Gunsmith - HK MP5      | Modify an MP5 to comply with the given specifications                                                                                                                                                                                                                                  | Unlocks barter for Glock 17 9x19 pistol (variant Tac 3) at Mechanic LL1                                                                                                        |
-| ✅ Farming                | Find the warehouse of seized goods on Customs <br> Obtain the package of graphics cards <br> Hand over the package of graphics cards to Mechanic                                                                                                                                       | Unlocks purchase of PP-19-01 Vityaz 9x19 submachine gun (variant Zenit) at Ref LL1 <br> Unlocks barter for PP-19-01 Vityaz 9x19 submachine gun (variant Zenit) at Mechanic LL1 |
-| ✅ Gunsmith - AKS-74U     | Modify an AKS-74U to comply with the given specifications                                                                                                                                                                                                                              |                                                                                                                                                                                |
-| ✅ The Courier            | Stash a Trijicon REAP-IR scope behind the trash containers at the new gas station on Customs                                                                                                                                                                                           | Unlocks barter for Ammunition case at Mechanic LL1                                                                                                                             |
-| ✅ Bad Habit              | Find the item in raid: 15 Malboro , Wilston, or Strike cigarettes <br> Hand over the items                                                                                                                                                                                             |                                                                                                                                                                                |
-| ✅ Gunsmith - MP-133      | Modify an MP-133 to comply with the given specifications                                                                                                                                                                                                                               |                                                                                                                                                                                |
-| ✅ Saving the Mole        | Access the lab scientist's office on Ground Zero <br> (Optional) Locate the USEC group at the parking lot of the TerraGroup complex <br> (Optional) Locate the lab scientist in the TerraGroup complex <br> Locate and obtain the scientist's hard drive <br> Hand over the hard drive |                                                                                                                                                                                |
+| Quest                  | Objectives                                                                                                                                                                                                                                                                             | Rewards                                                                                                                                                                        |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Steady Signal          | Mark any of the weather stations with an MS2000 Marker on Woods                                                                                                                                                                                                                        |                                                                                                                                                                                |
+| Passion for Ergonomics | Locate and obtain the customized tool set at the garage complex on Customs <br> Hand over the found item                                                                                                                                                                               |                                                                                                                                                                                |
+| Gunsmith - HK MP5      | Modify an MP5 to comply with the given specifications                                                                                                                                                                                                                                  | Unlocks barter for Glock 17 9x19 pistol (variant Tac 3) at Mechanic LL1                                                                                                        |
+| Farming                | Find the warehouse of seized goods on Customs <br> Obtain the package of graphics cards <br> Hand over the package of graphics cards to Mechanic                                                                                                                                       | Unlocks purchase of PP-19-01 Vityaz 9x19 submachine gun (variant Zenit) at Ref LL1 <br> Unlocks barter for PP-19-01 Vityaz 9x19 submachine gun (variant Zenit) at Mechanic LL1 |
+| Gunsmith - AKS-74U     | Modify an AKS-74U to comply with the given specifications                                                                                                                                                                                                                              |                                                                                                                                                                                |
+| The Courier            | Stash a Trijicon REAP-IR scope behind the trash containers at the new gas station on Customs                                                                                                                                                                                           | Unlocks barter for Ammunition case at Mechanic LL1                                                                                                                             |
+| Bad Habit              | Find the item in raid: 15 Malboro , Wilston, or Strike cigarettes <br> Hand over the items                                                                                                                                                                                             |                                                                                                                                                                                |
+| Gunsmith - MP-133      | Modify an MP-133 to comply with the given specifications                                                                                                                                                                                                                               |                                                                                                                                                                                |
+| Saving the Mole        | Access the lab scientist's office on Ground Zero <br> (Optional) Locate the USEC group at the parking lot of the TerraGroup complex <br> (Optional) Locate the lab scientist in the TerraGroup complex <br> Locate and obtain the scientist's hard drive <br> Hand over the hard drive |                                                                                                                                                                                |
 
 ## Loyalty Level 2
 
 | Quest                      | Objectives                                                                                                                                                                                                  | Rewards                                                                                                                                                                     |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅ Rat Hunting             | Find the item in raid: PC CPU <br> Hand over the item <br> Find the item in raid: Rechargeable battery <br> Hand over the item <br> Find the item in raid: Printed circuit board <br> Hand over the item    |                                                                                                                                                                             |
+| Rat Hunting                | Find the item in raid: PC CPU <br> Hand over the item <br> Find the item in raid: Rechargeable battery <br> Hand over the item <br> Find the item in raid: Printed circuit board <br> Hand over the item    |                                                                                                                                                                             |
 | Watching You               | Locate the surveillance spot on Streets of Tarkov <br> Obtain the observation results                                                                                                                       |                                                                                                                                                                             |
 | Secrets of Polikhim        | Locate and obtain the precision tools package in the laboratory on Customs <br> Use the transit from Customs to Factory (In one raid) <br> Stash the package at the laboratory storage room on Factory      | Unlocks purchase of 5.7x28mm R37.F at Mechanic LL3 <br> Unlocks purchase of AK GP-25 accessory kit recoil pad at Prapor LL2                                                 |
 | Playing the Market         | Fix the first control board with a Toolset on Factory <br> Fix the second control board with a Toolset on Factory                                                                                           | Unlocks purchase of Ammunition case at Mechanic LL2                                                                                                                         |
 | Surveillance               | Obtain the data on vehicle movement at the Concordia residential complex parking lot on Streets of Tarkov <br> Hand over the information                                                                    |                                                                                                                                                                             |
-| ✅ Ill-Wisher              | Locate the first signal source on Shoreline <br> Place a Signal jammer on the first signal source <br> Locate the second signal source on Shoreline <br> Place a Signal jammer on the second signal source  |                                                                                                                                                                             |
-| ✅ Black Swan              | Locate and mark any of the heat exchangers with an MS2000 Marker on Factory                                                                                                                                 |                                                                                                                                                                             |
-| ✅ Scout                   | Locate the first Factory extraction <br> Locate the second Factory extraction <br> Locate the third Factory extraction <br> Locate the fourth Factory extraction <br> Survive and extract from the location |                                                                                                                                                                             |
-| ✅ Gunsmith - OP-SKS       | Modify an OP-SKS to comply with the given specifications                                                                                                                                                    |                                                                                                                                                                             |
+| Ill-Wisher                 | Locate the first signal source on Shoreline <br> Place a Signal jammer on the first signal source <br> Locate the second signal source on Shoreline <br> Place a Signal jammer on the second signal source  |                                                                                                                                                                             |
+| Black Swan                 | Locate and mark any of the heat exchangers with an MS2000 Marker on Factory                                                                                                                                 |                                                                                                                                                                             |
+| Scout                      | Locate the first Factory extraction <br> Locate the second Factory extraction <br> Locate the third Factory extraction <br> Locate the fourth Factory extraction <br> Survive and extract from the location |                                                                                                                                                                             |
+| Gunsmith - OP-SKS          | Modify an OP-SKS to comply with the given specifications                                                                                                                                                    |                                                                                                                                                                             |
 | Chemistry Closet           | Locate Sanitar's office in the health resort on Shoreline                                                                                                                                                   |                                                                                                                                                                             |
-| ✅ Gunsmith - Model 870    | Modify a Remington Model 870 to comply with the given specifications                                                                                                                                        | Unlocks purchase of Tromix Monster Claw 12ga muzzle brake at Mechanic LL3 <br> Unlocks purchase of Kalashnikov AK-104 7.62x39 assault rifle (variant RPKT mod.1) at Ref LL2 |
+| Gunsmith - Model 870       | Modify a Remington Model 870 to comply with the given specifications                                                                                                                                        | Unlocks purchase of Tromix Monster Claw 12ga muzzle brake at Mechanic LL3 <br> Unlocks purchase of Kalashnikov AK-104 7.62x39 assault rifle (variant RPKT mod.1) at Ref LL2 |
 | The Secret to Productivity | Unravel the secret of the IT firm's employees' high morale on Streets of Tarkov <br> Survive and extract from the location                                                                                  |                                                                                                                                                                             |
 
 ## Loyalty Level 3
 
-| Quest              | Objectives                                                                                                                                                                                                      | Rewards |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Surplus Goods      | Obtain the MBT Integrated Navigation System on Reserve <br> Hand over the navigation system to Mechanic                                                                                                         |         |
-| Back Door          | Locate the secret underground bunker exit on Reserve <br> (Optional) Locate the switch that activates the exit <br> Survive and extract from the location through the secret exit                               |         |
-| ✅ Gunsmith - M4A1 | Modify an M4A1 to comply with the given specifications                                                                                                                                                          |         |
-| Gunsmith - P226R   | Modify a P226R to comply with the given specifications                                                                                                                                                          |         |
-| Corporate Secrets  | Locate and obtain the data on water pump operation on Lighthouse <br> Hand over the extracted data <br> Locate and obtain the data on pumping station operation on Lighthouse <br> Hand over the extracted data |         |
-| The Door           | Locate the cause of the signal interference on Streets of Tarkov <br> Install a WI-FI Camera to watch the door <br> Install a WI-FI Camera to watch the stairwell                                               |         |
+| Quest             | Objectives                                                                                                                                                                                                      | Rewards |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Surplus Goods     | Obtain the MBT Integrated Navigation System on Reserve <br> Hand over the navigation system to Mechanic                                                                                                         |         |
+| Back Door         | Locate the secret underground bunker exit on Reserve <br> (Optional) Locate the switch that activates the exit <br> Survive and extract from the location through the secret exit                               |         |
+| Gunsmith - M4A1   | Modify an M4A1 to comply with the given specifications                                                                                                                                                          |         |
+| Gunsmith - P226R  | Modify a P226R to comply with the given specifications                                                                                                                                                          |         |
+| Corporate Secrets | Locate and obtain the data on water pump operation on Lighthouse <br> Hand over the extracted data <br> Locate and obtain the data on pumping station operation on Lighthouse <br> Hand over the extracted data |         |
+| The Door          | Locate the cause of the signal interference on Streets of Tarkov <br> Install a WI-FI Camera to watch the door <br> Install a WI-FI Camera to watch the stairwell                                               |         |
 
 ## Essential Tasks
 
@@ -49,9 +151,9 @@
 | Needle in a Haystack            | Investigate the courtyard park by TerraGroup HQ on Ground Zero <br> Investigate the kart track on Interchange <br> Investigate the indoor children's playground on Interchange <br> Investigate the children's playground by Concordia on Streets of Tarkov <br> Investigate the coast-side construction site on Shoreline <br> Investigate the children's playground by the Health Resort on Shoreline |                          |
 | Shady Contractor                | Locate the Knossos LLC senior manager's car on Ground Zero <br> Locate and obtain the manager's diary <br> Hand over the diary                                                                                                                                                                                                                                                                          |                          |
 | Broadcast - Part 1              | Locate the hidden recording studio on Lighthouse <br> Place a Signal Jammer inside the studio                                                                                                                                                                                                                                                                                                           |                          |
-| ✅ A Helping Hand               | Locate and obtain Prapor's package on Woods <br> Survive and extract from the location <br> Complete the task Shipping Delay - Part 1                                                                                                                                                                                                                                                                   |                          |
+| A Helping Hand                  | Locate and obtain Prapor's package on Woods <br> Survive and extract from the location <br> Complete the task Shipping Delay - Part 1                                                                                                                                                                                                                                                                   |                          |
 | To the Light - Trust but Verify | Stash the Hard drive with false data in the server room near the weapon testing area in The Lab (In one raid) <br> (Optional) After that, extract through the Ventilation Shaft <br> Extract from The Lab through the Ventilation Shaft (In one raid)                                                                                                                                                   |                          |
-| ✅ Introduction                 | Find Jaeger's camp at the specified spot on Woods <br> Obtain Jaeger's encrypted message <br> Hand over the message to Mechanic                                                                                                                                                                                                                                                                         | Unlocks Jaeger as trader |
+| Introduction                    | Find Jaeger's camp at the specified spot on Woods <br> Obtain Jaeger's encrypted message <br> Hand over the message to Mechanic                                                                                                                                                                                                                                                                         | Unlocks Jaeger as trader |
 
 ## ???
 
