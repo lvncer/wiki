@@ -24,8 +24,14 @@ title: "Quests" # gen_index
 
 ## このフォルダの中身
 
-### サブトピック
+### ノート
 
-- [trader-quest](./trader-quest/README.md)
+- [Jeager Quest](./jeager.md)
+- [Mechanic Quest](./mechanic.md)
+- [Peacekeeper Quest](./peacekeeper.md)
+- [Prapor Quests](./prapor.md)
+- [Ragman Quest](./ragman.md)
+- [Skier Quest](./skier.md)
+- [Therapist Quest](./therapist.md)
 
 <!-- index:end -->

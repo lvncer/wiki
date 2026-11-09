@@ -28,5 +28,6 @@ title: "ゲームノウハウ" # gen_index
 - [PROMOTE](./PROMOTE.md)
 - [ローグライク vs ローグライト](./roguelike-vs-roguelite.md)
 - [まず最優先で見てほしいやつ](./should-watch-contents-create-indie.md)
+- [UIの参考資料](./ui.md)
 
 <!-- index:end -->

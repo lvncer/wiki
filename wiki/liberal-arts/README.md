@@ -15,8 +15,11 @@ title: "liberal-arts" # gen_index
 ### サブトピック
 
 - [affairs](./affairs/README.md)
+- [栄養管理](./dietary-manage/README.md)
 - [game](./game/README.md)
+- [Hobbies](./hobby/README.md)
 - [knowledges](./knowledges/README.md)
+- [Sports](./sports/README.md)
 - [Workout](./workout/README.md)
 
 <!-- index:end -->

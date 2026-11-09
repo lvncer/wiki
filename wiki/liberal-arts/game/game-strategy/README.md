@@ -22,6 +22,7 @@ title: "game-strategy" # gen_index
 - [geoguessr](./geoguessr/README.md)
 - [metalgear](./metalgear/README.md)
 - [minecraft](./minecraft/README.md)
+- [Monster Hunter Rise / Sunbreak](./monster-hunter-rise/README.md)
 - [monster-hunter-wilds](./monster-hunter-wilds/README.md)
 - [monster-hunter-world](./monster-hunter-world/README.md)
 - [steins;gate](./steins%3Bgate/README.md)

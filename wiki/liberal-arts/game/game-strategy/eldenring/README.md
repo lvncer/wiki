@@ -25,5 +25,6 @@ title: "ELDENRING" # gen_index
 
 - [アイテム](./ITEMS.md)
 - [MAP](./MAP.md)
+- [エルデンリング 全武器](./WEAPONS.md)
 
 <!-- index:end -->

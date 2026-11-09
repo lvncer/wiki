@@ -12,14 +12,15 @@ title: "chapter" # gen_index
 
 ### ノート
 
-- [Accidental Witness](./Accidental-Witness.md)
-- [Batya](./Batya.md)
+- [CHAPTER: Accidental Witness](./Accidental-Witness.md)
+- [CHAPTER: Batya](./Batya.md)
 - [Chapter: Blue Fire](./bluefire.md)
+- [CHAPTER: Boreas](./Boreas.md)
 - [Chapter: Falling Skies](./falling-skies.md)
-- [The-Labyrinth](./The-Labyrinth.md)
-- [The Ticket](./the-ticket.md)
-- [The-Unheard](./The-Unheard.md)
-- [They-Are-Already-Here](./They-Are-Already-Here.md)
+- [CHAPTER: The Labyrihth](./The-Labyrinth.md)
+- [CHAPTER: The Ticket](./the-ticket.md)
+- [CHAPTER: The Unheard](./The-Unheard.md)
+- [CHAPTER: They Are Already Here](./They-Are-Already-Here.md)
 - [CHAPTER Tour](./tour.md)
 
 <!-- index:end -->
