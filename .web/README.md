@@ -10,9 +10,9 @@
 
 ```bash
 cd .web
-npm install
-npm run dev     # http://localhost:3000
-npm run build   # 静的エクスポート → .web/out/
+bun install
+bun run dev
+bun run build   # 静的エクスポート → .web/out/
 ```
 
 生成物(`public/generated/`, `public/wiki-assets/`, `.content-cache/`, `out/`)はすべて `.gitignore` 対象で、ビルドの度に再生成される。

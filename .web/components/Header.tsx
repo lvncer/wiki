@@ -17,9 +17,6 @@ export default function Header() {
           <Link href="/" className="hover:underline">
             トップ
           </Link>
-          <Link href="/categories" className="hover:underline">
-            カテゴリー
-          </Link>
           <Link href="/graph" className="hover:underline">
             グラフ
           </Link>
