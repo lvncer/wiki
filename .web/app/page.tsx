@@ -20,10 +20,6 @@ export default async function HomePage() {
     <ArticleLayout>
       <MarkdownArticle html={html} />
       <RecentChanges items={recentChanges} />
-
-      <h1 className="pt-2 my-8 text-2xl font-bold text-ink-900 dark:text-ink-50">
-        Categories
-      </h1>
       <DirectoryListing entries={categories} />
     </ArticleLayout>
   );

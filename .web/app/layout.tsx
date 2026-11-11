@@ -5,11 +5,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "lvncerpedia",
-  description: "個人の学習メモ Wiki(Obsidian Vault を Web 公開)",
+  description: "lvncer's personal knowledge base",
 };
 
-// ハイドレーション前に <html> へ dark クラスを同期的に付与し、テーマのちらつき(FOUC)を防ぐ。
-// キー名 "theme" は lib/theme.ts の THEME_STORAGE_KEY と一致させること。
 const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||((!t||t==="system")&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark");}catch(e){}})();`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
