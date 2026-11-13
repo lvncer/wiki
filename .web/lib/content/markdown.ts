@@ -163,10 +163,9 @@ export function processMarkdown(
 ): MarkdownResult {
   const linkedNotes: LinkedNote[] = [];
 
-  const mdastTree = unified().use(remarkParse).use(remarkGfm).parse(content);
-  const plainText = mdastToString(mdastTree);
-
-  const file = unified()
+  // remarkParse を2回走らせない: 1回だけ parse した mdast から plainText を取り、
+  // 同じツリーをそのまま後続の変換(リンク書き換え→hast→HTML文字列化)にも使い回す。
+  const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkFailedTaskList)
@@ -174,8 +173,13 @@ export function processMarkdown(
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(() => rehypeRewriteRawHtml(absFile, linkedNotes))
-    .use(rehypeStringify)
-    .processSync(content);
+    .use(rehypeStringify);
 
-  return { html: String(file), linkedNotes, plainText };
+  const mdastTree = processor.parse(content);
+  const plainText = mdastToString(mdastTree);
+
+  const transformedTree = processor.runSync(mdastTree);
+  const html = String(processor.stringify(transformedTree));
+
+  return { html, linkedNotes, plainText };
 }

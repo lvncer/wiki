@@ -24,39 +24,44 @@ function readDirSafe(dir: string): fs.Dirent[] {
   }
 }
 
-/** CONTENT_ROOT 以下を再帰的に歩いて .md ファイルの絶対パス一覧を返す(gen_index.py の os.walk と同じ除外規則)。 */
-export function walkMarkdownFiles(root: string = CONTENT_ROOT): string[] {
-  const out: string[] = [];
+/** CONTENT_ROOT 以下を再帰的に歩いて、.md ファイルと全ディレクトリの絶対パス一覧を1回の fs 走査で返す
+ *  (gen_index.py の os.walk と同じ除外規則)。以前は walkMarkdownFiles / walkDirectories が
+ *  それぞれ独立に同じツリーを辿っていたため、ここで1回にまとめている。 */
+function walkContentTree(root: string): { files: string[]; dirs: string[] } {
+  const files: string[] = [];
+  const dirs: string[] = [];
   const visit = (dir: string) => {
     for (const entry of readDirSafe(dir)) {
       if (isExcludedName(entry.name)) continue;
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) {
+        dirs.push(full);
         visit(full);
       } else if (entry.isFile() && entry.name.endsWith(".md")) {
-        out.push(full);
+        files.push(full);
       }
     }
   };
   visit(root);
-  return out.sort();
+  return { files: files.sort(), dirs: dirs.sort() };
 }
 
-/** CONTENT_ROOT 以下の全ディレクトリ(除外規則適用後)の絶対パス一覧を返す。
+let cachedTree: { files: string[]; dirs: string[] } | null = null;
+
+function contentTree(): { files: string[]; dirs: string[] } {
+  if (!cachedTree) cachedTree = walkContentTree(CONTENT_ROOT);
+  return cachedTree;
+}
+
+/** CONTENT_ROOT 以下の .md ファイルの絶対パス一覧。 */
+export function walkMarkdownFiles(): string[] {
+  return contentTree().files;
+}
+
+/** CONTENT_ROOT 以下の全ディレクトリ(除外規則適用後)の絶対パス一覧。
  *  README.md を持たないフォルダにも最低限のページ(ファイルツリーのみ)を用意するために使う。 */
-export function walkDirectories(root: string = CONTENT_ROOT): string[] {
-  const out: string[] = [];
-  const visit = (dir: string) => {
-    for (const entry of readDirSafe(dir)) {
-      if (isExcludedName(entry.name)) continue;
-      if (!entry.isDirectory()) continue;
-      const full = path.join(dir, entry.name);
-      out.push(full);
-      visit(full);
-    }
-  };
-  visit(root);
-  return out.sort();
+export function walkDirectories(): string[] {
+  return contentTree().dirs;
 }
 
 /** リンク/画像から参照されている非 .md ファイルを静的配信用にコピーする際の存在確認に使う。 */
