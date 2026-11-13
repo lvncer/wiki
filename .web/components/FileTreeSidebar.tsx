@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import type { TreeNode } from "@/lib/content/build";
 import {
   getSidebarOpenPreference,
@@ -30,42 +30,33 @@ function ancestorSlugsOf(slug: string): string[] {
   return chain;
 }
 
-export default function FileTreeSidebar() {
+export default function FileTreeSidebar({ tree }: { tree: TreeNode[] }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(true);
-  const [tree, setTree] = useState<TreeNode[] | null>(null);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
-  const nodeBySlug = useRef<Map<string, TreeNode>>(new Map());
 
   // 初回マウント後にだけ localStorage の実際の設定へ切り替える(ThemeToggle の mounted ガードと同じ発想)。
   useEffect(() => {
     setOpen(getSidebarOpenPreference(true));
   }, []);
 
-  // ツリーデータはこのコンポーネントがマウントされている間、一度だけ取得する
-  // (layout.tsx はクライアント遷移をまたいでマウントされ続けるため、ページ遷移ごとの再取得は不要)。
-  useEffect(() => {
-    fetch("/generated/tree.json")
-      .then((r) => r.json())
-      .then((data: TreeNode[]) => {
-        const map = new Map<string, TreeNode>();
-        const visit = (nodes: TreeNode[]) => {
-          for (const n of nodes) {
-            map.set(n.slug, n);
-            if (n.children) visit(n.children);
-          }
-        };
-        visit(data);
-        nodeBySlug.current = map;
-        setTree(data);
-      });
-  }, []);
+  // tree はビルド時に確定した静的データ(props)なので、slug → ノードの索引も一度だけ作れば十分。
+  const nodeBySlug = useMemo(() => {
+    const map = new Map<string, TreeNode>();
+    const visit = (nodes: TreeNode[]) => {
+      for (const n of nodes) {
+        map.set(n.slug, n);
+        if (n.children) visit(n.children);
+      }
+    };
+    visit(tree);
+    return map;
+  }, [tree]);
 
   // ページ遷移ごとに現在地の祖先フォルダだけを「追加」で展開する(既に手動展開した他の枝は保持する)。
   useEffect(() => {
-    if (!tree) return;
     const activeSlug = slugFromPathname(pathname);
-    if (activeSlug === null || !nodeBySlug.current.has(activeSlug)) return;
+    if (activeSlug === null || !nodeBySlug.has(activeSlug)) return;
     // activeSlug 自身も追加する: フォルダの README.md はフォルダ自身と同じ slug を持つ
     // ファイル行として一覧に出るため、そのフォルダを開いて README.md を見せる必要がある。
     const toExpand = [...ancestorSlugsOf(activeSlug), activeSlug];
@@ -80,18 +71,20 @@ export default function FileTreeSidebar() {
       }
       return changed ? next : prev;
     });
-  }, [pathname, tree]);
+  }, [pathname, nodeBySlug]);
 
   const activeSlug = useMemo(() => slugFromPathname(pathname), [pathname]);
 
-  function toggle(slug: string) {
+  // FileTreeNode は React.memo でラップしているので、onToggle の参照を安定させないと
+  // 毎レンダーで memo が効かなくなる(= クリック1回でツリー全体が再レンダーされる元凶に戻る)。
+  const toggle = useCallback((slug: string) => {
     setExpanded((prev) => {
       const next = new Set(prev);
       if (next.has(slug)) next.delete(slug);
       else next.add(slug);
       return next;
     });
-  }
+  }, []);
 
   if (!open) {
     return (
@@ -128,12 +121,7 @@ export default function FileTreeSidebar() {
         </button>
       </div>
       <nav aria-label="ファイルツリー" className="py-1">
-        {tree === null && (
-          <p className="px-3 py-2 text-sm text-ink-500 dark:text-ink-400">
-            読み込み中…
-          </p>
-        )}
-        {tree?.map((node) => (
+        {tree.map((node) => (
           <FileTreeNode
             key={node.slug}
             node={node}

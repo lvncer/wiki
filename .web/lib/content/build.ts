@@ -131,7 +131,7 @@ function fallbackTitleFor(absPath: string, slug: string): string {
 
 /** リポジトリ全体を一度だけ読み、本文HTML・検索用プレーンテキスト・グラフ用エッジを生成する。
  *  next.config.ts から dev / build の両方で必ず一度呼ばれる(npm スクリプトのライフサイクルに依存しない)。 */
-export function buildContentData(): { notes: NoteRecord[] } {
+export function buildContentData(): { notes: NoteRecord[]; tree: TreeNode[] } {
   const files = walkMarkdownFiles();
   const bySlug = new Map<string, InternalRecord>();
 
@@ -233,6 +233,15 @@ export function buildContentData(): { notes: NoteRecord[] } {
     "utf-8",
   );
 
+  // ファイルツリーはサイドバーがサーバーコンポーネント経由で読む(ブラウザから fetch しない)ので
+  // public/ ではなく内部キャッシュに置く。
+  const tree = buildTree(CONTENT_ROOT, allSlugs);
+  fs.writeFileSync(
+    path.join(CACHE_DIR, "tree.json"),
+    JSON.stringify(tree),
+    "utf-8",
+  );
+
   // --- ブラウザから fetch される生成物 ---
   fs.mkdirSync(PUBLIC_GENERATED_DIR, { recursive: true });
 
@@ -261,12 +270,5 @@ export function buildContentData(): { notes: NoteRecord[] } {
     "utf-8",
   );
 
-  const tree = buildTree(CONTENT_ROOT, allSlugs);
-  fs.writeFileSync(
-    path.join(PUBLIC_GENERATED_DIR, "tree.json"),
-    JSON.stringify(tree),
-    "utf-8",
-  );
-
-  return { notes };
+  return { notes, tree };
 }

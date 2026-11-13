@@ -1,7 +1,7 @@
 "use client";
 
 import type MiniSearch from "minisearch";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface SearchDoc {
   id: string;
@@ -23,16 +23,22 @@ function hrefForSlug(slug: string): string {
   return `/wiki/${slug.split("/").map(encodeURIComponent).join("/")}`;
 }
 
+// 入力ごとに毎回 search() を叩かない(1.8MB の索引を初回だけ読み込むのでタイプ中は特に無駄)。
+const SEARCH_DEBOUNCE_MS = 150;
+
 export default function SearchBox() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchHit[]>([]);
   const [open, setOpen] = useState(false);
+  const [indexLoading, setIndexLoading] = useState(false);
   const indexRef = useRef<MiniSearch<SearchDoc> | null>(null);
   const loadingRef = useRef<Promise<MiniSearch<SearchDoc>> | null>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   async function ensureIndex(): Promise<MiniSearch<SearchDoc>> {
     if (indexRef.current) return indexRef.current;
     if (!loadingRef.current) {
+      setIndexLoading(true);
       loadingRef.current = (async () => {
         const [{ default: MiniSearch }, docs] = await Promise.all([
           import("minisearch"),
@@ -47,23 +53,40 @@ export default function SearchBox() {
         });
         ms.addAll(docs);
         indexRef.current = ms;
+        setIndexLoading(false);
         return ms;
       })();
     }
     return loadingRef.current;
   }
 
-  async function handleChange(value: string) {
-    setQuery(value);
-    if (!value.trim()) {
-      setResults([]);
-      return;
-    }
+  async function runSearch(value: string) {
     const ms = await ensureIndex();
     const hits = ms.search(value).slice(0, 8) as unknown as SearchHit[];
     setResults(hits);
     setOpen(true);
   }
+
+  function handleChange(value: string) {
+    setQuery(value);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    if (!value.trim()) {
+      setResults([]);
+      return;
+    }
+    debounceRef.current = setTimeout(() => {
+      void runSearch(value);
+    }, SEARCH_DEBOUNCE_MS);
+  }
+
+  useEffect(() => {
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, []);
+
+  const showLoading = indexLoading && query.trim().length > 0;
+  const showDropdown = open && (results.length > 0 || showLoading);
 
   return (
     <div className="relative w-full max-w-xs">
@@ -74,14 +97,19 @@ export default function SearchBox() {
           void ensureIndex();
           if (results.length) setOpen(true);
         }}
-        onChange={(e) => void handleChange(e.target.value)}
+        onChange={(e) => handleChange(e.target.value)}
         onBlur={() => setTimeout(() => setOpen(false), 120)}
         placeholder="検索"
         aria-label="ウィキ内検索"
         className="w-full rounded-sm border border-ink-300 bg-white px-3 py-1.5 text-sm text-ink-900 focus:border-ink-600 focus:outline-hidden dark:border-ink-700 dark:bg-ink-800 dark:text-ink-100 dark:focus:border-ink-400"
       />
-      {open && results.length > 0 && (
+      {showDropdown && (
         <ul className="absolute z-20 mt-1 w-full max-h-80 overflow-auto border border-ink-300 bg-white shadow-xs dark:border-ink-700 dark:bg-ink-800">
+          {showLoading && results.length === 0 && (
+            <li className="px-3 py-2 text-sm text-ink-500 dark:text-ink-400">
+              検索中…
+            </li>
+          )}
           {results.map((r) => (
             <li
               key={r.id}
