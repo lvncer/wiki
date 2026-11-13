@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
-    <header className="border-b border-ink-300 dark:border-ink-700">
+    <header className="sticky top-0 z-30 border-b border-ink-300 bg-white dark:border-ink-700 dark:bg-ink-900">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4 px-4 py-3 sm:px-6">
         <Link
           href="/"
