@@ -16,10 +16,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="min-h-screen bg-white font-sans text-ink-800 dark:bg-ink-900 dark:text-ink-100">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <div className="mx-auto flex max-w-6xl lg:items-start">
-            <FileTreeSidebar />
-            <main className="min-w-0 flex-1 px-4 py-8 sm:px-6">{children}</main>
-          </div>
+          <FileTreeSidebar />
+          <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

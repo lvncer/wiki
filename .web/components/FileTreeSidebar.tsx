@@ -104,7 +104,7 @@ export default function FileTreeSidebar() {
           setSidebarOpenPreference(true);
         }}
         aria-label="ファイルツリーを開く"
-        className="fixed top-20 left-0 z-20 hidden rounded-r-sm border border-l-0 border-ink-300 bg-white p-1.5 text-ink-600 hover:bg-ink-50 lg:block dark:border-ink-700 dark:bg-ink-900 dark:text-ink-400 dark:hover:bg-ink-800"
+        className="fixed top-[75px] left-4 z-20 hidden rounded-md border border-ink-300 bg-white p-1.5 text-ink-600 shadow-sm hover:bg-ink-50 lg:block dark:border-ink-700 dark:bg-ink-900 dark:text-ink-400 dark:hover:bg-ink-800"
       >
         <ChevronRightIcon />
       </button>
@@ -112,7 +112,7 @@ export default function FileTreeSidebar() {
   }
 
   return (
-    <aside className="hidden w-64 shrink-0 border-r border-ink-200 lg:top-[59px] lg:block lg:h-[calc(100vh-59px)] lg:sticky lg:overflow-y-auto dark:border-ink-800">
+    <aside className="hidden w-56 overflow-y-auto rounded-md border border-ink-200 bg-white shadow-sm lg:fixed lg:top-[75px] lg:left-4 lg:z-20 lg:block lg:h-[calc(100vh-91px)] dark:border-ink-700 dark:bg-ink-900">
       <div className="flex items-center justify-between border-b border-ink-200 px-3 py-2 dark:border-ink-800">
         <span className="text-xs font-semibold tracking-wide text-ink-500 uppercase dark:text-ink-400">
           ファイル
