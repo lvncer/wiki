@@ -66,11 +66,9 @@ export default function FileTreeSidebar() {
     if (!tree) return;
     const activeSlug = slugFromPathname(pathname);
     if (activeSlug === null || !nodeBySlug.current.has(activeSlug)) return;
-    const toExpand = ancestorSlugsOf(activeSlug);
-    if (nodeBySlug.current.get(activeSlug)?.kind === "folder") {
-      toExpand.push(activeSlug);
-    }
-    if (toExpand.length === 0) return;
+    // activeSlug 自身も追加する: フォルダの README.md はフォルダ自身と同じ slug を持つ
+    // ファイル行として一覧に出るため、そのフォルダを開いて README.md を見せる必要がある。
+    const toExpand = [...ancestorSlugsOf(activeSlug), activeSlug];
     setExpanded((prev) => {
       let changed = false;
       const next = new Set(prev);

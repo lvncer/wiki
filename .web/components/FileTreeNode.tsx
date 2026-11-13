@@ -23,7 +23,9 @@ export default function FileTreeNode({
   activeSlug: string | null;
   onToggle: (slug: string) => void;
 }) {
-  const isActive = node.slug === activeSlug;
+  // フォルダ自身の README.md も通常のファイル行として一覧に出るため、
+  // アクティブハイライトはその実ファイル行だけに付ける(フォルダ行には付けない)。
+  const isActive = node.kind === "file" && node.slug === activeSlug;
   const indent = { paddingLeft: `${depth * 14 + 8}px` };
   const rowClass =
     "flex w-full items-center gap-1.5 py-1 pr-2 text-left text-sm hover:bg-ink-50 dark:hover:bg-ink-800 " +

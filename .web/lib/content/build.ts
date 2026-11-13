@@ -88,36 +88,33 @@ export interface TreeNode {
 }
 
 /** CONTENT_ROOT 以下を再帰的に辿り、サイドバーのファイルツリー全体を組み立てる。
- *  directoryChildrenForDir と同じ allSlugs/titleBySlug・除外ルールを使い、1階層分の
- *  DirectoryEntry とは別に、フルの再帰ツリーをここでだけ構築する。 */
-function buildTree(
-  dirAbsPath: string,
-  allSlugs: Set<string>,
-  titleBySlug: Map<string, string>,
-): TreeNode[] {
+ *  本物のファイルツリー(Cursor 等のエディタのサイドバー)を再現するため、表示名は常に
+ *  実際のファイル名・フォルダ名をそのまま使う(本文の H1 由来のタイトルは使わない)。
+ *  README.md も普通のファイルとして一覧に含める(= README しか無いフォルダでも
+ *  展開すれば README.md をクリックしてページを開ける)。 */
+function buildTree(dirAbsPath: string, allSlugs: Set<string>): TreeNode[] {
   const { dirs, files } = listImmediateChildren(dirAbsPath);
   const nodes: TreeNode[] = [];
 
   for (const d of dirs) {
     const slug = fileToSlug(path.join(d, "README.md"));
     if (!allSlugs.has(slug)) continue;
-    const children = buildTree(d, allSlugs, titleBySlug);
+    const children = buildTree(d, allSlugs);
     nodes.push({
       kind: "folder",
       slug,
-      title: titleBySlug.get(slug) ?? path.basename(d),
+      title: path.basename(d),
       children: children.length > 0 ? children : undefined,
     });
   }
   for (const f of files) {
     if (!f.toLowerCase().endsWith(".md")) continue;
-    if (path.basename(f).toLowerCase() === "readme.md") continue;
     const slug = fileToSlug(f);
     if (!allSlugs.has(slug)) continue;
     nodes.push({
       kind: "file",
       slug,
-      title: titleBySlug.get(slug) ?? path.basename(f, ".md"),
+      title: path.basename(f),
     });
   }
   return nodes;
@@ -264,7 +261,7 @@ export function buildContentData(): { notes: NoteRecord[] } {
     "utf-8",
   );
 
-  const tree = buildTree(CONTENT_ROOT, allSlugs, titleBySlug);
+  const tree = buildTree(CONTENT_ROOT, allSlugs);
   fs.writeFileSync(
     path.join(PUBLIC_GENERATED_DIR, "tree.json"),
     JSON.stringify(tree),
