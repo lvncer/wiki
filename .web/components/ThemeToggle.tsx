@@ -1,12 +1,9 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
-import {
-  applyThemePreference,
-  getThemePreference,
-  setThemePreference,
-  type ThemePreference,
-} from "@/lib/theme";
+
+type ThemePreference = "light" | "dark" | "system";
 
 const OPTIONS: { value: ThemePreference; label: string }[] = [
   { value: "light", label: "ライト" },
@@ -69,23 +66,13 @@ function iconFor(pref: ThemePreference) {
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  const [pref, setPref] = useState<ThemePreference>("system");
+  const { theme, setTheme } = useTheme();
+  const pref = (theme as ThemePreference | undefined) ?? "system";
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setPref(getThemePreference());
     setMounted(true);
-  }, []);
-
-  // OS のテーマ設定が変わった時、「システム」選択中なら追従させる。
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    function onChange() {
-      if (getThemePreference() === "system") applyThemePreference("system");
-    }
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
   }, []);
 
   useEffect(() => {
@@ -105,8 +92,7 @@ export default function ThemeToggle() {
   }, []);
 
   function choose(next: ThemePreference) {
-    setThemePreference(next);
-    setPref(next);
+    setTheme(next);
     setOpen(false);
   }
 

@@ -2,9 +2,9 @@
 
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { GraphData } from "@/lib/content/graph";
-import { isDarkMode, THEME_CHANGE_EVENT } from "@/lib/theme";
 
 // Canvas / window に依存するため SSR 禁止。型は react-force-graph-2d のジェネリクスが
 // 動的 import + ref forwarding と噛み合いにくいので、このコンポーネント内だけ any を許容する。
@@ -22,18 +22,12 @@ function hrefFor(slug: string): string {
 export default function GraphView() {
   const [data, setData] = useState<GraphData | null>(null);
   const [hoverId, setHoverId] = useState<string | null>(null);
-  const [dark, setDark] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const dark = resolvedTheme === "dark";
   const router = useRouter();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fgRef = useRef<any>(null);
   const neighborsRef = useRef<Map<string, Set<string>>>(new Map());
-
-  useEffect(() => {
-    setDark(isDarkMode());
-    const handler = () => setDark(isDarkMode());
-    window.addEventListener(THEME_CHANGE_EVENT, handler);
-    return () => window.removeEventListener(THEME_CHANGE_EVENT, handler);
-  }, []);
 
   useEffect(() => {
     fetch("/generated/graph.json")

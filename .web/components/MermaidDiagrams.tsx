@@ -1,7 +1,7 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import { isDarkMode, THEME_CHANGE_EVENT } from "@/lib/theme";
 
 let idCounter = 0;
 
@@ -24,7 +24,7 @@ function convertCodeBlocks() {
   }
 }
 
-async function renderAll() {
+async function renderAll(dark: boolean) {
   const containers = Array.from(
     document.querySelectorAll<HTMLElement>(
       "article .mermaid-diagram[data-mermaid-source]",
@@ -35,7 +35,7 @@ async function renderAll() {
   const { default: mermaid } = await import("mermaid");
   mermaid.initialize({
     startOnLoad: false,
-    theme: isDarkMode() ? "dark" : "default",
+    theme: dark ? "dark" : "default",
   });
 
   for (const container of containers) {
@@ -51,13 +51,13 @@ async function renderAll() {
 }
 
 export default function MermaidDiagrams() {
+  const { resolvedTheme } = useTheme();
+  const dark = resolvedTheme === "dark";
+
   useEffect(() => {
     convertCodeBlocks();
-    renderAll();
-
-    window.addEventListener(THEME_CHANGE_EVENT, renderAll);
-    return () => window.removeEventListener(THEME_CHANGE_EVENT, renderAll);
-  }, []);
+    renderAll(dark);
+  }, [dark]);
 
   return null;
 }
