@@ -6,291 +6,102 @@ title: "News Source" # gen_index
 
 一次情報のニュースの入手源
 
-## AI Models Providers
-
-- Microsoft Copilot
-- OpenAI ChatGPT
-- OpenAI Codex
-- Anthropic Claude (Sonnet, Opus, Mythos, Haiku)
-- Google Gemini
-- XAI Grok
-- Meta Spark
-
-## Open Weight Models Providers
-
-- Meta Llama
-- OpenAI gpt-oss
-- Google Gemma
-- DeepSeek (北京深度求索人工知能基礎技術研究有限公司)
-- GLM (Z.ai)
-- MiMo (Xiaomi)
-  - https://mimo.xiaomi.com/
-- Hy (Tencent)
-  - https://hy.tencent.com/research
-- Mistral, Mixtral (Mistral AI)
-- Kimi (Moonshot AI)
-- Qwen (Alibaba)
-- MiniMax (MiniMax Group)
-- ZAYA (AMD)
-- Trinity (Arcee AI)
-- Laguna (Poolside)
-- Granite (IBM)
-- OpenBMB MiniCPM
-- AI21 Labs Jamba
-- LFM2.5 (Liquid AI)
-
-## Open Weight World Models
-
-- Nvidea SANA-WM
-
-## Omni-modal Reasoning Model
-
-- NVIDEA Nemotron
+## カテゴリー
 
-## Contents generations with AI
+- 全般
+- テクノロジー
+- エネルギー
+- 科学
+- インターネットセキュリティ
+- バーチャルリアリティ
+- ロボット工学
+- ガジェット
+- ファイナンス
+- ゲーム
+- 政治
+- 経済
 
-https://arena.ai/leaderboard/text-to-video
+## ソース源
 
-### Text-to-Image / Editing Models
+### 全般(複数カテゴリーをまたぐ総合ニュース)
 
-- gpt-image
-- Google Gemini nano-banana
-- grok-imagine-image
-- MAI-Image-2
-- qwen-image
-- Reve rave
-- ByteDance Seedream
-- Alibaba wan-image
-- Kuaishou Kling image O Series
-- Tencent HunyuanImage (OSS)
-  - https://aistudio.tencent.com/image/en?tabIndex=0
-- Black Forest Labs FLUX (OSS)
-- PrismML Bonsai Image
+- [Yahooニュース](https://news.yahoo.co.jp/)
+- [毎日新聞](https://mainichi.jp/)
+- [朝日新聞](https://www.asahi.com/)
+- [読売新聞](https://www.yomiuri.co.jp/)
+- [産経ニュース](https://www.sankei.com/)
+- [時事ドットコム](https://www.jiji.com/)
+- [TBS NEWS DIG](https://newsdig.tbs.co.jp/)
+- [Reuters](https://jp.reuters.com/)
+- [AP News](https://apnews.com/)
+- [The New York Times](https://www.nytimes.com/)
+- [X](https://x.com/)
 
-### Text-to-Video / Image-to-Video / Video Editing Models
+### テクノロジー
 
-- ByteDance dreamina-seeddance
-- Alibaba-ATH HappyHorse
-- grok-imagine-video
-- Google Veo
-- OpenAI Sora
-- wan-t2v
-- Runway runway-gen
-- Kling kling
-- Pixverse pixverse
-- Runway Aleph
-- Runway Edit Studio
+- [ITmedia](https://www.itmedia.co.jp/)
+- [GIGAZINE](https://gigazine.net/)
+- [窓の杜](https://forest.watch.impress.co.jp/)
+- [PC Watch](https://pc.watch.impress.co.jp/)
+- [zenn](https://zenn.dev/)
+- [Hacker News](https://news.ycombinator.com/)([hnrss](https://hnrss.org/))
 
-### Voice Cloning
+### エネルギー
 
-- ElevenLabs 
+- [資源エネルギー庁](https://www.enecho.meti.go.jp/)
+- [スマートジャパン](https://www.itmedia.co.jp/smartjapan/)
 
-### Text to Speech (TTS) Models and Platforms
+### 科学
 
-- ElevenLabs Eleven
+- [arXiv](https://arxiv.org/)
+- [Nature News](https://www.nature.com/news)
+- [Science](https://www.science.org/)
+- [Reddit (r/science)](https://www.reddit.com/r/science/)
 
-### Image to Text (OCR) Models
+### インターネットセキュリティ
 
-- Z.ai GLM-OCR
+- [JPCERT/CC](https://www.jpcert.or.jp/)
+- [IPA 情報セキュリティ](https://www.ipa.go.jp/security/)
+- [Krebs on Security](https://krebsonsecurity.com/)
+- [Reddit (r/netsec)](https://www.reddit.com/r/netsec/)
 
-### Speech to Text (ASR) Models or Platform
+### バーチャルリアリティ
 
-- OpenAI Whisper
-- Cohere Transcribe
-- Mistral AI Voxtral
-- Mistral OCR
-- Meta Omnilingual
-- ElevenLabs Scribe
-- Deepgram Nova
+- [Mogura VR](https://www.moguravr.com/)
+- [UploadVR](https://www.uploadvr.com/)
+- [Road to VR](https://www.roadtovr.com/)
 
-### Text to Music Models or Platform
+### ロボット工学
 
-- Suno
-- Google Lyria
-- Eleven Music
+- [ロボスタ](https://robotstart.info/)
+- [IEEE Spectrum: Robotics](https://spectrum.ieee.org/robotics)
+- [The Robot Report](https://www.therobotreport.com/)
 
-## Editors
+### ガジェット
 
-- VSCode
-- Cursor
-  - [https://cursor.com/changelog](https://cursor.com/changelog)
-- Windsurf
-- Kiro
-- Antigravity
-- zed
-- intellij
+- [Engadget Japan](https://japanese.engadget.com/)
+- [GIZMODO Japan](https://www.gizmodo.jp/)
 
-## AI Extensions
+### ファイナンス
 
-- Cline
+- [かぶたん](https://kabutan.jp/)
+- [みんかぶ](https://minkabu.jp/)
+- [Bloomberg](https://www.bloomberg.co.jp/)
 
-## Terminal
+### ゲーム
 
-- Warp
-- Ghostty
+- [4Gamer](https://www.4gamer.net/)
+- [Famitsu.com](https://www.famitsu.com/)
 
-## CLI Agents
+### 政治
 
-- Cursor CLI
-- Codex CLI
-- Claude Code
-- Gemini CLI
-- opencode
-  - https://github.com/anomalyco/opencode
- 
-## A node-based GUI
+- [NHK NEWS WEB](https://www3.nhk.or.jp/news/)
+- [首相官邸](https://www.kantei.go.jp/)
 
-- ConfyUI (for stable diffusion)
+### 経済
 
-## AI Review
-
-- coderabbit
-
-## AI Agent saas
-
-- Devin
-- Manus
-
-## AI Agents with Desktop OS
-
-- Raycast
-- OpenClaw
-- NVIDIA NemoClaw
-  - https://github.com/NVIDIA/NemoClaw
-
-## design tools
-
-- Figma
-
-## Slide Making and Generations
-
-- Canva
-
-## Image Editting
-
-## MCP Providers
-
-## deployment platform
-
-- vercel
-- cloudflare
-
-## Browsers
-
-- OpenAI Atlas
-- Perplexity Comet
-
-## Meta Web Flamework Updates
-
-- React
-- Next.js
-- Ruby on Rails
-
-## Mobile Phone
-
-## Smartwatch
-
-- Apple watch
-- Google pixel watch
-
-## Drones
-
-- DJI
-- Parrot
-- 3DRobotics
-
-## Action Cameras
-
-- GoPro
-- DJI
-- Insta 360
-
-## EarPhones
-
-## HeadPhones
-
-## AR
-
-- Samsung Galaxy Glasses
-- Ray-Ban Meta
-- Oakley Meta HSTN
-- Meta Aria Gen
-- Meta Hypernova
-
-## VR
-
-- Meta Quest
-
-## MR
-
-- Meta Puffin
-
-## SR
-
-## XR
-
-- Apple Vision Pro
-- Samsung Galaxy XR
-- Google Project Aura
-- HTC VIVE XR
-- Amazon Echo Frames
-
-## CPU
-
-- Intel Ultra, Core
-- AMD Ryzen
-- AWS Graviton
-- Nvidea
-  - Grace
-  - Vera
-  - Tegra SoC
-
-## GPU
-
-- Nvidea
-  - Geforce Series
-  - RTX Series (PRO Blackwell, Ada)
-  - Blackwell Architecture (NVIDIA B200)
-  - Hopper Architecture (H100)
-  - Rubin
-  - Spectrum-X / BlueField-3
-  - Jetson
-  - NVIDIA DRIVE 
-- AMD Radeon
-
-## ASIC (Application Specific Integrated Circuit)
-
-- Google TPU
-- Amazon Trainium
-- Meta MTIA
-
-## AI Workflow
-
-- Dify
-- n8n
-
-## bagpacks
-
--
-
-## Blogs
-
-- OpenAI
-  - https://openai.com/news/
-- Anthropic
-- Claude
-  - https://claude.com/blog/
-
-## AI Positions
-
-- Andrej Karpathy
-  - https://karpathy.ai/
-- Simon Willison’s Weblog
-  - https://simonwillison.net/
-- DHH
-  - https://world.hey.com/dhh
-- Kent Beck (Creator of Extreme Programming and Test-Driven Development)
-- Martin Fowler
+- [日本経済新聞](https://www.nikkei.com/)
+- [Bloomberg](https://www.bloomberg.co.jp/)
 
 <!-- index:start (auto-generated by .scripts/gen_index.py: この範囲は上書きされます) -->
 
