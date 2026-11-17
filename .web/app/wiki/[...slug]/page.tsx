@@ -43,20 +43,19 @@ export default async function WikiPage({
   if (!note) notFound();
 
   return (
-    <ArticleLayout
-      meta={
-        <ArticleMeta
-          category={note.category}
-          author={note.author}
-          updatedAt={note.updatedAt}
-        />
-      }
-    >
-      <Breadcrumbs slug={slug} />
-      <DirectoryListing entries={note.children} />
-      <MarkdownArticle html={note.html} />
-      <Backlinks backlinks={note.backlinks} />
-      <ViewHistoryRecorder slug={note.slug} title={note.title} />
-    </ArticleLayout>
+    <>
+      <ArticleMeta
+        category={note.category}
+        author={note.author}
+        updatedAt={note.updatedAt}
+      />
+      <ArticleLayout>
+        <Breadcrumbs slug={slug} />
+        <DirectoryListing entries={note.children} />
+        <MarkdownArticle html={note.html} />
+        <Backlinks backlinks={note.backlinks} />
+        <ViewHistoryRecorder slug={note.slug} title={note.title} />
+      </ArticleLayout>
+    </>
   );
 }
