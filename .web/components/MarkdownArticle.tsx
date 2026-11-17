@@ -1,3 +1,4 @@
+import CodeBlockEnhancer from "./CodeBlockEnhancer";
 import MermaidDiagrams from "./MermaidDiagrams";
 import SortableTables from "./SortableTables";
 
@@ -11,6 +12,7 @@ export default function MarkdownArticle({ html }: { html: string }) {
       />
       <SortableTables />
       <MermaidDiagrams />
+      <CodeBlockEnhancer />
     </>
   );
 }

@@ -49,3 +49,28 @@ export function getTopCategories(): { slug: string; title: string }[] {
     .map((n) => ({ slug: n.slug, title: n.title }))
     .sort((a, b) => a.slug.localeCompare(b.slug));
 }
+
+export interface RecentChange {
+  slug: string;
+  title: string;
+  updatedAt: string;
+  author?: string;
+}
+
+/** 直近に更新された記事(トップページの「直近の変更履歴」用)。git 情報が無い記事
+ *  (合成ページ、shallow clone 時)は対象外。 */
+export function getRecentChanges(limit = 10): RecentChange[] {
+  return getAllNotes()
+    .filter(
+      (n): n is NoteRecord & { updatedAt: string } =>
+        n.slug !== "" && Boolean(n.updatedAt),
+    )
+    .sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1))
+    .slice(0, limit)
+    .map((n) => ({
+      slug: n.slug,
+      title: n.title,
+      updatedAt: n.updatedAt,
+      author: n.author,
+    }));
+}

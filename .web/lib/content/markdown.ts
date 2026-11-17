@@ -44,6 +44,9 @@ export interface MarkdownResult {
   linkedNotes: LinkedNote[];
   /** 検索インデックス用のプレーンテキスト。 */
   plainText: string;
+  /** SEO description 用の、本文中最初の段落のプレーンテキスト(見出し・自動生成ブロック・
+   *  テーブル/コード等は対象外)。見つからなければ undefined。 */
+  excerpt?: string;
 }
 
 /** 通常の Markdown リンク構文 `[text](url)` / `![alt](src)` の url を解決し、
@@ -157,6 +160,28 @@ function rehypeRewriteRawHtml(fromAbsFile: string, collected: LinkedNote[]) {
   };
 }
 
+/** 本文トップレベルの最初の段落(paragraph)のプレーンテキストを返す。見出しや、自動生成
+ *  インデックスブロック(`<!-- index:start -->`〜`<!-- index:end -->` の html ノードで
+ *  挟まれた区間)、テーブル・コードブロック等は対象外にする(SEO description には不向きなため)。 */
+function firstParagraphText(tree: MdastLike): string | undefined {
+  type RootLike = { children?: { type: string; value?: string }[] };
+  const children = (tree as unknown as RootLike).children ?? [];
+  let inIndexBlock = false;
+  for (const node of children) {
+    if (node.type === "html" && typeof node.value === "string") {
+      if (/index:start/.test(node.value)) inIndexBlock = true;
+      if (/index:end/.test(node.value)) inIndexBlock = false;
+      continue;
+    }
+    if (inIndexBlock || node.type !== "paragraph") continue;
+    const text = mdastToString(
+      node as Parameters<typeof mdastToString>[0],
+    ).trim();
+    if (text) return text;
+  }
+  return undefined;
+}
+
 export function processMarkdown(
   absFile: string,
   content: string,
@@ -177,9 +202,10 @@ export function processMarkdown(
 
   const mdastTree = processor.parse(content);
   const plainText = mdastToString(mdastTree);
+  const excerpt = firstParagraphText(mdastTree);
 
   const transformedTree = processor.runSync(mdastTree);
   const html = String(processor.stringify(transformedTree));
 
-  return { html, linkedNotes, plainText };
+  return { html, linkedNotes, plainText, excerpt };
 }

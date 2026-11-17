@@ -103,8 +103,8 @@ export default function FileTreeSidebar({ tree }: { tree: TreeNode[] }) {
   }
 
   return (
-    <aside className="hidden w-56 overflow-y-auto rounded-md border border-ink-200 bg-white shadow-sm lg:fixed lg:top-[75px] lg:left-4 lg:z-20 lg:block lg:h-[calc(100vh-91px)] dark:border-ink-700 dark:bg-ink-900">
-      <div className="flex items-center justify-between border-b border-ink-200 px-3 py-2 dark:border-ink-800">
+    <aside className="hidden w-56 flex-col rounded-md border border-ink-200 bg-white shadow-sm lg:fixed lg:top-[75px] lg:left-4 lg:z-20 lg:flex lg:h-[calc(100vh-91px)] dark:border-ink-700 dark:bg-ink-900">
+      <div className="flex shrink-0 items-center justify-between border-b border-ink-200 px-3 py-2 dark:border-ink-800">
         <span className="text-xs font-semibold tracking-wide text-ink-500 uppercase dark:text-ink-400">
           ファイル
         </span>
@@ -120,18 +120,20 @@ export default function FileTreeSidebar({ tree }: { tree: TreeNode[] }) {
           <CloseIcon />
         </button>
       </div>
-      <nav aria-label="ファイルツリー" className="py-1">
-        {tree.map((node) => (
-          <FileTreeNode
-            key={node.slug}
-            node={node}
-            depth={0}
-            expanded={expanded}
-            activeSlug={activeSlug}
-            onToggle={toggle}
-          />
-        ))}
-      </nav>
+      <div className="flex-1 overflow-y-auto">
+        <nav aria-label="ファイルツリー" className="py-1">
+          {tree.map((node) => (
+            <FileTreeNode
+              key={node.slug}
+              node={node}
+              depth={0}
+              expanded={expanded}
+              activeSlug={activeSlug}
+              onToggle={toggle}
+            />
+          ))}
+        </nav>
+      </div>
     </aside>
   );
 }

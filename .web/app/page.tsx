@@ -1,8 +1,10 @@
 import ArticleLayout from "@/components/ArticleLayout";
-import MarkdownArticle from "@/components/MarkdownArticle";
-import { getHomeContent } from "@/lib/content/home";
-import { getTopCategories } from "@/lib/content/note";
 import DirectoryListing from "@/components/DirectoryListing";
+import MarkdownArticle from "@/components/MarkdownArticle";
+import RecentChanges from "@/components/RecentChanges";
+import ViewHistory from "@/components/ViewHistory";
+import { getHomeContent } from "@/lib/content/home";
+import { getRecentChanges, getTopCategories } from "@/lib/content/note";
 
 export default function HomePage() {
   const { html } = getHomeContent();
@@ -12,11 +14,14 @@ export default function HomePage() {
     slug: c.slug,
     title: c.title,
   }));
+  const recentChanges = getRecentChanges(8);
 
   return (
     <ArticleLayout>
       <MarkdownArticle html={html} />
       <DirectoryListing entries={categories} />
+      <RecentChanges changes={recentChanges} />
+      <ViewHistory />
     </ArticleLayout>
   );
 }

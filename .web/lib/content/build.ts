@@ -14,6 +14,7 @@ import {
   walkDirectories,
   walkMarkdownFiles,
 } from "./fs";
+import { type GitFileInfo, gitInfoFor } from "./git";
 import { type LinkedNote, processMarkdown } from "./markdown";
 import { fileToSlug } from "./slug";
 
@@ -30,6 +31,11 @@ export interface NoteRecord {
   slug: string;
   title: string;
   category?: string;
+  /** SEO用の抜粋(本文冒頭、140字程度)。README を持たない合成ページでは undefined。 */
+  description?: string;
+  /** git コミット履歴から取得した作成者・最終更新日。shallow clone 等では undefined。 */
+  author?: string;
+  updatedAt?: string;
   html: string;
   backlinks: { slug: string; title: string }[];
   /** README.md かつ直下に子がある場合のみ: GitHub 風のフォルダ内一覧(サブフォルダ→ファイルの順)。 */
@@ -41,8 +47,19 @@ interface InternalRecord {
   title: string;
   category?: string;
   html: string;
+  description?: string;
   plainText: string;
   linkedNotes: LinkedNote[];
+  gitInfo?: GitFileInfo;
+}
+
+/** processMarkdown が返す「最初の段落」テキストを、SEO description用に140字程度へトリムする。 */
+function excerptOf(excerpt: string | undefined): string | undefined {
+  if (!excerpt) return undefined;
+  const text = excerpt.replace(/\s+/g, " ").trim();
+  if (!text) return undefined;
+  const MAX = 140;
+  return text.length > MAX ? `${text.slice(0, MAX)}…` : text;
 }
 
 /** 指定フォルダ直下の子(サブフォルダ→ファイルの順)を一覧化する。
@@ -143,7 +160,10 @@ export function buildContentData(): { notes: NoteRecord[]; tree: TreeNode[] } {
     // linkedNotes(グラフ・バックリンク用)は元の本文(自動生成ブロック込み)から抽出する。
     // .scripts/gen_index.py --stats のエッジ数(477)はこのブロック内のリンクが大半を占めるため、
     // ここで取りこぼすとグラフがスカスカになる。
-    const { html, linkedNotes, plainText } = processMarkdown(absPath, content);
+    const { html, linkedNotes, plainText, excerpt } = processMarkdown(
+      absPath,
+      content,
+    );
     // 表示用 HTML だけ、GitHub 風の一覧コンポーネントに置き換える自動生成ブロックを取り除く
     // (コメントマーカーはレンダリング後も HTML コメントとして残るため、同じ正規表現で除去できる)。
     const displayHtml = stripGeneratedIndexBlock(html);
@@ -152,8 +172,10 @@ export function buildContentData(): { notes: NoteRecord[]; tree: TreeNode[] } {
       title,
       category: topCategoryOf(absPath),
       html: displayHtml,
+      description: excerptOf(excerpt),
       plainText: plainText.slice(0, 20000),
       linkedNotes,
+      gitInfo: gitInfoFor(absPath),
     });
   }
 
@@ -196,6 +218,9 @@ export function buildContentData(): { notes: NoteRecord[]; tree: TreeNode[] } {
     slug,
     title: rec.title,
     category: rec.category,
+    description: rec.description,
+    author: rec.gitInfo?.createdAuthor,
+    updatedAt: rec.gitInfo?.lastUpdatedAt,
     html: rec.html,
     backlinks: [...(backlinkMap.get(slug) ?? [])]
       .map((s) => ({ slug: s, title: titleBySlug.get(s) ?? s }))
