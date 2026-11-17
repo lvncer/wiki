@@ -7,7 +7,10 @@ import { getTree } from "@/lib/content/note";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "lvncerpedia",
+  title: {
+    default: "lvncerpedia",
+    template: "%s | lvncerpedia",
+  },
   description: "lvncer's personal knowledge base",
 };
 

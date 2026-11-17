@@ -68,20 +68,20 @@ exit 1
 
 ---
 
-## 3-1. トップページの「最近の更新」用に GitHub トークンを設定する(必須)
+## 3-1. 「直近の変更履歴」「作成者・最終更新日」表示用に Deep Clone を有効化する(必須)
 
-トップページの「最近の更新」は、ビルド時に GitHub API でコミット履歴を取得して表示する。`GITHUB_TOKEN` が未設定の場合は **ビルドは落ちずに、このセクションが単に表示されないだけ**(壊れない設計)。表示させたい場合のみ以下を行う。
+トップページの「直近の変更履歴」、記事ページの「作成者・最終更新日」は、ビルド時に `git log` でコミット履歴を読んで表示する(GitHub API は使わない。public リポジトリで476ファイル分を API 経由で取得すると未認証 60req/h の上限に到達するため)。
 
-1. GitHub の [Settings → Developer settings → Personal access tokens → Fine-grained tokens](https://github.com/settings/tokens?type=beta) で新規トークンを発行する。
-   - Repository access: このリポジトリ(`lvncerpedia/wiki`)のみに限定する。
-   - Permissions: **Contents: Read-only** のみで足りる。
-2. Vercel プロジェクトの **Settings → Environment Variables** で以下を追加する。
-   - Key: `GITHUB_TOKEN`
-   - Value: 発行したトークン
+Vercel は既定で `git clone --depth=10` の浅い clone を行う。これだと履歴の大部分が見えず、ほとんどの記事で作成者・最終更新日が表示されない(壊れはしないが、情報が欠落するだけ)。
+
+1. Vercel プロジェクトの **Settings → Environment Variables** で以下を追加する。
+   - Key: `VERCEL_DEEP_CLONE`
+   - Value: `true`
    - Environment: Production(必要なら Preview も)
-3. 再デプロイすると反映される(環境変数の追加はデプロイをトリガーしないので、何もしなければ次の push まで反映されない。すぐ試したい場合は Deployments タブから **Redeploy** する)。
+   > この変数は Vercel の公式ドキュメントには明記されていないが、コミュニティで広く使われている既知のオプトインフラグ。効かない場合は Vercel サポートに問い合わせること。
+2. 環境変数の追加はデプロイをトリガーしないので、Deployments タブから **Redeploy** する(次回の通常 push でも反映される)。
 
-ローカルで試したい場合は `.web/.env.local` に `GITHUB_TOKEN=xxxx` と書いて `npm run build` / `npm run dev`(このファイルは `.gitignore` 対象なのでコミットされない)。
+ローカルで試す場合は通常 `.git` がフルクローンされているので、追加設定なしでそのまま `author`/`updatedAt` が入る。
 
 ---
 
