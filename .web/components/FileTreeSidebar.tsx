@@ -1,14 +1,20 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { TreeNode } from "@/lib/content/build";
 import {
   getSidebarOpenPreference,
+  getSidebarWidthPreference,
   setSidebarOpenPreference,
+  setSidebarWidthPreference,
 } from "@/lib/sidebar";
 import FileTreeNode from "./FileTreeNode";
 import { ChevronRightIcon, CloseIcon } from "./icons";
+
+// 現行の固定幅(w-56 = 224px)を最小値とし、その2倍を最大値にする。
+const SIDEBAR_MIN_WIDTH = 224;
+const SIDEBAR_MAX_WIDTH = SIDEBAR_MIN_WIDTH * 2;
 
 function slugFromPathname(pathname: string): string | null {
   if (pathname === "/") return "";
@@ -34,11 +40,53 @@ export default function FileTreeSidebar({ tree }: { tree: TreeNode[] }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(true);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  const [width, setWidth] = useState(SIDEBAR_MIN_WIDTH);
+  const [isResizing, setIsResizing] = useState(false);
+  const resizeStartRef = useRef<{ startX: number; startWidth: number } | null>(
+    null,
+  );
 
   // 初回マウント後にだけ localStorage の実際の設定へ切り替える(ThemeToggle の mounted ガードと同じ発想)。
   useEffect(() => {
     setOpen(getSidebarOpenPreference(true));
+    setWidth(getSidebarWidthPreference(SIDEBAR_MIN_WIDTH));
   }, []);
+
+  const handleResizePointerDown = useCallback(
+    (e: React.PointerEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      resizeStartRef.current = { startX: e.clientX, startWidth: width };
+      setIsResizing(true);
+    },
+    [width],
+  );
+
+  useEffect(() => {
+    if (!isResizing) return;
+
+    const handlePointerMove = (e: PointerEvent) => {
+      const start = resizeStartRef.current;
+      if (!start) return;
+      const next = start.startWidth + (e.clientX - start.startX);
+      setWidth(Math.min(SIDEBAR_MAX_WIDTH, Math.max(SIDEBAR_MIN_WIDTH, next)));
+    };
+
+    const handlePointerUp = () => {
+      resizeStartRef.current = null;
+      setIsResizing(false);
+      setWidth((current) => {
+        setSidebarWidthPreference(current);
+        return current;
+      });
+    };
+
+    document.addEventListener("pointermove", handlePointerMove);
+    document.addEventListener("pointerup", handlePointerUp);
+    return () => {
+      document.removeEventListener("pointermove", handlePointerMove);
+      document.removeEventListener("pointerup", handlePointerUp);
+    };
+  }, [isResizing]);
 
   // tree はビルド時に確定した静的データ(props)なので、slug → ノードの索引も一度だけ作れば十分。
   const nodeBySlug = useMemo(() => {
@@ -103,7 +151,19 @@ export default function FileTreeSidebar({ tree }: { tree: TreeNode[] }) {
   }
 
   return (
-    <aside className="hidden w-56 flex-col rounded-md border border-ink-200 bg-white shadow-sm lg:fixed lg:top-[75px] lg:left-4 lg:z-20 lg:flex lg:h-[calc(100vh-91px)] dark:border-ink-700 dark:bg-ink-900">
+    <aside
+      style={{ width }}
+      className="hidden flex-col rounded-md border border-ink-200 bg-white shadow-sm lg:fixed lg:top-[75px] lg:left-4 lg:z-20 lg:flex lg:h-[calc(100vh-91px)] dark:border-ink-700 dark:bg-ink-900"
+    >
+      <div
+        role="separator"
+        aria-orientation="vertical"
+        aria-label="ファイルツリーの幅を変更"
+        onPointerDown={handleResizePointerDown}
+        className={`absolute top-0 right-0 z-10 hidden h-full w-1.5 -translate-x-1/2 cursor-col-resize touch-none lg:block ${
+          isResizing ? "bg-sky-400/60" : "hover:bg-sky-400/40"
+        }`}
+      />
       <div className="flex shrink-0 items-center justify-between border-b border-ink-200 px-3 py-2 dark:border-ink-800">
         <span className="text-xs font-semibold tracking-wide text-ink-500 uppercase dark:text-ink-400">
           ファイル
