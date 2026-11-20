@@ -16,18 +16,18 @@
 
 ### Loyalty Level 2
 
-- [x] Rat Hunting
-- [ ] Watching You
-- [ ] Secrets of Polikhim
-- [ ] Playing the Market
 - [ ] Surveillance
-- [x] Ill-Wisher
-- [x] Black Swan
-- [x] Scout
-- [x] Gunsmith - OP-SKS
-- [ ] Chemistry Closet
 - [x] Gunsmith - Model 870
-- [ ] The Secret to Productivity
+- [x] Ill-Wisher
+- [x] The Secret to Productivity
+- [x] Black Swan
+- [x] Watching You
+- [x] Rat Hunting
+- [x] Gunsmith - OP-SKS
+- [ ] Secrets of Polikhim
+- [x] Scout
+- [x] Playing the Market
+- [ ] Chemistry Closet
 
 ### Loyalty Level 3
 
