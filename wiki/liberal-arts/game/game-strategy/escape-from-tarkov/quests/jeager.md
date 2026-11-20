@@ -5,26 +5,26 @@
 ### Loyalty Level 1
 
 - [x] Work Smarter
-- [x] Acquaintance
-- [x] The Huntsman Path - Angry Watchman
-- [x] Swift
-- [ ] The Huntsman Path - Trophy
 - [x] The Huntsman Path - Woods Keeper
+- [x] First Aid
+- [x] The Huntsman Path - Trophy
 - [x] Rough Tarkov
 - [x] All This Filth...
-- [x] First Aid
+- [x] The Huntsman Path - Angry Watchman
+- [x] Swift
+- [x] Acquaintance
 
 ### Loyalty Level 2
 
 - [ ] Dragnet
-- [x] Cease Fire!
 - [ ] The Huntsman Path - Crooked Cop
-- [ ] The Huntsman Path - Big Game
+- [x] Cease Fire!
 - [ ] The Huntsman Path - Sellout
+- [x] The Huntsman Path - Big Game
 - [x] Courtesy Visit
-- [x] The Delicious Sausage
 - [x] Every Hunter Knows This
 - [ ] Claustrophobia
+- [x] The Delicious Sausage
 - [x] Nostalgia
 - [x] The Huntsman Path - Factory Chief
 
