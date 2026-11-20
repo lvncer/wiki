@@ -17,24 +17,30 @@
 
 ### Loyalty Level 2
 
-- [x] Ice Cream Cones
+- [x] Properties All Around
 - [ ] Grenadier
+- [x] Kings of the Rooftops
+- [x] Ice Cream Cones
 - [x] Anesthesia
-- [x] Postman Pat - Part 1
-- [ ] Properties All Around
-- [x] You've Got Mail
-- [ ] District Patrol
 - [x] Glory to CPSU
-- [ ] Delivery From the Past
-- [ ] Kings of the Rooftops
+- [x] Postman Pat - Part 1
+- [x] District Patrol
+- [x] You've Got Mail
+- [x] Delivery From the Past
 - [ ] Capturing Outposts
 - [x] Possessor
-- [ ] Job for a Patriot
+- [x] Job for a Patriot
+
+### Loyalty Level 3
+
+- [ ] No Place for Renegades
+- [ ] Easy Job
+- [ ] The Bunker
 
 ### Essential Tasks
 
 - [x] The Punisher - Part 1
-- [ ] The Punisher - Part 2
+- [x] The Punisher - Part 2
 - [ ] The Punisher - Part 3
 - [ ] The Punisher - Part 4
 - [ ] The Punisher - Part 5
@@ -43,14 +49,12 @@
 - [ ] The Good Times - Part 2
 - [ ] Hell on Earth - Part 1
 - [ ] Hell on Earth - Part 2
-- [ ] Big Customer
+- [xx] Big Customer
 - [ ] Shipping Delay - Part 1
 
 ### ???
 
 - [ ] Oil Run
-- [ ] The Bunker
-- [ ] No Place for Renegades
 - [ ] Documents
 - [ ] The Art of Explosion
 - [ ] The Tarkov Import
@@ -62,7 +66,6 @@
 - [ ] Ironclad Proof
 - [ ] Intimidator
 - [ ] Escort
-- [ ] Easy Job
 - [ ] Our Own Land
 - [ ] Reconnaissance
 - [ ] Best Job in the World
