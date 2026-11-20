@@ -16,15 +16,15 @@
 
 ### Loyalty Level 2
 
-- [ ] Supplements
 - [ ] Setup
+- [x] Supplements
 - [x] Beyond the Red Meat
-- [ ] The Secret Recipe
+- [x] The Secret Recipe
 - [x] Chumming
-- [ ] The Walls Have Eyes
+- [x] The Walls Have Eyes
 - [x] Friend From the West
 - [x] Exit Here
-- [ ] House Arrest
+- [x] House Arrest
 - [x] Stirrup
 
 ### Loyalty Level 3
@@ -37,9 +37,10 @@
 - [x] Chemical - Part 1
 - [x] Chemical - Part 2
 - [x] Chemical - Part 3
-- [ ] Chemical - Part 4
+- [xx] Chemical - Part 4
 - [x] Thirsty - Breadwinner
-- [ ] Thirsty - Delivery
+- [x] Thirsty - Delivery
+- [ ] Irresistible
 - [x] Easy Money - Part 1
 
 ### ???
@@ -56,7 +57,6 @@
 - [ ] Debtor
 - [ ] Stimulating Demand
 - [ ] Pyramid Scheme
-- [ ] Irresistible
 - [ ] Dangerous Props
 - [ ] Connections Up North
 - [ ] The Higher They Fly
