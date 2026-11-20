@@ -16,15 +16,15 @@
 
 ### Loyalty Level 2
 
+- [x] Aid Stations
+- [x] Pets Won't Need It
 - [x] Population Census
 - [x] Sanitary Standards
-- [ ] Aid Stations
-- [ ] Pets Won't Need It
-- [ ] Paramedic
+- [x] General Wares
+- [x] Urban Medicine
 - [ ] The Tarkov Butcher
-- [ ] General Wares
-- [ ] Urban Medicine
 - [x] All Is Revealed
+- [ ] Paramedic
 
 ### Loyalty Level 3
 
