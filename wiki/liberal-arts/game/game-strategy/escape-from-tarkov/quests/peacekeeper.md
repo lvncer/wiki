@@ -7,7 +7,7 @@
 - [x] Seizing the Initiative
 - [x] Tigr Safari
 - [x] Chemical Experiments
-- [ ] One Less Loose End
+- [xx] One Less Loose End
 - [x] Hiking
 - [x] Master Key
 - [x] Fuel Shortage
@@ -17,15 +17,15 @@
 
 - [x] Secret Message
 - [ ] I Need More Power
-- [x] One-Way Ticket
 - [x] Fishing Gear
-- [ ] Road Closed
-- [ ] Your Car Needs a Service
-- [ ] Weapons Circulation
-- [x] The Cult
-- [x] Eagle Eye
+- [x] One-Way Ticket
+- [x] Your Car Needs a Service
+- [x] Road Closed
 - [x] Revision - Streets of Tarkov
 - [x] Humanitarian Supplies
+- [x] The Cult
+- [ ] Weapons Circulation
+- [x] Eagle Eye
 
 ### Loyalty Level 3
 
