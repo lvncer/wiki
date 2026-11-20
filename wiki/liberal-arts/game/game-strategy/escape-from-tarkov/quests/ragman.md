@@ -4,12 +4,12 @@
 
 ### Loyalty Level 1
 
-- [ ] Dressed to Kill
-- [x] Gratitude
 - [x] A Big Loss
-- [x] Fuel Crisis
+- [x] Dressed to Kill
+- [x] Gratitude
 - [x] Pathfinder
-- [ ] Long Line
+- [x] Fuel Crisis
+- [x] Long Line
 - [x] Small Things, Big Help
 - [x] Make ULTRA Great Again
 
@@ -17,18 +17,19 @@
 
 - [ ] Dandies
 - [ ] The Key to Success
-- [ ] Hot Delivery
 - [x] Big Sale
-- [ ] Supervisor
-- [x] Break the Deal
-- [x] Audit
-- [x] Minibus
+- [x] Hot Delivery
 - [x] Nothing Fishy About This
-- [ ] Ballet Lover
+- [x] Ballet Lover
+- [x] Break the Deal
+- [x] Minibus
+- [x] Audit
+- [ ] Supervisor
 
 ### Loyalty Level 3
 
-- [ ] Audiophile
+- [x] Audiophile
+- [ ] Living High is Not a Crime
 - [ ] A Fuel Matter
 - [ ] Booze
 - [ ] Know Your Place!
@@ -40,13 +41,18 @@
 - [ ] Sew it Good - Part 3
 - [ ] Drip-Out - Part 1
 - [ ] Drip-Out - Part 2
+- [x] New Beginning (Prestige 1)
+- [ ] New Beginning (Prestige 2)
+- [ ] New Beginning (Prestige 3)
+- [ ] New Beginning (Prestige 4)
+- [ ] New Beginning (Prestige 5)
+- [ ] New Beginning (Prestige 6)
 
 ### ???
 
 - [ ] Reserve Expert
 - [ ] Scavenger
 - [ ] Inventory Files
-- [ ] Living High is Not a Crime
 - [ ] Antique Enthusiast
 - [ ] Sew it Good - Part 4
 - [ ] Textile - Part 1
@@ -66,9 +72,3 @@
 - [ ] Pay the Fare!
 - [ ] Akimbo
 - [ ] Sisyphus
-- [ ] New Beginning (Prestige 1)
-- [ ] New Beginning (Prestige 2)
-- [ ] New Beginning (Prestige 3)
-- [ ] New Beginning (Prestige 4)
-- [ ] New Beginning (Prestige 5)
-- [ ] New Beginning (Prestige 6)
