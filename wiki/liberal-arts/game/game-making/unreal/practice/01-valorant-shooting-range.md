@@ -1,13 +1,13 @@
-結論から言うと、#9 が分かりにくいのは、Manager が「みんなをつなぐ係」で、一度に覚えることが多いからだよ。だから Manager を丸ごと完成形で書いたよ。Bot、DisplayBoard、StartPanel も、Manager とつながる所まで全部書くね。長いけど、上から順に作れば完成するようにしたよ。
+# 01 Valorant 射撃場
 
 ## 0. 全体の地図
 
-| クラス | 持つ変数 | 関数・イベント |
-| - | - | - |
-| BP_Bot | `LifeTime`(float, 3.0)、`bFinished`(bool) | Dispatcher `OnBotFinished(bKilled)`、関数 `FinishBot`、イベント `OnTimeUp` |
-| BP_BotSpawnArea | `SpawnBox` | 関数 `GetRandomLocation`（#8 で完成済み） |
-| BP_DisplayBoard | `BoardText`(Text Render) | 関数 `UpdateDisplay(Score, Remaining)`、関数 `ShowFinalScore(Score)` |
-| BP_StartPanel | `Manager`(参照) | `Event AnyDamage` |
+| クラス                     | 持つ変数                                                                       | 関数・イベント                                                                      |
+| -------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| BP_Bot                     | `LifeTime`(float, 3.0)、`bFinished`(bool)                                      | Dispatcher `OnBotFinished(bKilled)`、関数 `FinishBot`、イベント `OnTimeUp`          |
+| BP_BotSpawnArea            | `SpawnBox`                                                                     | 関数 `GetRandomLocation`（#8 で完成済み）                                           |
+| BP_DisplayBoard            | `BoardText`(Text Render)                                                       | 関数 `UpdateDisplay(Score, Remaining)`、関数 `ShowFinalScore(Score)`                |
+| BP_StartPanel              | `Manager`(参照)                                                                | `Event AnyDamage`                                                                   |
 | BP_ShootingTestGameManager | `SpawnArea`、`DisplayBoard`、`Score`、`Remaining`、`TotalSpawns`、`bIsPlaying` | `StartTest`、`SpawnNextBot`、`OnBotFinishedHandler`、`EndTest`、関数 `RefreshBoard` |
 
 作る順番はこうだよ。
@@ -19,18 +19,18 @@
 
 ## 1. BP_Bot の完成形（#6、7、10、11）
 
-**変数**
+変数
 
-| 名前 | 型 | 初期値 | 補足 |
-| - | - | - | - |
-| LifeTime | Float | 3.0 | 目のアイコンを押して Instance Editable にする |
-| bFinished | Boolean | false | |
+| 名前      | 型      | 初期値 | 補足                                          |
+| --------- | ------- | ------ | --------------------------------------------- |
+| LifeTime  | Float   | 3.0    | 目のアイコンを押して Instance Editable にする |
+| bFinished | Boolean | false  |                                               |
 
 **Event Dispatcher**：My Blueprint の Event Dispatchers の **+** で `OnBotFinished` を作る。Details の Inputs に `bKilled`（Boolean）を足してね。
 
 **関数 FinishBot**（入力：`bKilled` Boolean）
 
-```
+```txt
 Branch( bFinished )
   True  : (nothing)
   False : Set bFinished = true
@@ -38,9 +38,9 @@ Branch( bFinished )
           -> Destroy Actor
 ```
 
-**Event Graph**
+Event Graph
 
-```
+```txt
 Event BeginPlay
   -> Set Timer by Event ( Time = LifeTime, Looping = false, Event = OnTimeUp )
 
@@ -59,16 +59,16 @@ Event AnyDamage
 
 Content Browser で右クリック → Blueprint Class → Actor。名前は `BP_ShootingTestGameManager`にしてね。
 
-**変数**
+変数
 
-| 名前 | 型 | 初期値 | Instance Editable |
-| - | - | - | - |
-| SpawnArea | BP_BotSpawnArea の Object Reference | なし | **する** |
-| DisplayBoard | BP_DisplayBoard の Object Reference | なし | **する** |
-| TotalSpawns | Integer | 30 | する |
-| Score | Integer | 0 | しない |
-| Remaining | Integer | 0 | しない |
-| bIsPlaying | Boolean | false | しない |
+| 名前         | 型                                  | 初期値 | Instance Editable |
+| ------------ | ----------------------------------- | ------ | ----------------- |
+| SpawnArea    | BP_BotSpawnArea の Object Reference | なし   | **する**          |
+| DisplayBoard | BP_DisplayBoard の Object Reference | なし   | **する**          |
+| TotalSpawns  | Integer                             | 30     | する              |
+| Score        | Integer                             | 0      | しない            |
+| Remaining    | Integer                             | 0      | しない            |
+| bIsPlaying   | Boolean                             | false  | しない            |
 
 `BP_DisplayBoard` はまだ無いから、先に空の Actor BP を作っておいてね。中身は後で作るよ。
 
@@ -76,7 +76,7 @@ Instance Editable にするのは、レベルに置いたあと Details から�
 
 ### 2-2. 関数 RefreshBoard（引数なし）
 
-```
+```txt
 Is Valid ( DisplayBoard )
   Valid -> DisplayBoard.UpdateDisplay( Score, Remaining )
 ```
@@ -89,7 +89,7 @@ Is Valid ( DisplayBoard )
 
 Event Graph で右クリック → `Add Custom Event` → `StartTest`。
 
-```
+```txt
 Custom Event StartTest
   -> Branch( bIsPlaying )
        True  : (nothing)
@@ -106,7 +106,7 @@ Custom Event StartTest
 
 ここが山場だよ。関数じゃなくて、**Event Graph の Custom Event** で作ってね。次のノードを順につなぐよ。
 
-```
+```txt
 Custom Event SpawnNextBot
   -> SpawnArea . Get Random Location        (Return: Location)
   -> Spawn Actor from Class
@@ -132,7 +132,7 @@ Custom Event SpawnNextBot
 
 赤い Custom Event の先を、こう書くよ。
 
-```
+```txt
 Custom Event OnBotFinishedHandler ( bKilled )
   -> Branch( bKilled )
        True  : Set Score = Score + 1  --+
@@ -151,7 +151,7 @@ Blueprint では、1つのノードの実行入力に何本でも線をつなげ
 
 ### 2-6. EndTest（#15）
 
-```
+```txt
 Custom Event EndTest
   -> Set bIsPlaying = false
   -> Is Valid ( DisplayBoard )
@@ -168,7 +168,7 @@ Custom Event EndTest
 
 Manager の Event Graph に、一時的にこれを足してね。
 
-```
+```txt
 Event BeginPlay -> StartTest
 ```
 
@@ -178,16 +178,16 @@ Play すると、Bot が箱の中のランダムな場所に出るはずだよ�
 
 **コンポーネント**（Components パネルの **+ Add**）
 
-| 名前 | 種類 | 設定 |
-| - | - | - |
-| BoardMesh | Static Mesh | Mesh=`Cube`、Scale=(3, 0.1, 1.5) |
+| 名前      | 種類        | 設定                                                                         |
+| --------- | ----------- | ---------------------------------------------------------------------------- |
+| BoardMesh | Static Mesh | Mesh=`Cube`、Scale=(3, 0.1, 1.5)                                             |
 | BoardText | Text Render | Location=(6, 0, 0)、Text=`READY`、World Size=40、Horizontal Alignment=Center |
 
 文字を X=6 にするのは、板の厚みの半分（0.1×100÷2=5）より少し手前に出すためだよ。文字は +X 側から見ると読めるの。裏返って見えたら、レベル上で板を Yaw 180 回転してね。
 
 **関数 UpdateDisplay**（入力：`Score` Integer、`Remaining` Integer）
 
-```
+```txt
 Format Text ( Format = "Score: {S}   Remaining: {R}", S <- Score, R <- Remaining )
   -> Set Text ( Target = BoardText, Value = Format Text result )
 ```
@@ -196,7 +196,7 @@ Format Text ( Format = "Score: {S}   Remaining: {R}", S <- Score, R <- Remaining
 
 **関数 ShowFinalScore**（入力：`Score` Integer）
 
-```
+```txt
 Format Text ( Format = "FINISH!  Score: {S}", S <- Score )
   -> Set Text ( Target = BoardText, Value = Format Text result )
 ```
@@ -211,7 +211,7 @@ Format Text ( Format = "FINISH!  Score: {S}", S <- Score )
 
 **Event Graph**
 
-```
+```txt
 Event AnyDamage
   -> Is Valid ( Manager )
        Valid -> Manager.StartTest
@@ -223,17 +223,18 @@ Event AnyDamage
 
 ## 5. 通しのテストとハマりポイント
 
-| 症状 | 原因 |
-| - | - |
-| Bot が出ない | Manager の `SpawnArea` を Details で選び忘れてる |
-| `Accessed None` が出る | `SpawnArea`、`DisplayBoard`、`Manager` のどれかを選び忘れてる |
-| 1体出て止まる | `Assign` をつなぎ忘れ、またはハンドラの `SpawnNextBot` を呼び忘れ |
-| スコアが2点ずつ入る | BP_Bot の `FinishBot` の `bFinished` ガードがない |
-| 30体より早く終わる | `Remaining` を、出した数で減らしてる |
-| 文字が見えない・裏返る | 板を Yaw 180 で回す |
+| 症状                   | 原因                                                              |
+| ---------------------- | ----------------------------------------------------------------- |
+| Bot が出ない           | Manager の `SpawnArea` を Details で選び忘れてる                  |
+| `Accessed None` が出る | `SpawnArea`、`DisplayBoard`、`Manager` のどれかを選び忘れてる     |
+| 1体出て止まる          | `Assign` をつなぎ忘れ、またはハンドラの `SpawnNextBot` を呼び忘れ |
+| スコアが2点ずつ入る    | BP_Bot の `FinishBot` の `bFinished` ガードがない                 |
+| 30体より早く終わる     | `Remaining` を、出した数で減らしてる                              |
+| 文字が見えない・裏返る | 板を Yaw 180 で回す                                               |
 
 ## 豆知識
 
-「30体の Bot のどこで終わるか」を間違えるのは、プログラミングで有名な **off-by-one error（1ズレるバグ）**だよ。「柵杭問題」とも言って、30本の杭を立てると隙間は29個しかないでしょ？ 数える対象が杭か隙間かで、1ズレるの。今回は「終わった数」で数えるって決めたから大丈夫だよ。
-
-いきなり全部は大変だから、まず2-8の仮テストまで進んでね。どこかで詰まったら、グラフのスクショを見せてほしいな。いっしょに直そう、頼りにしてるよ！
+「30体の Bot のどこで終わるか」を間違えるのは、プログラミングで有名な **off-by-one error（1ズレるバグ）**だよ。
+「柵杭問題」とも言って、30本の杭を立てると隙間は29個しかないでしょ？
+数える対象が杭か隙間かで、1ズレるの。
+今回は「終わった数」で数えるって決めたから大丈夫だよ。
