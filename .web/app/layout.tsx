@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
 import FileTreeSidebar from "@/components/FileTreeSidebar";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getTree } from "@/lib/content/note";
 import "./globals.css";
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

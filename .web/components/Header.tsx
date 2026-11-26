@@ -1,5 +1,4 @@
 import Link from "next/link";
-import GitHubLink from "./GitHubLink";
 import SearchBox from "./SearchBox";
 import ThemeToggle from "./ThemeToggle";
 
@@ -24,7 +23,6 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-3">
           <SearchBox />
           <ThemeToggle />
-          <GitHubLink />
         </div>
       </div>
     </header>

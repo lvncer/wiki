@@ -77,6 +77,24 @@ marker {
   color: #fef9c3;
 }
 
+.prose :where(code):not(:where(pre code))::before,
+.prose :where(code):not(:where(pre code))::after {
+  content: none;
+}
+
+.prose :where(code):not(:where(pre code)) {
+  color: #cf222e;
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 0.3em;
+  padding: 0.15em 0.4em;
+  font-weight: 500;
+}
+
+:root.dark .prose :where(code):not(:where(pre code)) {
+  color: #ff7b72;
+  background-color: rgba(110, 118, 129, 0.4);
+}
+
 .prose li.task-list-item {
   list-style: none;
   display: flex;
