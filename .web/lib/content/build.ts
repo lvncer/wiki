@@ -15,7 +15,7 @@ import {
   walkMarkdownFiles,
 } from "./fs";
 import { type GitFileInfo, gitInfoFor } from "./git";
-import { type LinkedNote, processMarkdown } from "./markdown";
+import { type Heading, type LinkedNote, processMarkdown } from "./markdown";
 import { fileToSlug } from "./slug";
 
 const CACHE_DIR = path.resolve(process.cwd(), ".content-cache");
@@ -37,6 +37,8 @@ export interface NoteRecord {
   author?: string;
   updatedAt?: string;
   html: string;
+  /** 右パネルの目次用。本文中の h2/h3 一覧(出現順)。 */
+  headings: Heading[];
   backlinks: { slug: string; title: string }[];
   /** README.md かつ直下に子がある場合のみ: GitHub 風のフォルダ内一覧(サブフォルダ→ファイルの順)。 */
   children?: DirectoryEntry[];
@@ -47,6 +49,7 @@ interface InternalRecord {
   title: string;
   category?: string;
   html: string;
+  headings: Heading[];
   description?: string;
   plainText: string;
   linkedNotes: LinkedNote[];
@@ -160,7 +163,7 @@ export function buildContentData(): { notes: NoteRecord[]; tree: TreeNode[] } {
     // linkedNotes(グラフ・バックリンク用)は元の本文(自動生成ブロック込み)から抽出する。
     // .scripts/gen_index.py --stats のエッジ数(477)はこのブロック内のリンクが大半を占めるため、
     // ここで取りこぼすとグラフがスカスカになる。
-    const { html, linkedNotes, plainText, excerpt } = processMarkdown(
+    const { html, linkedNotes, plainText, excerpt, headings } = processMarkdown(
       absPath,
       content,
     );
@@ -172,6 +175,7 @@ export function buildContentData(): { notes: NoteRecord[]; tree: TreeNode[] } {
       title,
       category: topCategoryOf(absPath),
       html: displayHtml,
+      headings,
       description: excerptOf(excerpt),
       plainText: plainText.slice(0, 20000),
       linkedNotes,
@@ -222,6 +226,7 @@ export function buildContentData(): { notes: NoteRecord[]; tree: TreeNode[] } {
     author: rec.gitInfo?.createdAuthor,
     updatedAt: rec.gitInfo?.lastUpdatedAt,
     html: rec.html,
+    headings: rec.headings,
     backlinks: [...(backlinkMap.get(slug) ?? [])]
       .map((s) => ({ slug: s, title: titleBySlug.get(s) ?? s }))
       .sort((a, b) => a.title.localeCompare(b.title, "ja")),
@@ -232,12 +237,13 @@ export function buildContentData(): { notes: NoteRecord[]; tree: TreeNode[] } {
     ({ slug, absPath }) => {
       const title = path.basename(absPath);
       const virtualReadme = path.join(absPath, "README.md");
-      const { html } = processMarkdown(virtualReadme, `# ${title}\n`);
+      const { html, headings } = processMarkdown(virtualReadme, `# ${title}\n`);
       return {
         slug,
         title,
         category: topCategoryOf(virtualReadme),
         html,
+        headings,
         backlinks: [...(backlinkMap.get(slug) ?? [])]
           .map((s) => ({ slug: s, title: titleBySlug.get(s) ?? s }))
           .sort((a, b) => a.title.localeCompare(b.title, "ja")),

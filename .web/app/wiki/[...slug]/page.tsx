@@ -48,6 +48,7 @@ export default async function WikiPage({
         category={note.category}
         author={note.author}
         updatedAt={note.updatedAt}
+        headings={note.headings}
       />
       <ArticleLayout>
         <Breadcrumbs slug={slug} />

@@ -1,6 +1,7 @@
 import path from "node:path";
 import { toString as mdastToString } from "mdast-util-to-string";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
@@ -22,6 +23,7 @@ type HastElement = {
   type: "element";
   tagName: string;
   properties?: Record<string, unknown>;
+  children?: unknown[];
 };
 type TextNode = { type: "text"; value: string };
 type ListItemNode = {
@@ -38,6 +40,12 @@ export interface LinkedNote {
   isDirectoryLink: boolean;
 }
 
+export interface Heading {
+  id: string;
+  text: string;
+  level: 2 | 3;
+}
+
 export interface MarkdownResult {
   html: string;
   /** グラフのエッジ・バックリンク計算に使う、解決できたノートリンク一覧(重複あり得る)。 */
@@ -47,6 +55,8 @@ export interface MarkdownResult {
   /** SEO description 用の、本文中最初の段落のプレーンテキスト(見出し・自動生成ブロック・
    *  テーブル/コード等は対象外)。見つからなければ undefined。 */
   excerpt?: string;
+  /** 右パネルの目次用。本文中の h2/h3 を出現順に収集(rehype-slug が付与した id を使う)。 */
+  headings: Heading[];
 }
 
 /** 通常の Markdown リンク構文 `[text](url)` / `![alt](src)` の url を解決し、
@@ -139,6 +149,28 @@ function remarkFailedTaskList() {
   };
 }
 
+function hastPlainText(node: unknown): string {
+  const n = node as { type?: string; value?: string; children?: unknown[] };
+  if (n.type === "text") return n.value ?? "";
+  if (Array.isArray(n.children)) return n.children.map(hastPlainText).join("");
+  return "";
+}
+
+/** rehype-slug が id を振った後の h2/h3 を出現順に集めて、右パネルの目次用データにする。 */
+function rehypeCollectHeadings(headings: Heading[]) {
+  return (tree: MdastLike) => {
+    visit(tree, "element", (node) => {
+      const el = node as unknown as HastElement;
+      if (el.tagName !== "h2" && el.tagName !== "h3") return;
+      const id = el.properties?.id;
+      if (typeof id !== "string") return;
+      const text = hastPlainText(node).trim();
+      if (!text) return;
+      headings.push({ id, text, level: el.tagName === "h2" ? 2 : 3 });
+    });
+  };
+}
+
 function rehypeRewriteRawHtml(fromAbsFile: string, collected: LinkedNote[]) {
   return (tree: MdastLike) => {
     visit(tree, "element", (node) => {
@@ -187,6 +219,7 @@ export function processMarkdown(
   content: string,
 ): MarkdownResult {
   const linkedNotes: LinkedNote[] = [];
+  const headings: Heading[] = [];
 
   // remarkParse を2回走らせない: 1回だけ parse した mdast から plainText を取り、
   // 同じツリーをそのまま後続の変換(リンク書き換え→hast→HTML文字列化)にも使い回す。
@@ -197,6 +230,8 @@ export function processMarkdown(
     .use(() => remarkRewriteLinks(absFile, linkedNotes))
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
+    .use(rehypeSlug)
+    .use(() => rehypeCollectHeadings(headings))
     .use(() => rehypeRewriteRawHtml(absFile, linkedNotes))
     .use(rehypeStringify);
 
@@ -207,5 +242,5 @@ export function processMarkdown(
   const transformedTree = processor.runSync(mdastTree);
   const html = String(processor.stringify(transformedTree));
 
-  return { html, linkedNotes, plainText, excerpt };
+  return { html, linkedNotes, plainText, excerpt, headings };
 }

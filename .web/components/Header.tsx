@@ -54,6 +54,8 @@ export default function Header() {
           </nav>
         )}
         <div className="ml-auto flex items-center gap-3">
+          {/* ArticleMeta がモバイル用の開閉ボタンをここに Portal で注入する(記事ページ以外では空のまま)。 */}
+          <div id="article-meta-mobile-slot" className="contents" />
           <SearchBox compact={scrolled} />
           {!scrolled && <ThemeToggle />}
         </div>
