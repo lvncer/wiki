@@ -23,7 +23,7 @@ export default function RecentChanges({
         id="recent-changes-heading"
         className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-500 dark:text-ink-400"
       >
-        直近の変更履歴
+        直近の変更履歴(最大5件)
       </h2>
       <ul className="divide-y divide-ink-100 dark:divide-ink-800">
         {changes.map((c) => (

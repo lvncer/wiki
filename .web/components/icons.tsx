@@ -78,3 +78,39 @@ export function CloseIcon() {
     </svg>
   );
 }
+
+export function SearchIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <circle cx="7" cy="7" r="5" />
+      <path d="M14.5 14.5L11 11" />
+    </svg>
+  );
+}
+
+export function ArrowUpIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M8 13V3M3.5 7.5L8 3l4.5 4.5" />
+    </svg>
+  );
+}

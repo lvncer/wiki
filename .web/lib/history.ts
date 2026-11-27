@@ -1,5 +1,5 @@
 const HISTORY_STORAGE_KEY = "view-history";
-const MAX_ENTRIES = 20;
+const MAX_ENTRIES = 10;
 
 export interface ViewHistoryEntry {
   slug: string;

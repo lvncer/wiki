@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
+import BackToTop from "@/components/BackToTop";
 import FileTreeSidebar from "@/components/FileTreeSidebar";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             {children}
           </main>
           <Footer />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>
