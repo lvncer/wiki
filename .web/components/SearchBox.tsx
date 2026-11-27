@@ -116,7 +116,7 @@ export default function SearchBox({
         }}
         title="検索"
         aria-label="検索を開く"
-        className="rounded-sm border border-ink-300 p-1.5 text-ink-700 hover:bg-ink-50 dark:border-ink-700 dark:text-ink-300 dark:hover:bg-ink-800"
+        className="inline-flex h-[34px] w-[34px] items-center justify-center rounded-sm border border-ink-300 text-ink-700 hover:bg-ink-50 dark:border-ink-700 dark:text-ink-300 dark:hover:bg-ink-800"
       >
         <SearchIcon />
       </button>
@@ -142,7 +142,7 @@ export default function SearchBox({
         }
         placeholder="検索"
         aria-label="ウィキ内検索"
-        className="w-full rounded-sm border border-ink-300 bg-white px-3 py-1.5 text-sm text-ink-900 focus:border-ink-600 focus:outline-hidden dark:border-ink-700 dark:bg-ink-800 dark:text-ink-100 dark:focus:border-ink-400"
+        className="h-[34px] w-full rounded-sm border border-ink-300 bg-white px-3 py-1.5 text-sm text-ink-900 focus:border-ink-600 focus:outline-hidden dark:border-ink-700 dark:bg-ink-800 dark:text-ink-100 dark:focus:border-ink-400"
       />
       {showDropdown && (
         <ul className="absolute z-20 mt-1 w-full max-h-80 overflow-auto border border-ink-300 bg-white shadow-xs dark:border-ink-700 dark:bg-ink-800">
