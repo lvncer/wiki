@@ -28,6 +28,12 @@
   color-scheme: dark;
 }
 
+/* sticky header(高さ約59px)の下に見出しが隠れないよう、目次クリック時のスクロール位置を
+   見出し側にオフセットする(scrollIntoView / URL の #id ジャンプ双方に効く)。 */
+.prose :where(h2, h3, h4, h5, h6) {
+  scroll-margin-top: 76px;
+}
+
 .broken-link {
   color: #989898;
   text-decoration: line-through;
