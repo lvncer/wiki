@@ -28,6 +28,8 @@ export default function GraphView() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fgRef = useRef<any>(null);
   const neighborsRef = useRef<Map<string, Set<string>>>(new Map());
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [size, setSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     fetch("/generated/graph.json")
@@ -45,11 +47,36 @@ export default function GraphView() {
       });
   }, []);
 
+  // コンテナの実サイズを明示的に ForceGraph2D へ渡す。
+  // 渡さないと canvas が内部デフォルト値で描画され、親の範囲を無視して右側に広がり続けるバグになる。
+  // container 要素はデータ読み込み完了後にしか DOM に存在しないため、data を依存配列に含める。
+  // biome-ignore lint/correctness/useExhaustiveDependencies: data 自体は使わないが、マウント後に再実行するためのトリガーとして必要
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+      const { width, height } = entry.contentRect;
+      setSize({ width, height });
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [data]);
+
   useEffect(() => {
     if (!data || !fgRef.current) return;
     // .obsidian/graph.json の linkDistance:250 / repelStrength:10 に近づけた物理パラメータ
     fgRef.current.d3Force("link")?.distance(90);
     fgRef.current.d3Force("charge")?.strength(-50);
+    // ルート(トップページ, id === "")をグラフの中心に固定する。
+    const root = data.nodes.find((n) => n.id === "");
+    if (root) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const r = root as any;
+      r.fx = 0;
+      r.fy = 0;
+    }
   }, [data]);
 
   const isDimmed = useCallback(
@@ -73,9 +100,14 @@ export default function GraphView() {
   const linkColor = dark ? "#4a4a4a" : "#c7c7c7";
 
   return (
-    <div className="h-[calc(100vh-10rem)] w-full border border-ink-200 dark:border-ink-700">
+    <div
+      ref={containerRef}
+      className="h-[calc(100vh-10rem)] w-full overflow-hidden border border-ink-200 dark:border-ink-700"
+    >
       <ForceGraph2D
         ref={fgRef}
+        width={size.width || undefined}
+        height={size.height || undefined}
         graphData={data}
         backgroundColor={dark ? "#161616" : "#ffffff"}
         nodeId="id"
@@ -96,7 +128,14 @@ export default function GraphView() {
         linkDirectionalArrowLength={0}
         d3VelocityDecay={0.35}
         cooldownTime={6000}
-        onEngineStop={() => fgRef.current?.zoomToFit(400, 40)}
+        onEngineStop={() => {
+          const fg = fgRef.current;
+          if (!fg) return;
+          fg.zoomToFit(400, 40);
+          // zoomToFit は全ノードの重心に合わせるため、ルートが中心からずれることがある。
+          // ズーム倍率はそのままに、ルート (0, 0) へ中心を合わせ直す。
+          setTimeout(() => fg.centerAt(0, 0, 200), 420);
+        }}
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         onNodeHover={(n: any) => setHoverId(n ? n.id : null)}
         // eslint-disable-next-line @typescript-eslint/no-explicit-any

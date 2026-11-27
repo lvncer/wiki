@@ -22,10 +22,10 @@ export default function ViewHistory() {
         id="view-history-heading"
         className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-500 dark:text-ink-400"
       >
-        閲覧履歴
+        閲覧履歴(最大10件)
       </h2>
       <ul className="divide-y divide-ink-100 dark:divide-ink-800">
-        {entries.map((e) => (
+        {entries.slice(0, 10).map((e) => (
           <li key={e.slug} className="py-2 text-sm">
             <Link
               href={

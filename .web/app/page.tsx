@@ -14,7 +14,7 @@ export default function HomePage() {
     slug: c.slug,
     title: c.title,
   }));
-  const recentChanges = getRecentChanges(8);
+  const recentChanges = getRecentChanges(5);
 
   return (
     <ArticleLayout>
