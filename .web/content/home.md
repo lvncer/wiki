@@ -15,6 +15,8 @@ title: "lvncerpedia"
 - 商用利用は禁止です
 - 利用の際はこのリポジトリへのクレジット表記をお願いします
 
+![pedia-icon](./../public/pedia-icon.png)
+
 ## Main Categories
 
 lvncerpedia の大項目は、大学の学部を手本に「分野」で切る。
