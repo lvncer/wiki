@@ -1,0 +1,44 @@
+# Distinction 2000
+
+## Contents
+
+- Ch. 01 Immigration
+- Ch. 02 Linguistics
+- Ch. 03 Anthropology
+- Ch. 04 Archaeology
+- Ch. 05 Art
+- Ch. 06 Architecture
+- Ch. 07 Performing Arts
+- Ch. 08 Music
+- Ch. 09 Literature
+- Ch. 10 Biography
+- Ch. 11 Geography
+- Ch. 12 History
+- Ch. 13 Philosophy
+- Ch. 14 Religion
+- Ch. 15 Psychology
+- Ch. 16 Society
+- Ch. 17 Media Studies
+- Ch. 18 Criminal Law
+- Ch. 19 Intellectual Property Law
+- Ch. 20 International Law
+- Ch. 21 Development Studies
+- Ch. 22 Warfare
+- Ch. 23 Politics
+- Ch. 24 Economics
+- Ch. 25 Business & Management
+- Ch. 26 Education
+- Ch. 27 History of Medicine
+- Ch. 28 Medical Ethics
+- Ch. 29 Public Health
+- Ch. 30 Psychiatry
+- Ch. 31 Mathematics
+- Ch. 32 Physics
+- Ch. 33 Astronomy
+- Ch. 34 Chemistry
+- Ch. 35 Biology
+- Ch. 36 Neuroscience
+- Ch. 37 Environment
+- Ch. 38 Engineering
+- Ch. 39 Computer Science
+- Ch. 40 Artificial Intelligence
